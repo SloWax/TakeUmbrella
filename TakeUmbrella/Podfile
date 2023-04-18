@@ -1,0 +1,47 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '14.0'
+
+# [Xcodeproj] Generated duplicate UUIDs 제거
+install!'cocoapods',:deterministic_uuids=>false
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+      config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+    end
+  end
+end
+
+# Available Pods
+def available_pods
+  
+  # Pods for TakeUmbrella
+  
+  #Rx
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxGesture'
+  pod 'RxDataSources'
+  pod 'RxOptional'
+  
+  #Util
+  pod 'Then'
+  pod 'SnapKit', '~> 5.0.0'
+  #pod 'RealmSwift', '~> 10'
+  
+  #Google
+  #pod 'Firebase/Core'
+  #pod 'Firebase/Firestore'
+  #pod 'FirebaseFirestoreSwift'
+  #pod 'Firebase/Analytics'
+  #pod 'Firebase/Crashlytics'
+end
+
+target 'TakeUmbrella' do
+  available_pods
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  # CocoaPods 경고 제거
+  inhibit_all_warnings!
+end
