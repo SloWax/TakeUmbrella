@@ -12,7 +12,6 @@ protocol OptionalCheck { }
 extension Int: OptionalCheck { }
 extension String: OptionalCheck { }
 extension UIImage: OptionalCheck { }
-extension TimeCardModel.Attendance: OptionalCheck { }
 
 extension Optional where Wrapped: OptionalCheck {
     var isEmptyString: Bool {

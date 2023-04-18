@@ -19,7 +19,7 @@ def available_pods
   # Pods for TakeUmbrella
   
   #Rx
-  pod 'RxSwift'
+  pod 'Moya/RxSwift'
   pod 'RxCocoa'
   pod 'RxGesture'
   pod 'RxDataSources'

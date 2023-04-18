@@ -15,19 +15,4 @@ extension Int {
         
         return numberFormatter.string(from: self as NSNumber) ?? ""
     }
-    
-    var splitTime: WorkTime {
-        let hour = self / 60
-        let min = self % 60
-        
-        return (hour, min)
-    }
-    
-    func sumTax(_ tax: TaxCase) -> Int {
-        switch tax {
-        case .free        : return self
-        case .withHolding : return Int(Double(self) * 0.967)
-        case .insurance   : return Int(Double(self) * 0.906)
-        }
-    }
 }
