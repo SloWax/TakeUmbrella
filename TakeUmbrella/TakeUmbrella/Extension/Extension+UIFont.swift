@@ -21,5 +21,6 @@ extension UIFont {
         case bold    = "NotoSansKR-Bold"
         case medium  = "NotoSansKR-Medium"
         case regular = "NotoSansKR-Regular"
+        case light   = "NotoSansKR-Light"
     }
 }

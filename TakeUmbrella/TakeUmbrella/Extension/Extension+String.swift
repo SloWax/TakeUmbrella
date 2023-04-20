@@ -15,19 +15,19 @@ extension String {
         return "\(self)원"
     }
     
-    var underLine: NSAttributedString {
-        let lineStyle = NSUnderlineStyle.init(rawValue: 20).rawValue
-        
-        let attributes: [NSAttributedString.Key: Any] = [
-            .underlineStyle: lineStyle,
-            .foregroundColor: UIColor.setCustomColor(.gray10),
-            .underlineColor: UIColor.setCustomColor(.primaryYellow)
-        ]
-
-        let attributedString = NSAttributedString(string: self, attributes: attributes)
-        
-        return attributedString
-    }
+//    var underLine: NSAttributedString {
+//        let lineStyle = NSUnderlineStyle.init(rawValue: 20).rawValue
+//        
+//        let attributes: [NSAttributedString.Key: Any] = [
+//            .underlineStyle: lineStyle,
+//            .foregroundColor: UIColor.setCustomColor(.gray10),
+//            .underlineColor: UIColor.setCustomColor(.primaryYellow)
+//        ]
+//
+//        let attributedString = NSAttributedString(string: self, attributes: attributes)
+//        
+//        return attributedString
+//    }
     
     func toInt() -> Int {
         return Int(self) ?? 0

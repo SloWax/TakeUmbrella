@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        window?.rootViewController = WeatherCasterViewController()
+//        window?.rootViewController = WeatherCasterViewController()
+        window?.rootViewController = WeatherVC()
         window?.makeKeyAndVisible()
         
         return true

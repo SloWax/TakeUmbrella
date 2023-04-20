@@ -2,16 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ServerURL</key>
+	<string>https://api.openweathermap.org/data/2.5</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>NotoSansKR-Light.otf</string>
 		<string>NotoSansKR-Black.otf</string>
 		<string>NotoSansKR-Bold.otf</string>
 		<string>NotoSansKR-Regular.otf</string>
 		<string>NotoSansKR-Medium.otf</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>현재위치 확인을 위해 허용해주세요.</string>
 </dict>
 </plist>

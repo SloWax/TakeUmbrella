@@ -23,9 +23,9 @@ class BaseVC: UIViewController {
     
     func setNavigationTitle(title: String) {
         let titleLabel = UILabel()
-        titleLabel.attributedText = title.underLine
-        titleLabel.font = .setCustomFont(font: .bold, size: 20)
-        titleLabel.textColor = .setCustomColor(.gray10)
+//        titleLabel.attributedText = title.underLine
+//        titleLabel.font = .setCustomFont(font: .bold, size: 20)
+//        titleLabel.textColor = .setCustomColor(.gray10)
         
         navigationItem.titleView = titleLabel
     }

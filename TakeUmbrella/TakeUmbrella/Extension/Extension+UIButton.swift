@@ -12,9 +12,9 @@ extension UIButton {
     
     func addBottomBorder(borderWidth: CGFloat) {
         let border = UIView()
-        border.backgroundColor = .setCustomColor(.primaryYellow)
-        border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
-        border.frame = CGRect(x: 0, y: frame.size.height, width: frame.size.width, height: borderWidth)
+//        border.backgroundColor = .setCustomColor(.primaryYellow)
+//        border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+//        border.frame = CGRect(x: 0, y: frame.size.height, width: frame.size.width, height: borderWidth)
 
         addSubview(border)
     }
