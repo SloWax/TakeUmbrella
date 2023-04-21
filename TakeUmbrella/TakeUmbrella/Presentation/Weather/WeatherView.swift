@@ -31,7 +31,7 @@ class WeatherView: BaseView {
     
     let btnCity = UIButton(type: .system).then {
         $0.setTitleColor(.setCustomColor(.white), for: .normal)
-        $0.titleLabel?.font = .setCustomFont(font: .bold, size: 20)
+        $0.titleLabel?.font = .setCustomFont(font: .bold, size: 24)
         $0.setTitle("test", for: .normal)
     }
     
@@ -41,68 +41,65 @@ class WeatherView: BaseView {
         $0.tintColor = .setCustomColor(.white)
     }
     
-    private let svMother = UIScrollView().then {
-        $0.alwaysBounceVertical = true
+    let svMother = UIScrollView().then {
+        $0.showsVerticalScrollIndicator = false
+        $0.showsHorizontalScrollIndicator = false
         $0.refreshControl = UIRefreshControl()
     }
     
-    private let svDayInfo = UIStackView().then {
+    private let svNowInfo = UIStackView().then {
         $0.alignment = .bottom
         $0.axis = .horizontal
         $0.distribution = .equalSpacing
         $0.spacing = 5
     }
     
-    private let ivDay = UIImageView().then {
+    private let ivNow = UIImageView().then {
         $0.contentMode = .scaleAspectFit
     }
     
-    private let lblDay = UILabel().then {
+    private let lblNow = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .regular, size: 14)
-        $0.text = "lblDay"
+        $0.font = .setCustomFont(font: .regular, size: 18)
     }
     
     private let svTemp = UIStackView().then {
         $0.alignment = .leading
         $0.axis = .horizontal
-        $0.distribution = .fillEqually
         $0.spacing = 5
     }
     
     private let lblMinTemp = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .regular, size: 14)
-        $0.text = "lblMinTemp"
+        $0.font = .setCustomFont(font: .regular, size: 18)
     }
     
     private let lblMaxTemp = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .regular, size: 14)
-        $0.text = "lblMaxTemp"
+        $0.font = .setCustomFont(font: .regular, size: 18)
     }
     
     private let lblFeelTemp = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .regular, size: 14)
-        $0.text = "lblFeelTemp"
+        $0.font = .setCustomFont(font: .regular, size: 18)
     }
     
     private let lblTemp = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.text = "lblTemp"
     }
     
     let tvList = UITableView().then {
-        $0.separatorStyle = .none
         $0.backgroundColor = .clear
+        $0.separatorColor = .clear
+        $0.separatorStyle = .none
         $0.allowsSelection = false
+        $0.showsVerticalScrollIndicator = false
+        $0.showsHorizontalScrollIndicator = false
+        $0.register(WeatherCell.self, forCellReuseIdentifier: WeatherCell.id)
     }
     
-    
     private var effectViewAlpha: CGFloat = 0
-    private var tempConstraint: Constraint?
-    private var timer: Timer?
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -118,18 +115,17 @@ class WeatherView: BaseView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-//        lblTemp.font = .systemFont(ofSize: self.frame.width / 3, weight: .ultraLight)
         lblTemp.font = .setCustomFont(font: .light, size: self.frame.width / 3)
     }
     
     private func setUP() {
-        let dayArrangedSubviews = [ivDay, lblDay]
-        svDayInfo.addArrangedSubviews(dayArrangedSubviews)
+        let nowArrangedSubviews = [ivNow, lblNow]
+        svNowInfo.addArrangedSubviews(nowArrangedSubviews)
         
         let tempArrangedSubviews = [lblMinTemp, lblMaxTemp, lblFeelTemp]
         svTemp.addArrangedSubviews(tempArrangedSubviews)
         
-        let subViews = [svDayInfo, svTemp, lblTemp, tvList]
+        let subViews = [svNowInfo, svTemp, lblTemp, tvList]
         svMother.addSubviews(subViews)
         
         let views = [
@@ -148,14 +144,12 @@ class WeatherView: BaseView {
         }
         
         viewBlur.snp.makeConstraints {
-//            $0.top.leading.bottom.equalTo(self)
-//            $0.width.equalTo(self.snp.width).multipliedBy(1.2)
             $0.edges.equalTo(ivBack)
         }
         
         btnCity.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide)//.offset(<#T##amount: ConstraintOffsetTarget##ConstraintOffsetTarget#>)
-            make.centerX.equalTo(self)
+            make.top.equalTo(self.safeAreaLayoutGuide)
+            make.left.equalTo(self).inset(15)
         }
         
         btnSetting.snp.makeConstraints { make in
@@ -165,26 +159,26 @@ class WeatherView: BaseView {
         }
         
         svMother.snp.makeConstraints {
-            $0.top.equalTo(btnSetting.snp.bottom)//.offset(<#T##amount: ConstraintOffsetTarget##ConstraintOffsetTarget#>)
+            $0.top.equalTo(btnSetting.snp.bottom)
             $0.left.right.bottom.equalTo(self)
         }
         
         lblTemp.snp.makeConstraints {
-            $0.top.equalTo(svMother.snp.bottom).multipliedBy(0.7)
-            tempConstraint = $0.left.equalTo(self).inset(10).constraint
+            $0.top.equalTo(svMother.snp.bottom).multipliedBy(0.23)
+            $0.left.equalTo(self).inset(10)
         }
         
         svTemp.snp.makeConstraints {
             $0.top.left.equalTo(lblTemp)
         }
         
-        ivDay.snp.makeConstraints {
+        ivNow.snp.makeConstraints {
             $0.width.height.equalTo(45)
         }
         
-        svDayInfo.snp.makeConstraints {
+        svNowInfo.snp.makeConstraints {
             $0.left.equalTo(svTemp)
-            $0.bottom.equalTo(svTemp.snp.top).offset(-5)
+            $0.bottom.equalTo(svTemp.snp.top)
         }
         
         tvList.snp.makeConstraints {
@@ -195,53 +189,36 @@ class WeatherView: BaseView {
         }
     }
     
-//    func setToday(data: WeatherViewModel) {
-//        let weather = data.todayWeather
-//        let main = data.todayMain
-//        let name = data.todayName
-//
-//        let dayLabelText = weather.description
-//                            .replacingOccurrences(of: "온", with: "")
-//                            .replacingOccurrences(of: "실 ", with: "")
-//                            .replacingOccurrences(of: "튼", with: "")
-//
-//        scrollView.dayLabel.text = dayLabelText
-//        scrollView.dayImage.image = UIImage(named: weather.icon)
-//        scrollView.minTemp.text = String(format: "⤓ %.1f°", main.temp_min - 273.15)
-//        scrollView.maxTemp.text = String(format: "⤒ %.1f°", main.temp_max - 273.15)
-//        scrollView.tempLabel.text = String(format: "%.1f°", main.temp - 273.15)
-//        cityLabel.text = name
-//    }
-    
-//    func beforeRefresh() {
-//
-//        effectViewAlpha = viewBlur.alpha
-//        viewBlur.alpha = 1
-//        locationStack.alpha = 0
-//        tempConstraint?.update(inset: self.frame.width)
-//    }
-    
-//    @objc private func timeShow() {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "a h:mm"
-//
-//        locationStack.timeLabel.text = formatter.string(from: Date())
-//    }
-    
-//    @objc private func refreshToggle(_ sender: UIBarButtonItem) {
-//
-//        UIView.animate(withDuration: 0.75) { [weak self] in
-//            guard let self = self else { return }
-//
-//            self.refreshButton.transform = CGAffineTransform(rotationAngle: .pi)
-//            self.refreshButton.transform = CGAffineTransform(rotationAngle: 0)
-//            self.viewBlur.alpha = self.effectViewAlpha
-//            self.locationStack.alpha = 1
-//            self.tempConstraint?.update(inset: 10)
-//
-//            self.layoutIfNeeded()
-//        }
-//
+    func setValue(_ data: NowWeatherModel) {
 //        ivBack.image = UIImage(named: backImage.randomElement() ?? "")
-//    }
+//        cityLabel.text = name
+
+        ivNow.image = UIImage(named: data.icon)
+        lblNow.text = data.description
+        lblMinTemp.text = data.minTemp.toString("⤓ %.1f°")
+        lblMaxTemp.text = data.maxTemp.toString("⤒ %.1f°")
+        lblFeelTemp.text = data.feelTemp.toString("👤 %.1f°")
+        
+        lblTemp.text = data.temp.toString("%.1f°")
+    }
+    
+    func setOffset(_ offset: CGPoint) {
+        ivBack.center.x = self.center.x - (offset.y / 20)
+        viewBlur.alpha = offset.y / self.frame.height
+    }
+    
+    func setWeatherCast(_ count: Int) {
+        svMother.refreshControl?.endRefreshing()
+        
+        // 셀 높이 가져오기
+        let tvVisibleCells = tvList.visibleCells
+        guard tvVisibleCells.count > 0 else { return }
+        
+        if let cell = tvVisibleCells.first as? WeatherCell {
+            let height = CGFloat(count) * cell.frame.height
+            tvList.snp.updateConstraints { make in
+                make.height.equalTo(height)
+            }
+        }
+    }
 }

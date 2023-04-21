@@ -48,8 +48,6 @@ struct WeatherDto: Codable {
             }
             
             struct System: Codable {
-                let type: Int
-                let id: Int
                 let country: String
                 let sunrise: Int
                 let sunset: Int
@@ -62,7 +60,7 @@ struct WeatherDto: Codable {
             let list: [List]
 
             struct List: Codable {
-                let dt: Int
+                let dt: Double
                 let main: Main
                 let weather: [Weather]
                 let dt_txt: String
