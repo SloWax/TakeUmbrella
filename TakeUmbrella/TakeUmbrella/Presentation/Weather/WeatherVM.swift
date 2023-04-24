@@ -73,7 +73,8 @@ class WeatherVM: BaseVM {
             .subscribe { [weak self] daysData, nowData in
                 guard let self = self else { return }
                 
-                let days = daysData.list[0...23]
+                let days = daysData.list
+                    .splitRange(23)
                     .map {
                         let date = Date(timeIntervalSince1970: $0.dt)
                         
@@ -88,18 +89,22 @@ class WeatherVM: BaseVM {
                     }
                 
                 let description = nowData.weather.first?.description
+                    .replacingOccurrences(of: "연무", with: "안개")
                     .replacingOccurrences(of: "박무", with: "안개")
                     .replacingOccurrences(of: "보통", with: "")
                     .replacingOccurrences(of: "온", with: "")
                     .replacingOccurrences(of: "실 ", with: "")
                     .replacingOccurrences(of: "튼", with: "") ?? ""
                 
-                let minTemp = daysData.list[0...7]
+                let list = daysData.list.count > 8 ?
+                daysData.list.splitRange(7) : daysData.list
+                
+                let minTemp = list
                     .compactMap { $0.main.temp_min }
                     .sorted()
                     .first ?? 0
                 
-                let maxTemp = daysData.list[0...7]
+                let maxTemp = list
                     .compactMap { $0.main.temp_max }
                     .sorted()
                     .last ?? 0

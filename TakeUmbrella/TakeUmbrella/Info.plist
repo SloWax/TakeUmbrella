@@ -14,5 +14,7 @@
 		<string>NotoSansKR-Regular.otf</string>
 		<string>NotoSansKR-Medium.otf</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>위치 정보 권한을 승인하시겠습니까?</string>
 </dict>
 </plist>
