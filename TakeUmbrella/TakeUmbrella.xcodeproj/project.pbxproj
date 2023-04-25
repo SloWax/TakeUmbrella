@@ -60,6 +60,8 @@
 		6E86E5C929F2E3F200FC0A17 /* DayWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */; };
 		6EC3CF4D29F6EE0C00BE5848 /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF4C29F6EE0C00BE5848 /* Extension+Array.swift */; };
 		6EC3CF4F29F6F28500BE5848 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */; };
+		6EC3CF5229F85BD400BE5848 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5129F85BD400BE5848 /* SplashVC.swift */; };
+		6EC3CF5429F85C1000BE5848 /* SplashVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5329F85C1000BE5848 /* SplashVM.swift */; };
 		8979D9F4A9E79DBBDC9B34D1 /* Pods_TakeUmbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +123,8 @@
 		6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherModel.swift; sourceTree = "<group>"; };
 		6EC3CF4C29F6EE0C00BE5848 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 		6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		6EC3CF5129F85BD400BE5848 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		6EC3CF5329F85C1000BE5848 /* SplashVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVM.swift; sourceTree = "<group>"; };
 		AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeUmbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -185,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				6E86E59929EEF10400FC0A17 /* Model */,
+				6EC3CF5029F85BC500BE5848 /* Splash */,
 				6E86E59829EEF0F100FC0A17 /* Weather */,
 				6E86E55A29EEEB1E00FC0A17 /* CustomUI */,
 			);
@@ -298,6 +303,8 @@
 		6E86E5AF29EEFCD100FC0A17 /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
+				6E86E59A29EEF10400FC0A17 /* WeatherModel.swift */,
+				6E86E59B29EEF10400FC0A17 /* WebService.swift */,
 				6E86E5A029EEF12600FC0A17 /* CustomTableViewCell.swift */,
 				6E86E5A329EEF12600FC0A17 /* MyLocationStackView.swift */,
 				6E86E5A129EEF12600FC0A17 /* MotherScrollView.swift */,
@@ -311,7 +318,6 @@
 		6E86E5B029EEFEE100FC0A17 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				6E86E59A29EEF10400FC0A17 /* WeatherModel.swift */,
 				6E86E5BC29EF893B00FC0A17 /* WeatherDto.swift */,
 			);
 			path = Entity;
@@ -320,11 +326,19 @@
 		6E86E5B129EEFEE900FC0A17 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				6E86E59B29EEF10400FC0A17 /* WebService.swift */,
 				6E86E5BE29EF8ED400FC0A17 /* BaseService.swift */,
 				6E86E5BA29EF85D600FC0A17 /* WeatherService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		6EC3CF5029F85BC500BE5848 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF5129F85BD400BE5848 /* SplashVC.swift */,
+				6EC3CF5329F85C1000BE5848 /* SplashVM.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		72C2F333B6AFB70DCC803503 /* Pods */ = {
@@ -469,9 +483,11 @@
 				6E86E58229EEEBA800FC0A17 /* Extension+Optional.swift in Sources */,
 				6E86E57B29EEEBA800FC0A17 /* Extension+UITextField.swift in Sources */,
 				6E86E5C329F184E200FC0A17 /* Extension+Double.swift in Sources */,
+				6EC3CF5229F85BD400BE5848 /* SplashVC.swift in Sources */,
 				6E86E5BD29EF893B00FC0A17 /* WeatherDto.swift in Sources */,
 				6E86E5A929EEF12600FC0A17 /* MyLocationStackView.swift in Sources */,
 				6E86E5B929EF7BF700FC0A17 /* WeatherVM.swift in Sources */,
+				6EC3CF5429F85C1000BE5848 /* SplashVM.swift in Sources */,
 				6E86E5C529F2C2EC00FC0A17 /* WeatherCell.swift in Sources */,
 				6E86E58429EEEBA800FC0A17 /* Extension+Date.swift in Sources */,
 				6E86E5AE29EEFCC400FC0A17 /* WeatherView.swift in Sources */,

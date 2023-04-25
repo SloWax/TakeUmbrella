@@ -10,13 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxOptional
-import CoreLocation
 
 
-class WeatherVC: BaseVC, CLLocationManagerDelegate {
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        print("")
-    }
+class WeatherVC: BaseVC {
     private let weatherView = WeatherView()
     private let vm = WeatherVM()
     

@@ -1,24 +1,27 @@
 //
-//  WeatherVM.swift
+//  SplashVM.swift
 //  TakeUmbrella
 //
-//  Created by 표건욱 on 2023/04/19.
+//  Created by 표건욱 on 2023/04/26.
 //
-
 
 import Foundation
 import RxSwift
 import RxCocoa
 
+enum LocationAuth {
+    case auth
+    case notDetermined
+    case denied
+}
 
-class WeatherVM: BaseVM {
+class SplashVM: BaseVM {
     struct Input {
-        let bindRefresh = PublishRelay<Void>()
+        let bindAuth = PublishRelay<Void>()
     }
     
     struct Output {
-        let bindToday = PublishRelay<NowWeatherModel>()
-        let bindList = BehaviorRelay<[DayWeatherModel]>(value: [])
+        let bindAuth = PublishRelay<(NowWeatherModel, [DayWeatherModel])?>()
     }
     
     let input: Input
@@ -30,17 +33,31 @@ class WeatherVM: BaseVM {
         super.init()
         
         self.input
-            .bindRefresh
-            .bind { [weak self] in
+            .bindAuth
+            .bind { LocationManager.shared.request() }
+            .disposed(by: bag)
+        
+        LocationManager.shared
+            .bindAuth
+            .bind { [weak self] status in
                 guard let self = self else { return }
                 
-                self.getWeather()
+                switch status {
+                case .auth:
+                    let coor = LocationManager.shared.loadLocation()
+                    
+                    self.getWeather(lat: coor.lat, lon: coor.lon)
+                case .notDetermined:
+                    
+                    break
+                case .denied:
+                    
+                    self.output.bindAuth.accept(nil)
+                }
             }.disposed(by: bag)
     }
     
-    private func getWeather() {
-        let lat = "65"
-        let lon = "16"
+    private func getWeather(lat: String, lon: String) {
         let appID = "35bc6c3ea0807b59455f3bfb5e237c97"
         let lang = "kr"
         
@@ -70,8 +87,7 @@ class WeatherVM: BaseVM {
             .asObservable()
         
         Observable.zip(daysService, nowService)
-            .subscribe { [weak self] daysData, nowData in
-                guard let self = self else { return }
+            .subscribe { daysData, nowData in
                 
                 let days = daysData.list
                     .splitRange(23)
@@ -118,8 +134,7 @@ class WeatherVM: BaseVM {
                     temp: nowData.main.temp.toCelsius
                 )
                 
-                self.output.bindList.accept(days)
-                self.output.bindToday.accept(nowWeather)
+                print(days, nowWeather)
             } onError: { [weak self] error in
                 guard let self = self else { return }
                 
