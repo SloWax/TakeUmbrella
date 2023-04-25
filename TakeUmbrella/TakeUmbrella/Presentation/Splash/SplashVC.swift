@@ -80,7 +80,7 @@ class SplashVC: BaseVC {
         }
         
         let cancelAction = UIAlertAction(title: "종료", style: .cancel) { _ in
-            UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+            WindowManager.exit()
         }
         
         alert.addAction(defaultAction)
