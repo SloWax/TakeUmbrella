@@ -62,6 +62,10 @@
 		6EC3CF5229F85BD400BE5848 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5129F85BD400BE5848 /* SplashVC.swift */; };
 		6EC3CF5429F85C1000BE5848 /* SplashVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5329F85C1000BE5848 /* SplashVM.swift */; };
 		6EC3CF5629F8718000BE5848 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5529F8718000BE5848 /* WindowManager.swift */; };
+		6EC3CF5829F8752E00BE5848 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5729F8752E00BE5848 /* Case.swift */; };
+		6EC3CF5C29F95E7800BE5848 /* WeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5B29F95E7800BE5848 /* WeatherProtocol.swift */; };
+		6EC3CF5E29F9638000BE5848 /* LottieIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5D29F9638000BE5848 /* LottieIndicator.swift */; };
+		6EC3CF6429F969F400BE5848 /* UmbrellaIndicator.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF6329F969F300BE5848 /* UmbrellaIndicator.json */; };
 		8979D9F4A9E79DBBDC9B34D1 /* Pods_TakeUmbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +129,10 @@
 		6EC3CF5129F85BD400BE5848 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		6EC3CF5329F85C1000BE5848 /* SplashVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVM.swift; sourceTree = "<group>"; };
 		6EC3CF5529F8718000BE5848 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		6EC3CF5729F8752E00BE5848 /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
+		6EC3CF5B29F95E7800BE5848 /* WeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProtocol.swift; sourceTree = "<group>"; };
+		6EC3CF5D29F9638000BE5848 /* LottieIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieIndicator.swift; sourceTree = "<group>"; };
+		6EC3CF6329F969F300BE5848 /* UmbrellaIndicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UmbrellaIndicator.json; sourceTree = "<group>"; };
 		AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeUmbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,6 +185,7 @@
 		6E86E55629EEE94200FC0A17 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				6EC3CF6329F969F300BE5848 /* UmbrellaIndicator.json */,
 				6E86E54D29EEE67D00FC0A17 /* LaunchScreen.storyboard */,
 				6E86E54B29EEE67D00FC0A17 /* Assets.xcassets */,
 				6E86E59629EEF03D00FC0A17 /* Colors.xcassets */,
@@ -200,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				6E86E55B29EEEB3200FC0A17 /* Font */,
+				6EC3CF5D29F9638000BE5848 /* LottieIndicator.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -219,8 +229,8 @@
 		6E86E56429EEEB6900FC0A17 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				6EC3CF5529F8718000BE5848 /* WindowManager.swift */,
-				6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */,
+				6EC3CF5A29F95E6700BE5848 /* Manager */,
+				6EC3CF5929F95E6300BE5848 /* Protocol */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -286,8 +296,9 @@
 		6E86E59929EEF10400FC0A17 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6E86E5C629F2DF1C00FC0A17 /* NowWeatherModel.swift */,
+				6EC3CF5729F8752E00BE5848 /* Case.swift */,
 				6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */,
+				6E86E5C629F2DF1C00FC0A17 /* NowWeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,6 +350,23 @@
 				6EC3CF5329F85C1000BE5848 /* SplashVM.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		6EC3CF5929F95E6300BE5848 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF5B29F95E7800BE5848 /* WeatherProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6EC3CF5A29F95E6700BE5848 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF5529F8718000BE5848 /* WindowManager.swift */,
+				6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		72C2F333B6AFB70DCC803503 /* Pods */ = {
@@ -419,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E86E54F29EEE67D00FC0A17 /* LaunchScreen.storyboard in Resources */,
+				6EC3CF6429F969F400BE5848 /* UmbrellaIndicator.json in Resources */,
 				6E86E56029EEEB3200FC0A17 /* NotoSansKR-Bold.otf in Resources */,
 				6E86E5B729EF73AE00FC0A17 /* NotoSansKR-Light.otf in Resources */,
 				6E86E56229EEEB3200FC0A17 /* NotoSansKR-Medium.otf in Resources */,
@@ -479,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E86E57929EEEBA800FC0A17 /* Extension+UIImage.swift in Sources */,
+				6EC3CF5829F8752E00BE5848 /* Case.swift in Sources */,
 				6E86E59429EEEBBA00FC0A17 /* BaseView.swift in Sources */,
 				6E86E58229EEEBA800FC0A17 /* Extension+Optional.swift in Sources */,
 				6E86E57B29EEEBA800FC0A17 /* Extension+UITextField.swift in Sources */,
@@ -502,6 +532,7 @@
 				6E86E58029EEEBA800FC0A17 /* Extension+UIButton.swift in Sources */,
 				6E86E59329EEEBBA00FC0A17 /* BaseMainVC.swift in Sources */,
 				6E86E57729EEEBA800FC0A17 /* Extension+UIFont.swift in Sources */,
+				6EC3CF5C29F95E7800BE5848 /* WeatherProtocol.swift in Sources */,
 				6E86E5AA29EEF12600FC0A17 /* WeatherCasterViewController.swift in Sources */,
 				6E86E5A729EEF12600FC0A17 /* MotherScrollView.swift in Sources */,
 				6E86E58529EEEBA800FC0A17 /* Extension+UIStackView.swift in Sources */,
@@ -510,6 +541,7 @@
 				6E86E57829EEEBA800FC0A17 /* Extension+UIViewController.swift in Sources */,
 				6E86E5A529EEF12600FC0A17 /* WeatherCasterView.swift in Sources */,
 				6E86E59229EEEBBA00FC0A17 /* BaseVM.swift in Sources */,
+				6EC3CF5E29F9638000BE5848 /* LottieIndicator.swift in Sources */,
 				6E86E59129EEEBBA00FC0A17 /* BaseSceneVC.swift in Sources */,
 				6E86E58F29EEEBBA00FC0A17 /* BaseNC.swift in Sources */,
 				6E86E59D29EEF10400FC0A17 /* WebService.swift in Sources */,

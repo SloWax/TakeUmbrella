@@ -32,7 +32,6 @@ class WeatherView: BaseView {
     let btnCity = UIButton(type: .system).then {
         $0.setTitleColor(.setCustomColor(.white), for: .normal)
         $0.titleLabel?.font = .setCustomFont(font: .bold, size: 24)
-        $0.setTitle("test", for: .normal)
     }
     
     let btnSetting = UIButton(type: .system).then {
@@ -191,8 +190,8 @@ class WeatherView: BaseView {
     
     func setValue(_ data: NowWeatherModel) {
 //        ivBack.image = UIImage(named: backImage.randomElement() ?? "")
-//        cityLabel.text = name
-
+        
+        btnCity.setTitle(data.address, for: .normal)
         ivNow.image = UIImage(named: data.icon)
         lblNow.text = data.description
         lblMinTemp.text = data.minTemp.toString("⤓ %.1f°")

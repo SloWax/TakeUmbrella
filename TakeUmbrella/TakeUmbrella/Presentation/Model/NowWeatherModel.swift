@@ -8,6 +8,7 @@
 import Foundation
 
 struct NowWeatherModel {
+    let address: String
     let icon: String
     let description: String
     let minTemp: Double

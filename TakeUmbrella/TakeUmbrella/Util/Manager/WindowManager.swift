@@ -10,14 +10,16 @@ import UIKit
 
 class WindowManager {
     
-    enum Path: String {
+    enum Path {
         case splash
-        case weather
+        case weather(nowWeather: NowWeatherModel, daysWeather: [DayWeatherModel])
         
         var vc: UIViewController {
             switch self {
-            case .splash    : return SplashVC()
-            case .weather   : return WeatherVC()
+            case .splash:
+                return SplashVC()
+            case .weather(let now, let days):
+                return WeatherVC(nowWeather: now, daysWeather: days)
             }
         }
     }

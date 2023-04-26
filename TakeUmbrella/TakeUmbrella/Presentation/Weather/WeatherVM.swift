@@ -11,22 +11,27 @@ import RxSwift
 import RxCocoa
 
 
-class WeatherVM: BaseVM {
+class WeatherVM: BaseVM, WeatherProtocol {
     struct Input {
         let bindRefresh = PublishRelay<Void>()
     }
     
     struct Output {
-        let bindToday = PublishRelay<NowWeatherModel>()
+        let bindNow = PublishRelay<NowWeatherModel>()
         let bindList = BehaviorRelay<[DayWeatherModel]>(value: [])
     }
     
     let input: Input
     let output: Output
     
-    init(input: Input = Input(), output: Output = Output()) {
+    init(input: Input = Input(), output: Output = Output(),
+         daysWeather: [DayWeatherModel]) {
+        
         self.input = input
         self.output = output
+        
+        output.bindList.accept(daysWeather)
+        
         super.init()
         
         self.input
@@ -34,96 +39,19 @@ class WeatherVM: BaseVM {
             .bind { [weak self] in
                 guard let self = self else { return }
                 
-                self.getWeather()
+                self.requestWeather()
             }.disposed(by: bag)
     }
     
-    private func getWeather() {
-        let lat = "65"
-        let lon = "16"
-        let appID = "35bc6c3ea0807b59455f3bfb5e237c97"
-        let lang = "kr"
-        
-        let daysQuery = WeatherDto.Request(
-            lat: lat,
-            lon: lon,
-            appid: appID,
-            lang: lang
-        )
-        
-        let todayQuery = WeatherDto.Request(
-            lat: lat,
-            lon: lon,
-            appid: appID,
-            lang: lang
-        )
-        
-        guard let daysQuery = daysQuery.toDictionary,
-              let nowQuery = todayQuery.toDictionary else { return }
-        
-        let daysService = WeatherService.shared
-            .request(.days(query: daysQuery), WeatherDto.Response.Days.self)
-            .asObservable()
-        
-        let nowService = WeatherService.shared
-            .request(.today(query: nowQuery), WeatherDto.Response.Today.self)
-            .asObservable()
-        
-        Observable.zip(daysService, nowService)
-            .subscribe { [weak self] daysData, nowData in
-                guard let self = self else { return }
-                
-                let days = daysData.list
-                    .splitRange(23)
-                    .map {
-                        let date = Date(timeIntervalSince1970: $0.dt)
-                        
-                        let newDay = DayWeatherModel(
-                            day: date.toString(dateFormat: "M.d (E)"),
-                            time: date.toString(dateFormat: "HH:mm"),
-                            icon: $0.weather.first?.icon ?? "",
-                            temp: $0.main.temp.toCelsius
-                        )
-                        
-                        return newDay
-                    }
-                
-                let description = nowData.weather.first?.description
-                    .replacingOccurrences(of: "연무", with: "안개")
-                    .replacingOccurrences(of: "박무", with: "안개")
-                    .replacingOccurrences(of: "보통", with: "")
-                    .replacingOccurrences(of: "온", with: "")
-                    .replacingOccurrences(of: "실 ", with: "")
-                    .replacingOccurrences(of: "튼", with: "") ?? ""
-                
-                let list = daysData.list.count > 8 ?
-                daysData.list.splitRange(7) : daysData.list
-                
-                let minTemp = list
-                    .compactMap { $0.main.temp_min }
-                    .sorted()
-                    .first ?? 0
-                
-                let maxTemp = list
-                    .compactMap { $0.main.temp_max }
-                    .sorted()
-                    .last ?? 0
-                
-                let nowWeather = NowWeatherModel(
-                    icon: nowData.weather.first?.icon ?? "",
-                    description: description,
-                    minTemp: minTemp.toCelsius,
-                    maxTemp: maxTemp.toCelsius,
-                    feelTemp: nowData.main.feels_like.toCelsius,
-                    temp: nowData.main.temp.toCelsius
-                )
-                
-                self.output.bindList.accept(days)
-                self.output.bindToday.accept(nowWeather)
-            } onError: { [weak self] error in
-                guard let self = self else { return }
-                
+    private func requestWeather() {
+        getWeather { result in
+            switch result {
+            case .success(let data):
+                self.output.bindNow.accept(data.now)
+                self.output.bindList.accept(data.days)
+            case .failure(let error):
                 self.error.accept(error)
-            }.disposed(by: bag)
+            }
+        }
     }
 }

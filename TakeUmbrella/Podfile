@@ -29,6 +29,7 @@ def available_pods
   pod 'Then'
   pod 'SnapKit', '~> 5.0.0'
   #pod 'RealmSwift', '~> 10'
+  pod 'lottie-ios'
   
   #Google
   #pod 'Firebase/Core'

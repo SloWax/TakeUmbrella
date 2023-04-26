@@ -14,7 +14,19 @@ import RxOptional
 
 class WeatherVC: BaseVC {
     private let weatherView = WeatherView()
-    private let vm = WeatherVM()
+    private let vm: WeatherVM
+    
+    init(nowWeather: NowWeatherModel, daysWeather: [DayWeatherModel]) {
+        
+        self.weatherView.setValue(nowWeather)
+        self.vm = WeatherVM(daysWeather: daysWeather)
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +40,10 @@ class WeatherVC: BaseVC {
     }
     
     private func bind() {
-        self.rx
-            .viewWillAppear
-            .bind(to: vm.input.bindRefresh)
-            .disposed(by: vm.bag)
+//        self.rx
+//            .viewWillAppear
+//            .bind(to: vm.input.bindRefresh)
+//            .disposed(by: vm.bag)
         
 //        weatherView.btnCity // 위치
 //            .rx
@@ -65,7 +77,7 @@ class WeatherVC: BaseVC {
             
         
         vm.output
-            .bindToday // 현재 날씨
+            .bindNow // 현재 날씨
             .bind { [weak self] nowWeather in
                 guard let self = self else { return }
                 

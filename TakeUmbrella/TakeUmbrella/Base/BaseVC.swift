@@ -30,7 +30,27 @@ class BaseVC: UIViewController {
         navigationItem.titleView = titleLabel
     }
     
-    func clearBag(vm: BaseVM = BaseVM()) {
-        vm.clearBag()
+    func openSettingAlert(title: String? = nil, message: String?) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let defaultAction = UIAlertAction(title: "확인", style: .default) { _ in
+            guard let url = URL(string: UIApplication.openSettingsURLString),
+                  UIApplication.shared.canOpenURL(url) else { return }
+            
+            UIApplication.shared.open(url)
+        }
+        
+        let cancelAction = UIAlertAction(title: "종료", style: .cancel) { _ in
+            WindowManager.exit()
+        }
+        
+        alert.addAction(defaultAction)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true)
     }
 }
