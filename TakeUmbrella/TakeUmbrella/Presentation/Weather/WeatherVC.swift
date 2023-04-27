@@ -45,12 +45,12 @@ class WeatherVC: BaseVC {
 //            .bind(to: vm.input.bindRefresh)
 //            .disposed(by: vm.bag)
         
-//        weatherView.btnCity // 위치
-//            .rx
-//            .tap
-//            .bind(to: <#T##Void...##Void#>)
-//            .disposed(by: vm.bag)
-//
+        weatherView.btnCity // 위치 설정
+            .rx
+            .tap
+            .bind(to: vm.input.bindLocation)
+            .disposed(by: vm.bag)
+        
 //        weatherView.btnSetting // 설정
 //            .rx
 //            .tap

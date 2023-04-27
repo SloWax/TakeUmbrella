@@ -28,11 +28,11 @@ class BaseService<API: TargetType> {
             switch change {
             case .began:
                 DispatchQueue.main.async {
-                    LottieIndicator.shared.show()
+                    // Indicator Start
                 }
             case .ended:
                 DispatchQueue.main.async {
-                    LottieIndicator.shared.dismiss()
+                    // Indicator Stop
                 }
             }
         }

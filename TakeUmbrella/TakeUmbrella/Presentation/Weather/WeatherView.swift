@@ -8,14 +8,13 @@
 import UIKit
 import SnapKit
 import Then
+import Gifu
 
 
 class WeatherView: BaseView {
     
-    private let ivBack = UIImageView().then {
-        let backImage = ["sunny", "cloudy", "lightning", "rainy"]
-        let image = UIImage(named: backImage.randomElement() ?? "")
-        $0.image = image
+    private let ivBack = GIFImageView().then {
+        $0.animate(withGIFNamed: "rainy1")
         $0.contentMode = .scaleAspectFill
     }
     
@@ -189,7 +188,24 @@ class WeatherView: BaseView {
     }
     
     func setValue(_ data: NowWeatherModel) {
-//        ivBack.image = UIImage(named: backImage.randomElement() ?? "")
+        
+        switch data.description {
+        case let des where des.contains("맑음"):
+            ivBack.animate(withGIFNamed: "sunny")
+        case let des where des.contains("뇌우"):
+            ivBack.animate(withGIFNamed: "lightning")
+        case let des where des.contains("비"):
+            ivBack.animate(withGIFNamed: "rainy")
+        case let des where des.contains("눈"):
+            ivBack.animate(withGIFNamed: "snow")
+        case let des where des.contains("구름")
+            || des.contains("흐림")
+            || des.contains("안개")
+            || des.contains("연기"):
+            ivBack.animate(withGIFNamed: "cloud")
+        default:
+            ivBack.animate(withGIFNamed: "sunny")
+        }
         
         btnCity.setTitle(data.address, for: .normal)
         ivNow.image = UIImage(named: data.icon)

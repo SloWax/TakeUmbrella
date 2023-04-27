@@ -97,9 +97,7 @@ extension WeatherProtocol where Self: BaseVM {
                 )
                 
                 completion(.success((now, days)))
-            } onError: { [weak self] error in
-                guard let self = self else { return }
-                
+            } onError: { error in
                 completion(.failure(error))
             }.disposed(by: bag)
     }

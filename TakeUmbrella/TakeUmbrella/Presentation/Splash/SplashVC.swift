@@ -15,11 +15,8 @@ import Then
 
 class SplashVC: BaseVC {
     
-    private let ivImage = UIImageView().then {
-        let image = UIImage(named: "rainy")
-        $0.image = image
-//        $0.backgroundColor = .setCustomColor(.primaryRubys)
-        $0.contentMode = .scaleAspectFill
+    private let ivImage = UIView().then {
+        $0.backgroundColor = .setCustomColor(.black)
     }
     
     private let vm = SplashVM()
@@ -33,7 +30,6 @@ class SplashVC: BaseVC {
     
     private func initialize() {
         view = ivImage
-        
     }
     
     private func bind() {
@@ -49,10 +45,18 @@ class SplashVC: BaseVC {
             .bind(to: vm.input.bindAuth)
             .disposed(by: vm.bag)
         
+        self.rx
+            .viewDidAppear
+            .bind { LottieIndicator.shared.show() }
+            .disposed(by: vm.bag)
+        
         vm.output
             .bindAuth
+            .delay(.seconds(3), scheduler: MainScheduler.instance)
             .bind { [weak self] data in
                 guard let self = self else { return }
+                
+                LottieIndicator.shared.dismiss()
                 
                 if let data = data {
                     WindowManager.change(.weather(nowWeather: data.now, daysWeather: data.days))

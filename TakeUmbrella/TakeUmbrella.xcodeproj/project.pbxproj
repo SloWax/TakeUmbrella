@@ -66,6 +66,11 @@
 		6EC3CF5C29F95E7800BE5848 /* WeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5B29F95E7800BE5848 /* WeatherProtocol.swift */; };
 		6EC3CF5E29F9638000BE5848 /* LottieIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5D29F9638000BE5848 /* LottieIndicator.swift */; };
 		6EC3CF6429F969F400BE5848 /* UmbrellaIndicator.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF6329F969F300BE5848 /* UmbrellaIndicator.json */; };
+		6EC3CF6E29FAD96C00BE5848 /* lightning.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF6A29FAD96C00BE5848 /* lightning.gif */; };
+		6EC3CF6F29FAD96C00BE5848 /* cloud.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF6B29FAD96C00BE5848 /* cloud.gif */; };
+		6EC3CF7029FAD96C00BE5848 /* rainy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF6C29FAD96C00BE5848 /* rainy.gif */; };
+		6EC3CF7329FAD97200BE5848 /* snow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7129FAD97100BE5848 /* snow.gif */; };
+		6EC3CF7429FAD97200BE5848 /* sunny.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7229FAD97200BE5848 /* sunny.gif */; };
 		8979D9F4A9E79DBBDC9B34D1 /* Pods_TakeUmbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +138,11 @@
 		6EC3CF5B29F95E7800BE5848 /* WeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProtocol.swift; sourceTree = "<group>"; };
 		6EC3CF5D29F9638000BE5848 /* LottieIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieIndicator.swift; sourceTree = "<group>"; };
 		6EC3CF6329F969F300BE5848 /* UmbrellaIndicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UmbrellaIndicator.json; sourceTree = "<group>"; };
+		6EC3CF6A29FAD96C00BE5848 /* lightning.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lightning.gif; sourceTree = "<group>"; };
+		6EC3CF6B29FAD96C00BE5848 /* cloud.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cloud.gif; sourceTree = "<group>"; };
+		6EC3CF6C29FAD96C00BE5848 /* rainy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rainy.gif; sourceTree = "<group>"; };
+		6EC3CF7129FAD97100BE5848 /* snow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = snow.gif; sourceTree = "<group>"; };
+		6EC3CF7229FAD97200BE5848 /* sunny.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sunny.gif; sourceTree = "<group>"; };
 		AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeUmbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -185,6 +195,7 @@
 		6E86E55629EEE94200FC0A17 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				6EC3CF7529FADC7C00BE5848 /* GIF */,
 				6EC3CF6329F969F300BE5848 /* UmbrellaIndicator.json */,
 				6E86E54D29EEE67D00FC0A17 /* LaunchScreen.storyboard */,
 				6E86E54B29EEE67D00FC0A17 /* Assets.xcassets */,
@@ -369,6 +380,18 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		6EC3CF7529FADC7C00BE5848 /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF6B29FAD96C00BE5848 /* cloud.gif */,
+				6EC3CF6A29FAD96C00BE5848 /* lightning.gif */,
+				6EC3CF6C29FAD96C00BE5848 /* rainy.gif */,
+				6EC3CF7129FAD97100BE5848 /* snow.gif */,
+				6EC3CF7229FAD97200BE5848 /* sunny.gif */,
+			);
+			name = GIF;
+			sourceTree = "<group>";
+		};
 		72C2F333B6AFB70DCC803503 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,13 +469,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC3CF7029FAD96C00BE5848 /* rainy.gif in Resources */,
 				6E86E54F29EEE67D00FC0A17 /* LaunchScreen.storyboard in Resources */,
 				6EC3CF6429F969F400BE5848 /* UmbrellaIndicator.json in Resources */,
+				6EC3CF7329FAD97200BE5848 /* snow.gif in Resources */,
 				6E86E56029EEEB3200FC0A17 /* NotoSansKR-Bold.otf in Resources */,
 				6E86E5B729EF73AE00FC0A17 /* NotoSansKR-Light.otf in Resources */,
 				6E86E56229EEEB3200FC0A17 /* NotoSansKR-Medium.otf in Resources */,
 				6E86E54C29EEE67D00FC0A17 /* Assets.xcassets in Resources */,
+				6EC3CF6E29FAD96C00BE5848 /* lightning.gif in Resources */,
 				6E86E56329EEEB3200FC0A17 /* NotoSansKR-Regular.otf in Resources */,
+				6EC3CF7429FAD97200BE5848 /* sunny.gif in Resources */,
+				6EC3CF6F29FAD96C00BE5848 /* cloud.gif in Resources */,
 				6E86E56129EEEB3200FC0A17 /* NotoSansKR-Black.otf in Resources */,
 				6E86E59729EEF03D00FC0A17 /* Colors.xcassets in Resources */,
 			);

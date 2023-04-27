@@ -30,6 +30,7 @@ def available_pods
   pod 'SnapKit', '~> 5.0.0'
   #pod 'RealmSwift', '~> 10'
   pod 'lottie-ios'
+  pod 'Gifu'
   
   #Google
   #pod 'Firebase/Core'
