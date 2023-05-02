@@ -46,7 +46,9 @@ class SplashVM: BaseVM, WeatherProtocol {
     }
     
     private func requestWeather() {
-        getWeather { result in
+        getWeather { [weak self] result in
+            guard let self = self else { return }
+            
             switch result {
             case .success(let data):
                 self.output.bindAuth.accept(data)

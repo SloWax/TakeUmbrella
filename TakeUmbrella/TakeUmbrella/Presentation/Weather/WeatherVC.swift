@@ -37,6 +37,15 @@ class WeatherVC: BaseVC {
     
     private func initialize() {
         view = weatherView
+        
+        let userNotiCenter = UNUserNotificationCenter.current()
+        let notiAuthOptions = UNAuthorizationOptions(arrayLiteral: [.criticalAlert, .badge, .sound])
+        
+        userNotiCenter.requestAuthorization(options: notiAuthOptions) { (success, error) in
+            if let error = error {
+                print(error)
+            }
+        }
     }
     
     private func bind() {
@@ -101,6 +110,23 @@ class WeatherVC: BaseVC {
                 guard let self = self else { return }
                 
                 self.weatherView.setWeatherCast(list.count)
+                
+//                self.addPush()
             }.disposed(by: vm.bag)
+    }
+    
+    private func addPush() {
+        let push =  UNMutableNotificationContent()
+
+        push.title = "엄마가우산챙기래"
+        push.subtitle = "일기예보를 다시 확인해볼까요?"
+        push.badge = 1
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+        let request = UNNotificationRequest(identifier: "test", content: push, trigger: trigger)
+        
+        
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
 }

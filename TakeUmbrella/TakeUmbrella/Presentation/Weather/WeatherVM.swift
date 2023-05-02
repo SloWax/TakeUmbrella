@@ -45,11 +45,14 @@ class WeatherVM: BaseVM, WeatherProtocol {
     }
     
     private func requestWeather() {
-        getWeather { result in
+        getWeather { [weak self] result in
+            guard let self = self else { return }
+            
             switch result {
             case .success(let data):
                 self.output.bindNow.accept(data.now)
                 self.output.bindList.accept(data.days)
+                
             case .failure(let error):
                 self.error.accept(error)
             }
