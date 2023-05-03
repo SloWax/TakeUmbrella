@@ -11,5 +11,6 @@ struct DayWeatherModel {
     let day: String
     let time: String
     let icon: String
+    let rain: Bool
     let temp: Double
 }

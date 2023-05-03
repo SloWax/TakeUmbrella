@@ -111,7 +111,9 @@ class WeatherVC: BaseVC {
                 
                 self.weatherView.setWeatherCast(list.count)
                 
-//                self.addPush()
+                guard list.contains(where: { $0.rain }) else { return }
+                
+                self.addPush()
             }.disposed(by: vm.bag)
     }
     
@@ -122,8 +124,8 @@ class WeatherVC: BaseVC {
         push.subtitle = "일기예보를 다시 확인해볼까요?"
         push.badge = 1
 
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
-        let request = UNNotificationRequest(identifier: "test", content: push, trigger: trigger)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "rain", content: push, trigger: trigger)
         
         
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()

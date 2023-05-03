@@ -55,10 +55,17 @@ extension WeatherProtocol where Self: BaseVM {
                     .map {
                         let date = Date(timeIntervalSince1970: $0.dt)
                         
+                        let isRain = $0
+                            .weather
+                            .first?
+                            .description
+                            .contains { String($0).contains("비") || String($0).contains("눈") }
+                        
                         let newDay = DayWeatherModel(
                             day: date.toString(dateFormat: "M.d (E)"),
                             time: date.toString(dateFormat: "HH:mm"),
                             icon: $0.weather.first?.icon ?? "",
+                            rain: isRain ?? false,
                             temp: $0.main.temp.toCelsius
                         )
                         
