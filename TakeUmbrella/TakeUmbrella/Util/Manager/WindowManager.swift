@@ -19,7 +19,9 @@ class WindowManager {
             case .splash:
                 return SplashVC()
             case .weather(let now, let days):
-                return WeatherVC(nowWeather: now, daysWeather: days)
+                let vc = WeatherVC(nowWeather: now, daysWeather: days)
+                let navi = BaseNC(rootViewController: vc)
+                return navi
             }
         }
     }

@@ -71,6 +71,9 @@
 		6EC3CF7029FAD96C00BE5848 /* rainy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF6C29FAD96C00BE5848 /* rainy.gif */; };
 		6EC3CF7329FAD97200BE5848 /* snow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7129FAD97100BE5848 /* snow.gif */; };
 		6EC3CF7429FAD97200BE5848 /* sunny.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7229FAD97200BE5848 /* sunny.gif */; };
+		6EC3CF792A13901200BE5848 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF782A13901200BE5848 /* SettingVC.swift */; };
+		6EC3CF7B2A13901900BE5848 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7A2A13901900BE5848 /* SettingView.swift */; };
+		6EC3CF7D2A13902200BE5848 /* SettingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7C2A13902200BE5848 /* SettingVM.swift */; };
 		8979D9F4A9E79DBBDC9B34D1 /* Pods_TakeUmbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +147,9 @@
 		6EC3CF7129FAD97100BE5848 /* snow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = snow.gif; sourceTree = "<group>"; };
 		6EC3CF7229FAD97200BE5848 /* sunny.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sunny.gif; sourceTree = "<group>"; };
 		6EC3CF762A02A82000BE5848 /* TakeUmbrella.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TakeUmbrella.entitlements; sourceTree = "<group>"; };
+		6EC3CF782A13901200BE5848 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		6EC3CF7A2A13901900BE5848 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		6EC3CF7C2A13902200BE5848 /* SettingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVM.swift; sourceTree = "<group>"; };
 		AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeUmbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -213,6 +219,7 @@
 				6E86E59929EEF10400FC0A17 /* Model */,
 				6EC3CF5029F85BC500BE5848 /* Splash */,
 				6E86E59829EEF0F100FC0A17 /* Weather */,
+				6EC3CF772A13865A00BE5848 /* Setting */,
 				6E86E55A29EEEB1E00FC0A17 /* CustomUI */,
 			);
 			path = Presentation;
@@ -276,13 +283,13 @@
 		6E86E58629EEEBB900FC0A17 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				6E86E58D29EEEBB900FC0A17 /* BaseView.swift */,
+				6E86E58C29EEEBB900FC0A17 /* BaseMainVC.swift */,
 				6E86E58729EEEBB900FC0A17 /* BaseVC.swift */,
 				6E86E58829EEEBB900FC0A17 /* BaseNC.swift */,
 				6E86E58929EEEBB900FC0A17 /* BaseModalVC.swift */,
 				6E86E58A29EEEBB900FC0A17 /* BaseSceneVC.swift */,
 				6E86E58B29EEEBB900FC0A17 /* BaseVM.swift */,
-				6E86E58C29EEEBB900FC0A17 /* BaseMainVC.swift */,
-				6E86E58D29EEEBB900FC0A17 /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -392,6 +399,16 @@
 				6EC3CF7229FAD97200BE5848 /* sunny.gif */,
 			);
 			name = GIF;
+			sourceTree = "<group>";
+		};
+		6EC3CF772A13865A00BE5848 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF7A2A13901900BE5848 /* SettingView.swift */,
+				6EC3CF782A13901200BE5848 /* SettingVC.swift */,
+				6EC3CF7C2A13902200BE5848 /* SettingVM.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		72C2F333B6AFB70DCC803503 /* Pods */ = {
@@ -547,6 +564,7 @@
 				6E86E5BD29EF893B00FC0A17 /* WeatherDto.swift in Sources */,
 				6E86E5A929EEF12600FC0A17 /* MyLocationStackView.swift in Sources */,
 				6E86E5B929EF7BF700FC0A17 /* WeatherVM.swift in Sources */,
+				6EC3CF792A13901200BE5848 /* SettingVC.swift in Sources */,
 				6EC3CF5429F85C1000BE5848 /* SplashVM.swift in Sources */,
 				6E86E5C529F2C2EC00FC0A17 /* WeatherCell.swift in Sources */,
 				6E86E58429EEEBA800FC0A17 /* Extension+Date.swift in Sources */,
@@ -557,6 +575,7 @@
 				6E86E57C29EEEBA800FC0A17 /* Extension+CGFloat.swift in Sources */,
 				6EC3CF5629F8718000BE5848 /* WindowManager.swift in Sources */,
 				6EC3CF4D29F6EE0C00BE5848 /* Extension+Array.swift in Sources */,
+				6EC3CF7B2A13901900BE5848 /* SettingView.swift in Sources */,
 				6E86E5BF29EF8ED400FC0A17 /* BaseService.swift in Sources */,
 				6EC3CF4F29F6F28500BE5848 /* LocationManager.swift in Sources */,
 				6E86E58029EEEBA800FC0A17 /* Extension+UIButton.swift in Sources */,
@@ -570,6 +589,7 @@
 				6E86E59029EEEBBA00FC0A17 /* BaseModalVC.swift in Sources */,
 				6E86E57829EEEBA800FC0A17 /* Extension+UIViewController.swift in Sources */,
 				6E86E5A529EEF12600FC0A17 /* WeatherCasterView.swift in Sources */,
+				6EC3CF7D2A13902200BE5848 /* SettingVM.swift in Sources */,
 				6E86E59229EEEBBA00FC0A17 /* BaseVM.swift in Sources */,
 				6EC3CF5E29F9638000BE5848 /* LottieIndicator.swift in Sources */,
 				6E86E59129EEEBBA00FC0A17 /* BaseSceneVC.swift in Sources */,

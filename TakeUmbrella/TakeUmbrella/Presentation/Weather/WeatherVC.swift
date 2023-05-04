@@ -12,7 +12,7 @@ import RxCocoa
 import RxOptional
 
 
-class WeatherVC: BaseVC {
+class WeatherVC: BaseMainVC {
     private let weatherView = WeatherView()
     private let vm: WeatherVM
     
@@ -49,22 +49,22 @@ class WeatherVC: BaseVC {
     }
     
     private func bind() {
-//        self.rx
-//            .viewWillAppear
-//            .bind(to: vm.input.bindRefresh)
-//            .disposed(by: vm.bag)
-        
-        weatherView.btnCity // 위치 설정
+        NotificationCenter.default // 다른 앱에서 되돌아왔을때
             .rx
-            .tap
-            .bind(to: vm.input.bindLocation)
+            .notification(UIApplication.willEnterForegroundNotification)
+            .map { _ in Void() }
+            .bind(to: vm.input.bindRefresh)
             .disposed(by: vm.bag)
         
-//        weatherView.btnSetting // 설정
-//            .rx
-//            .tap
-//            .bind(to: <#T##Void...##Void#>)
-//            .disposed(by: vm.bag)
+        weatherView.btnSetting // 설정
+            .rx
+            .tap
+            .bind { [weak self] in
+                guard let self = self else { return }
+                
+                let vc = SettingVC()
+                self.pushVC(vc)
+            }.disposed(by: vm.bag)
         
         weatherView.svMother // 배경 블러처리
             .rx
@@ -126,7 +126,6 @@ class WeatherVC: BaseVC {
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let request = UNNotificationRequest(identifier: "rain", content: push, trigger: trigger)
-        
         
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)

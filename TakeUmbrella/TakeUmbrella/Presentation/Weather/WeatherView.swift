@@ -23,14 +23,14 @@ class WeatherView: BaseView {
         let blur = UIVisualEffectView(effect: effect)
         
         blur.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blur.alpha = 0
+        blur.alpha = 0.5
         
         return blur
     }()
     
-    let btnCity = UIButton(type: .system).then {
-        $0.setTitleColor(.setCustomColor(.white), for: .normal)
-        $0.titleLabel?.font = .setCustomFont(font: .bold, size: 24)
+    let lblCity = UILabel().then {
+        $0.textColor = .setCustomColor(.white)
+        $0.font = .setCustomFont(font: .bold, size: 24)
     }
     
     let btnSetting = UIButton(type: .system).then {
@@ -128,7 +128,7 @@ class WeatherView: BaseView {
         
         let views = [
             ivBack, viewBlur,
-            btnCity, btnSetting,
+            lblCity, btnSetting,
             svMother
         ]
         
@@ -136,54 +136,54 @@ class WeatherView: BaseView {
     }
     
     private func setLayout() {
-        ivBack.snp.makeConstraints {
-            $0.top.left.bottom.equalTo(self)
-            $0.width.equalTo(self).multipliedBy(1.1)
+        ivBack.snp.makeConstraints { make in
+            make.top.centerX.bottom.equalTo(self)
+            make.width.equalTo(self).multipliedBy(1.1)
         }
         
-        viewBlur.snp.makeConstraints {
-            $0.edges.equalTo(ivBack)
+        viewBlur.snp.makeConstraints { make in
+            make.edges.equalTo(ivBack)
         }
         
-        btnCity.snp.makeConstraints { make in
+        lblCity.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide)
             make.left.equalTo(self).inset(15)
         }
         
         btnSetting.snp.makeConstraints { make in
-            make.centerY.equalTo(btnCity)
+            make.centerY.equalTo(lblCity)
             make.right.equalTo(self).inset(5)
             make.width.height.equalTo(45)
         }
         
-        svMother.snp.makeConstraints {
-            $0.top.equalTo(btnSetting.snp.bottom)
-            $0.left.right.bottom.equalTo(self)
+        svMother.snp.makeConstraints { make in
+            make.top.equalTo(btnSetting.snp.bottom)
+            make.left.right.bottom.equalTo(self)
         }
         
-        lblTemp.snp.makeConstraints {
-            $0.top.equalTo(svMother.snp.bottom).multipliedBy(0.23)
-            $0.left.equalTo(self).inset(10)
+        lblTemp.snp.makeConstraints { make in
+            make.top.equalTo(svMother.snp.bottom).multipliedBy(0.23)
+            make.left.equalTo(self).inset(10)
         }
         
-        svTemp.snp.makeConstraints {
-            $0.top.left.equalTo(lblTemp)
+        svTemp.snp.makeConstraints { make in
+            make.top.left.equalTo(lblTemp)
         }
         
-        ivNow.snp.makeConstraints {
-            $0.width.height.equalTo(45)
+        ivNow.snp.makeConstraints { make in
+            make.width.height.equalTo(45)
         }
         
-        svNowInfo.snp.makeConstraints {
-            $0.left.equalTo(svTemp)
-            $0.bottom.equalTo(svTemp.snp.top)
+        svNowInfo.snp.makeConstraints { make in
+            make.left.equalTo(svTemp)
+            make.bottom.equalTo(svTemp.snp.top)
         }
         
-        tvList.snp.makeConstraints {
-            $0.top.equalTo(lblTemp.snp.bottom)
-            $0.left.right.equalTo(self)
-            $0.height.equalTo(0)
-            $0.bottom.equalTo(svMother)
+        tvList.snp.makeConstraints { make in
+            make.top.equalTo(lblTemp.snp.bottom)
+            make.left.right.equalTo(self)
+            make.height.equalTo(0)
+            make.bottom.equalTo(svMother)
         }
     }
     
@@ -207,7 +207,7 @@ class WeatherView: BaseView {
             ivBack.animate(withGIFNamed: "sunny")
         }
         
-        btnCity.setTitle(data.address, for: .normal)
+        lblCity.text = data.address
         ivNow.image = UIImage(named: data.icon)
         lblNow.text = data.description
         lblMinTemp.text = data.minTemp.toString("⤓ %.1f°")
@@ -219,7 +219,9 @@ class WeatherView: BaseView {
     
     func setOffset(_ offset: CGPoint) {
         ivBack.center.x = self.center.x - (offset.y / 20)
-        viewBlur.alpha = offset.y / self.frame.height
+        
+        let alpha = offset.y / self.frame.height
+        viewBlur.alpha = alpha > 0.5 ? alpha : 0.5
     }
     
     func setWeatherCast(_ count: Int) {

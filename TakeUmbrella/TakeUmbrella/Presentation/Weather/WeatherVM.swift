@@ -14,7 +14,6 @@ import RxCocoa
 class WeatherVM: BaseVM, WeatherProtocol {
     struct Input {
         let bindRefresh = PublishRelay<Void>()
-        let bindLocation = PublishRelay<Void>()
     }
     
     struct Output {
