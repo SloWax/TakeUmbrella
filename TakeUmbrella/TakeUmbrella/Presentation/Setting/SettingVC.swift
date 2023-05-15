@@ -12,7 +12,7 @@ import RxCocoa
 import RxOptional
 
 
-class SettingVC: BaseVC {
+class SettingVC: BaseSceneVC {
     private let settingView = SettingView()
     private let vm = SettingVM()
     
@@ -28,6 +28,15 @@ class SettingVC: BaseVC {
     }
     
     private func bind() {
-        
+        vm.output
+            .bindMyList // 
+            .bind(to: settingView.tvMy
+                .rx
+                .items(cellIdentifier: MyCityCell.id,
+                       cellType: MyCityCell.self)
+            ) { (row, data, cell) in
+                
+//                cell.setValue(data)
+            }.disposed(by: vm.bag)
     }
 }

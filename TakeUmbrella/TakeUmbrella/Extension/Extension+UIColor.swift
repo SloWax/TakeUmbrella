@@ -44,15 +44,15 @@ enum ColorCode: String {
     // primary
 //    case primaryRed            = "#ED6363"
 //    case primaryYellow         = "#FFD100"
-//    case primaryBlue           = "#6F74EA"
+    case primaryBlue           = "#68B4D1"
     
     // Grays
     case white                 = "#FFFFFF"
-//    case gray1                 = "#F5F5F5"
-//    case gray2                 = "#DBDBDB"
-//    case gray4                 = "#B8B8B8"
-//    case gray6                 = "#808080"
-//    case gray8                 = "#555555"
-//    case gray10                = "#393939"
+    case gray1                 = "#F5F5F5"
+    case gray2                 = "#DBDBDB"
+    case gray4                 = "#B8B8B8"
+    case gray6                 = "#808080"
+    case gray8                 = "#555555"
+    case gray10                = "#393939"
     case black                 = "#000000"
 }

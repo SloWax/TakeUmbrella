@@ -15,7 +15,7 @@ import Then
 
 class SplashVC: BaseVC {
     
-    private let ivImage = UIView().then {
+    private let viewBack = UIView().then {
         $0.backgroundColor = .setCustomColor(.black)
     }
     
@@ -29,7 +29,7 @@ class SplashVC: BaseVC {
     }
     
     private func initialize() {
-        view = ivImage
+        view = viewBack
     }
     
     private func bind() {

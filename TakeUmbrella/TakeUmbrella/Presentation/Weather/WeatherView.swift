@@ -96,8 +96,6 @@ class WeatherView: BaseView {
         $0.register(WeatherCell.self, forCellReuseIdentifier: WeatherCell.id)
     }
     
-    private var effectViewAlpha: CGFloat = 0
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
