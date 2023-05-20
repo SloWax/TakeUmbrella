@@ -74,7 +74,6 @@
 		6EC3CF792A13901200BE5848 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF782A13901200BE5848 /* SettingVC.swift */; };
 		6EC3CF7B2A13901900BE5848 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7A2A13901900BE5848 /* SettingView.swift */; };
 		6EC3CF7D2A13902200BE5848 /* SettingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7C2A13902200BE5848 /* SettingVM.swift */; };
-		6ED2F8EB2A14DDEB0096E70E /* MyCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F8EA2A14DDEB0096E70E /* MyCityCell.swift */; };
 		8979D9F4A9E79DBBDC9B34D1 /* Pods_TakeUmbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,7 +150,6 @@
 		6EC3CF782A13901200BE5848 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		6EC3CF7A2A13901900BE5848 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		6EC3CF7C2A13902200BE5848 /* SettingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVM.swift; sourceTree = "<group>"; };
-		6ED2F8EA2A14DDEB0096E70E /* MyCityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCityCell.swift; sourceTree = "<group>"; };
 		AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeUmbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -287,10 +285,10 @@
 			children = (
 				6E86E58D29EEEBB900FC0A17 /* BaseView.swift */,
 				6E86E58C29EEEBB900FC0A17 /* BaseMainVC.swift */,
+				6E86E58A29EEEBB900FC0A17 /* BaseSceneVC.swift */,
 				6E86E58729EEEBB900FC0A17 /* BaseVC.swift */,
 				6E86E58829EEEBB900FC0A17 /* BaseNC.swift */,
 				6E86E58929EEEBB900FC0A17 /* BaseModalVC.swift */,
-				6E86E58A29EEEBB900FC0A17 /* BaseSceneVC.swift */,
 				6E86E58B29EEEBB900FC0A17 /* BaseVM.swift */,
 			);
 			path = Base;
@@ -409,17 +407,8 @@
 				6EC3CF7A2A13901900BE5848 /* SettingView.swift */,
 				6EC3CF782A13901200BE5848 /* SettingVC.swift */,
 				6EC3CF7C2A13902200BE5848 /* SettingVM.swift */,
-				6ED2F8E92A14DDB90096E70E /* Custom */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		6ED2F8E92A14DDB90096E70E /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				6ED2F8EA2A14DDEB0096E70E /* MyCityCell.swift */,
-			);
-			path = Custom;
 			sourceTree = "<group>";
 		};
 		72C2F333B6AFB70DCC803503 /* Pods */ = {
@@ -595,7 +584,6 @@
 				6EC3CF5C29F95E7800BE5848 /* WeatherProtocol.swift in Sources */,
 				6E86E5AA29EEF12600FC0A17 /* WeatherCasterViewController.swift in Sources */,
 				6E86E5A729EEF12600FC0A17 /* MotherScrollView.swift in Sources */,
-				6ED2F8EB2A14DDEB0096E70E /* MyCityCell.swift in Sources */,
 				6E86E58529EEEBA800FC0A17 /* Extension+UIStackView.swift in Sources */,
 				6E86E5C129EF9E2D00FC0A17 /* Extension+Codable.swift in Sources */,
 				6E86E59029EEEBBA00FC0A17 /* BaseModalVC.swift in Sources */,

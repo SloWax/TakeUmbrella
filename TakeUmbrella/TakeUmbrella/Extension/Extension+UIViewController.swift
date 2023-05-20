@@ -16,6 +16,7 @@ extension UIViewController {
         }
         
         vc.title = title
+        
         self.navigationController?.pushViewController(vc, animated: animated)
     }
     

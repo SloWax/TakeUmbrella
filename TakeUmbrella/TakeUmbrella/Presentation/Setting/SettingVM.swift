@@ -17,7 +17,7 @@ class SettingVM: BaseVM {
     }
     
     struct Output {
-        let bindMyList = BehaviorRelay<[Int]>(value: [1, 2])
+        
     }
     
     let input: Input

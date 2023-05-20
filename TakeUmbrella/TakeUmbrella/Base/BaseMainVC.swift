@@ -13,5 +13,9 @@ class BaseMainVC: BaseVC {
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.setCustomColor(.black)
+        ]
     }
 }

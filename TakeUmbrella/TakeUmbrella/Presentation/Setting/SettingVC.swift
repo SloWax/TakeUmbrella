@@ -28,15 +28,23 @@ class SettingVC: BaseSceneVC {
     }
     
     private func bind() {
-        vm.output
-            .bindMyList // 
-            .bind(to: settingView.tvMy
-                .rx
-                .items(cellIdentifier: MyCityCell.id,
-                       cellType: MyCityCell.self)
-            ) { (row, data, cell) in
+        settingView.viewPush.swOnOff
+            .rx
+            .value
+            .changed
+            .bind { [weak self] value in
+                guard let self = self else { return }
                 
-//                cell.setValue(data)
+                
+            }.disposed(by: vm.bag)
+            
+        settingView.btnTime
+            .rx
+            .tap
+            .bind { [weak self] in
+                guard let self = self else { return }
+                
+                
             }.disposed(by: vm.bag)
     }
 }

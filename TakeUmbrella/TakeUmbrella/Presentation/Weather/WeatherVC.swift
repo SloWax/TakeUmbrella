@@ -63,7 +63,7 @@ class WeatherVC: BaseMainVC {
                 guard let self = self else { return }
                 
                 let vc = SettingVC()
-                self.pushVC(vc)
+                self.pushVC(vc, title: "설정")
             }.disposed(by: vm.bag)
         
         weatherView.svMother // 배경 블러처리
