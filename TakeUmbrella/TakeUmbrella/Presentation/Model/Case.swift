@@ -7,6 +7,10 @@
 
 import Foundation
 
+typealias Time = (hour: Int, min: Int)
+typealias OnTime = (Time) -> Void
+typealias CallBack = () -> Void
+
 enum LocationAuth {
     case auth
     case notDetermined

@@ -152,10 +152,10 @@ final class TimeMenu: UIButton {
         }
     }
     
-    func setValue(value: String) {
-        self.isEnabled = false
+    func setValue(_ isOn: Bool, value: String) {
+        self.isEnabled = isOn
         
-        let textColor: UIColor = self.isEnabled ? .setCustomColor(.black) : .setCustomColor(.gray2)
+        let textColor: UIColor = isOn ? .setCustomColor(.black) : .setCustomColor(.gray2)
         lblTitle.textColor = textColor
         lblValue.textColor = textColor
         
