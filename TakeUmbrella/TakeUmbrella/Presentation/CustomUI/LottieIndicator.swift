@@ -38,6 +38,22 @@ class LottieIndicator {
         }
     }
     
+    func show(_ superview: UIView) {
+        let animationView = AnimationView(name: "UmbrellaIndicator")
+        animationView.frame.size = CGSize(width: 500, height: 500)
+        animationView.center = CGPoint(x: superview.center.x - 20, y: superview.center.y)
+        animationView.contentMode = .scaleAspectFit
+        
+        //뷰에 삽입
+        superview.addSubview(animationView)
+
+        //애니메이션 재생모드( .loop = 애니메이션 무한재생)
+        animationView.loopMode = .loop
+
+        //애니메이션 재생(애니메이션 재생모드 미 설정시 1회)
+        animationView.play()
+    }
+    
     func dismiss() {
         animationView.stop()
         animationView.removeFromSuperview()

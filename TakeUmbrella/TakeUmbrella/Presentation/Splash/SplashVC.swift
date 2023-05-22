@@ -12,7 +12,6 @@ import RxCocoa
 import RxGesture
 import Then
 
-
 class SplashVC: BaseVC {
     
     private let viewBack = UIView().then {
@@ -41,26 +40,27 @@ class SplashVC: BaseVC {
             .disposed(by: vm.bag)
         
         self.rx
-            .viewWillAppear // 화면이 뜰 때
+            .viewWillAppear
+            .map { [weak self] in
+                guard let self = self else { return }
+                
+                LottieIndicator.shared.show(self.viewBack)
+            }
             .bind(to: vm.input.bindAuth)
-            .disposed(by: vm.bag)
-        
-        self.rx
-            .viewDidAppear
-            .bind { LottieIndicator.shared.show() }
             .disposed(by: vm.bag)
         
         vm.output
             .bindAuth
-            .delay(.seconds(3), scheduler: MainScheduler.instance)
-            .bind { [weak self] data in
+            .delay(.seconds(1), scheduler: MainScheduler.instance)
+            .bind { [weak self] auth in
                 guard let self = self else { return }
                 
                 LottieIndicator.shared.dismiss()
                 
-                if let data = data {
+                switch auth {
+                case true:
                     WindowManager.change(.weather)
-                } else {
+                case false:
                     self.openSettingAlert(
                         title: "위치권한을 허용해 주세요.",
                         message: "앱을 사용하기 위해서 꼭 필요해요!"

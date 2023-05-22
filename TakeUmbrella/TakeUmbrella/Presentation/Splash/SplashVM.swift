@@ -16,7 +16,7 @@ class SplashVM: BaseVM, WeatherProtocol {
     }
     
     struct Output {
-        let bindAuth = PublishRelay<(now: NowWeatherModel, days: [DayWeatherModel])?>()
+        let bindAuth = PublishRelay<Bool>()
     }
     
     let input: Input
@@ -29,8 +29,17 @@ class SplashVM: BaseVM, WeatherProtocol {
         
         self.input
             .bindAuth
-            .bind { LocationManager.shared.request() }
-            .disposed(by: bag)
+            .bind {
+                LocationManager.shared.request()
+                
+                UserInfoManager.shared.removeAllNotification(.delivered)
+                
+                if !UserInfoManager.shared.getUserDefault(key: .launched, type: Bool.self) {
+                    UserInfoManager.shared.setUserDefault(true, key: .launched)
+                    UserInfoManager.shared.setUserDefault(true, key: .push)
+                    UserInfoManager.shared.setUserDefault(480, key: .time)
+                }
+            }.disposed(by: bag)
         
         LocationManager.shared
             .bindAuth
@@ -40,7 +49,7 @@ class SplashVM: BaseVM, WeatherProtocol {
                 switch status {
                 case .auth          : self.requestWeather()
                 case .notDetermined : break
-                case .denied        : self.output.bindAuth.accept(nil)
+                case .denied        : self.output.bindAuth.accept(false)
                 }
             }.disposed(by: bag)
     }
@@ -50,8 +59,8 @@ class SplashVM: BaseVM, WeatherProtocol {
             guard let self = self else { return }
             
             switch result {
-            case .success(let data):
-                self.output.bindAuth.accept(data)
+            case .success:
+                self.output.bindAuth.accept(true)
                 
                 self.addPushRainy()
             case .failure(let error):
