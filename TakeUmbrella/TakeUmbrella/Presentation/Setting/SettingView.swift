@@ -152,13 +152,18 @@ final class TimeMenu: UIButton {
         }
     }
     
-    func setValue(_ isOn: Bool, value: String) {
+    func setValue(_ isOn: Bool, value: Int? = nil) {
         self.isEnabled = isOn
         
         let textColor: UIColor = isOn ? .setCustomColor(.black) : .setCustomColor(.gray2)
         lblTitle.textColor = textColor
         lblValue.textColor = textColor
         
-        lblValue.text = value
+        if let time = value?.splitTime {
+            let hour = time.hour
+            let min = time.min
+            let value = min == 0 ? "\(hour)시" : "\(hour)시 \(min)분"
+            lblValue.text = value
+        }
     }
 }

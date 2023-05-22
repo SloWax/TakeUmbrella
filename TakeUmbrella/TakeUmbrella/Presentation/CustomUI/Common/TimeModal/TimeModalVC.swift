@@ -34,7 +34,7 @@ class TimeModalVC: BaseModalVC {
         },
         attributedTitleForRow: { _, _, items, row, component -> NSAttributedString? in
             var value = "\(items[component][row])"
-            component == 0 ? (value += " 시간") : (value += " 분")
+            component == 0 ? (value += " 시") : (value += " 분")
             
             let attributed = NSAttributedString(
                 string: value,

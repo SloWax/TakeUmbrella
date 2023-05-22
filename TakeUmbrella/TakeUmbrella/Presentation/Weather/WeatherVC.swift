@@ -118,16 +118,28 @@ class WeatherVC: BaseMainVC {
     }
     
     private func addPush() {
-        let push =  UNMutableNotificationContent()
-
-        push.title = "엄마가우산챙기래"
-        push.subtitle = "일기예보를 다시 확인해볼까요?"
-        push.badge = 1
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        let request = UNNotificationRequest(identifier: "rain", content: push, trigger: trigger)
+        guard DeviceManager.shared.getValue(key: .push, type: Bool.self) else { return }
         
-        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        DeviceManager.shared.removeAllNotification(.Pending)
+        
+        let time = DeviceManager.shared
+            .getValue(key: .time, type: Int.self)
+            .splitTime
+        
+        let calendar = Calendar.current
+        let now = Date()
+        let components = DateComponents(hour: time.hour, minute: time.min)
+        let nextTime = calendar.nextDate(after: now, matching: components, matchingPolicy: .nextTime) ?? Date()
+        let interval = DateInterval(start: now, end: nextTime)
+        let duration = interval.duration
+        print(duration)
+        
+        let timeInterval: TimeInterval = duration
+        
+        DeviceManager.shared.addNotification(
+            title: "엄마가우산챙기래",
+            subtitle: "일기예보를 다시 확인해볼까요?",
+            timeInterval: timeInterval
+        )
     }
 }

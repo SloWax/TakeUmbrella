@@ -52,9 +52,7 @@ class SettingVC: BaseSceneVC {
                     subTitle: "비 소식이 있다면 몇시에 알려드릴까요?",
                     confirmTitle: "설정",
                     defaultTime: defaultTime,
-                    onWorkTime: { time in
-                        print(time)
-                    }
+                    onWorkTime: { self.vm.input.bindTime.accept($0) }
                 )
                 
                 self.presentVC(modal)
@@ -65,8 +63,8 @@ class SettingVC: BaseSceneVC {
             .bind { [weak self] data in
                 guard let self = self else { return }
 
-                self.settingView.viewPush.swOnOff.setOn(data, animated: false)
-                self.settingView.btnTime.setValue(data, value: "설정됨")
+                self.settingView.viewPush.swOnOff.setOn(data.isOn, animated: false)
+                self.settingView.btnTime.setValue(data.isOn, value: data.time)
             }.disposed(by: vm.bag)
         
         vm.output
@@ -74,7 +72,7 @@ class SettingVC: BaseSceneVC {
             .bind { [weak self] isOn in
                 guard let self = self else { return }
                 
-                self.settingView.btnTime.setValue(isOn, value: "설정됨")
+                self.settingView.btnTime.setValue(isOn)
             }.disposed(by: vm.bag)
     }
 }
