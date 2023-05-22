@@ -24,12 +24,12 @@ class WeatherVM: BaseVM, WeatherProtocol {
     let input: Input
     let output: Output
     
-    init(input: Input = Input(), output: Output = Output(),
-         daysWeather: [DayWeatherModel]) {
+    init(input: Input = Input(), output: Output = Output()) {
         
         self.input = input
         self.output = output
         
+        let daysWeather = UserInfoManager.shared.getDays()
         output.bindList.accept(daysWeather)
         
         super.init()
@@ -52,6 +52,7 @@ class WeatherVM: BaseVM, WeatherProtocol {
                 self.output.bindNow.accept(data.now)
                 self.output.bindList.accept(data.days)
                 
+                self.addPushRainy()
             case .failure(let error):
                 self.error.accept(error)
             }

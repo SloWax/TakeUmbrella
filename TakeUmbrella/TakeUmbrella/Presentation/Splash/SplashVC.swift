@@ -59,7 +59,7 @@ class SplashVC: BaseVC {
                 LottieIndicator.shared.dismiss()
                 
                 if let data = data {
-                    WindowManager.change(.weather(nowWeather: data.now, daysWeather: data.days))
+                    WindowManager.change(.weather)
                 } else {
                     self.openSettingAlert(
                         title: "위치권한을 허용해 주세요.",

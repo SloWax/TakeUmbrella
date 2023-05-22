@@ -12,14 +12,14 @@ class WindowManager {
     
     enum Path {
         case splash
-        case weather(nowWeather: NowWeatherModel, daysWeather: [DayWeatherModel])
+        case weather
         
         var vc: UIViewController {
             switch self {
             case .splash:
                 return SplashVC()
-            case .weather(let now, let days):
-                let vc = WeatherVC(nowWeather: now, daysWeather: days)
+            case .weather:
+                let vc = WeatherVC()
                 let navi = BaseNC(rootViewController: vc)
                 return navi
             }

@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 
-class SettingVM: BaseVM {
+class SettingVM: BaseVM, WeatherProtocol {
     struct Input {
         let loadData = PublishRelay<Void>()
         let bindSwitch = PublishRelay<Bool>()
@@ -19,7 +19,7 @@ class SettingVM: BaseVM {
     }
     
     struct Output {
-        let setData = PublishRelay<(isOn: Bool, time: Int?)>()
+        let setData = PublishRelay<(isOn: Bool, time: Int)>()
         let bindSwitch = PublishRelay<Bool>()
     }
     
@@ -34,20 +34,22 @@ class SettingVM: BaseVM {
         self.input
             .loadData
             .map {
-                let isOn = DeviceManager.shared.getValue(key: .push, type: Bool.self)
-                let time = DeviceManager.shared.getValue(key: .time, type: Int.self)
-                let sumTime = (time > 0) ? time : nil
+                let isOn = UserInfoManager.shared.getUserDefault(key: .push, type: Bool.self)
+                let time = UserInfoManager.shared.getUserDefault(key: .time, type: Int.self)
                 
-                return (isOn, sumTime)
+                return (isOn, time)
             }
             .bind(to: self.output.setData)
             .disposed(by: bag)
         
         self.input
             .bindSwitch
-            .map { isOn in
-                if !isOn { DeviceManager.shared.removeAllNotification(.Pending) }
-                DeviceManager.shared.setValue(isOn, key: .push)
+            .map { [weak self] isOn in
+                guard let self = self else { return isOn }
+                
+                UserInfoManager.shared.setUserDefault(isOn, key: .push)
+                
+                isOn ? self.addPushRainy() : UserInfoManager.shared.removeAllNotification(.pending)
                 
                 return isOn
             }
@@ -58,7 +60,7 @@ class SettingVM: BaseVM {
             .bindTime
             .map { time in
                 let convertTime = (time.hour * 60) + time.min
-                DeviceManager.shared.setValue(convertTime, key: .time)
+                UserInfoManager.shared.setUserDefault(convertTime, key: .time)
                 
                 return Void()
             }

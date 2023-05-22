@@ -14,19 +14,7 @@ import RxOptional
 
 class WeatherVC: BaseMainVC {
     private let weatherView = WeatherView()
-    private let vm: WeatherVM
-    
-    init(nowWeather: NowWeatherModel, daysWeather: [DayWeatherModel]) {
-        
-        self.weatherView.setValue(nowWeather)
-        self.vm = WeatherVM(daysWeather: daysWeather)
-        
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    private let vm = WeatherVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +25,10 @@ class WeatherVC: BaseMainVC {
     
     private func initialize() {
         view = weatherView
+        
+        if let nowWeather = UserInfoManager.shared.getNow() {
+            weatherView.setValue(nowWeather)
+        }
         
         let userNotiCenter = UNUserNotificationCenter.current()
         let notiAuthOptions = UNAuthorizationOptions(arrayLiteral: [.criticalAlert, .badge, .sound])
@@ -110,36 +102,6 @@ class WeatherVC: BaseMainVC {
                 guard let self = self else { return }
                 
                 self.weatherView.setWeatherCast(list.count)
-                
-                guard list.contains(where: { $0.rain }) else { return }
-                
-                self.addPush()
             }.disposed(by: vm.bag)
-    }
-    
-    private func addPush() {
-        guard DeviceManager.shared.getValue(key: .push, type: Bool.self) else { return }
-        
-        DeviceManager.shared.removeAllNotification(.Pending)
-        
-        let time = DeviceManager.shared
-            .getValue(key: .time, type: Int.self)
-            .splitTime
-        
-        let calendar = Calendar.current
-        let now = Date()
-        let components = DateComponents(hour: time.hour, minute: time.min)
-        let nextTime = calendar.nextDate(after: now, matching: components, matchingPolicy: .nextTime) ?? Date()
-        let interval = DateInterval(start: now, end: nextTime)
-        let duration = interval.duration
-        print(duration)
-        
-        let timeInterval: TimeInterval = duration
-        
-        DeviceManager.shared.addNotification(
-            title: "엄마가우산챙기래",
-            subtitle: "일기예보를 다시 확인해볼까요?",
-            timeInterval: timeInterval
-        )
     }
 }

@@ -21,6 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         window?.rootViewController = SplashVC()
         window?.makeKeyAndVisible()
         
+        UserInfoManager.shared.removeAllNotification(.delivered)
+        
+        if !UserInfoManager.shared.getUserDefault(key: .launched, type: Bool.self) {
+            UserInfoManager.shared.setUserDefault(true, key: .launched)
+            UserInfoManager.shared.setUserDefault(true, key: .push)
+            UserInfoManager.shared.setUserDefault(480, key: .time)
+        }
+        
         return true
     }
     

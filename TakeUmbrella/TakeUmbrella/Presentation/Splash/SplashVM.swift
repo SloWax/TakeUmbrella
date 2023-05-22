@@ -52,6 +52,8 @@ class SplashVM: BaseVM, WeatherProtocol {
             switch result {
             case .success(let data):
                 self.output.bindAuth.accept(data)
+                
+                self.addPushRainy()
             case .failure(let error):
                 self.error.accept(error)
             }

@@ -46,7 +46,10 @@ class SettingVC: BaseSceneVC {
             .bind { [weak self] in
                 guard let self = self else { return }
                 
-                let defaultTime = (0, 0)
+                let defaultTime = UserInfoManager.shared
+                    .getUserDefault(key: .time, type: Int.self)
+                    .splitTime
+                
                 let modal = TimeModalVC(
                     title: "알림 시간 설정",
                     subTitle: "비 소식이 있다면 몇시에 알려드릴까요?",

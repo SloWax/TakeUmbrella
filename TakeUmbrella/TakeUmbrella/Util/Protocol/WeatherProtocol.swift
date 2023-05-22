@@ -103,9 +103,35 @@ extension WeatherProtocol where Self: BaseVM {
                     temp: nowData.main.temp.toCelsius
                 )
                 
+                UserInfoManager.shared.setNow(now)
+                UserInfoManager.shared.setDays(days)
+                
                 completion(.success((now, days)))
             } onError: { error in
                 completion(.failure(error))
             }.disposed(by: bag)
+    }
+    
+    func addPushRainy() {
+        guard UserInfoManager.shared.getUserDefault(key: .push, type: Bool.self),
+              UserInfoManager.shared.getDays().contains(where: { $0.rain }) else { return }
+        
+        UserInfoManager.shared.removeAllNotification(.pending)
+        
+        let time = UserInfoManager.shared
+            .getUserDefault(key: .time, type: Int.self)
+            .splitTime
+        
+        let components = DateComponents(hour: time.hour, minute: time.min)
+        let nextTime = Calendar.current.nextDate(after: Date(), matching: components, matchingPolicy: .nextTime) ?? Date()
+        let interval = DateInterval(start: Date(), end: nextTime)
+        let duration = interval.duration
+        
+        UserInfoManager.shared.addNotification(
+            identifier: "rain",
+            title: "엄마가우산챙기래",
+            subtitle: "일기예보를 다시 확인해볼까요?",
+            timeInterval: duration
+        )
     }
 }
