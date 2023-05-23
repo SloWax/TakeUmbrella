@@ -37,14 +37,6 @@
 		6E86E59329EEEBBA00FC0A17 /* BaseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E58C29EEEBB900FC0A17 /* BaseMainVC.swift */; };
 		6E86E59429EEEBBA00FC0A17 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E58D29EEEBB900FC0A17 /* BaseView.swift */; };
 		6E86E59729EEF03D00FC0A17 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E59629EEF03D00FC0A17 /* Colors.xcassets */; };
-		6E86E59C29EEF10400FC0A17 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E59A29EEF10400FC0A17 /* WeatherModel.swift */; };
-		6E86E59D29EEF10400FC0A17 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E59B29EEF10400FC0A17 /* WebService.swift */; };
-		6E86E5A529EEF12600FC0A17 /* WeatherCasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E59F29EEF12600FC0A17 /* WeatherCasterView.swift */; };
-		6E86E5A629EEF12600FC0A17 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5A029EEF12600FC0A17 /* CustomTableViewCell.swift */; };
-		6E86E5A729EEF12600FC0A17 /* MotherScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5A129EEF12600FC0A17 /* MotherScrollView.swift */; };
-		6E86E5A929EEF12600FC0A17 /* MyLocationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5A329EEF12600FC0A17 /* MyLocationStackView.swift */; };
-		6E86E5AA29EEF12600FC0A17 /* WeatherCasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5A429EEF12600FC0A17 /* WeatherCasterViewController.swift */; };
-		6E86E5AC29EEF14600FC0A17 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5AB29EEF14600FC0A17 /* ViewModel.swift */; };
 		6E86E5AE29EEFCC400FC0A17 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5AD29EEFCC400FC0A17 /* WeatherView.swift */; };
 		6E86E5B329EF4D8400FC0A17 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5B229EF4D8400FC0A17 /* WeatherVC.swift */; };
 		6E86E5B729EF73AE00FC0A17 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E5B629EF73AE00FC0A17 /* NotoSansKR-Light.otf */; };
@@ -117,14 +109,6 @@
 		6E86E58C29EEEBB900FC0A17 /* BaseMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMainVC.swift; sourceTree = "<group>"; };
 		6E86E58D29EEEBB900FC0A17 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		6E86E59629EEF03D00FC0A17 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		6E86E59A29EEF10400FC0A17 /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
-		6E86E59B29EEF10400FC0A17 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		6E86E59F29EEF12600FC0A17 /* WeatherCasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCasterView.swift; sourceTree = "<group>"; };
-		6E86E5A029EEF12600FC0A17 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		6E86E5A129EEF12600FC0A17 /* MotherScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotherScrollView.swift; sourceTree = "<group>"; };
-		6E86E5A329EEF12600FC0A17 /* MyLocationStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocationStackView.swift; sourceTree = "<group>"; };
-		6E86E5A429EEF12600FC0A17 /* WeatherCasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCasterViewController.swift; sourceTree = "<group>"; };
-		6E86E5AB29EEF14600FC0A17 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6E86E5AD29EEFCC400FC0A17 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		6E86E5B229EF4D8400FC0A17 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		6E86E5B629EF73AE00FC0A17 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
@@ -346,14 +330,6 @@
 		6E86E5AF29EEFCD100FC0A17 /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
-				6E86E59A29EEF10400FC0A17 /* WeatherModel.swift */,
-				6E86E59B29EEF10400FC0A17 /* WebService.swift */,
-				6E86E5A029EEF12600FC0A17 /* CustomTableViewCell.swift */,
-				6E86E5A329EEF12600FC0A17 /* MyLocationStackView.swift */,
-				6E86E5A129EEF12600FC0A17 /* MotherScrollView.swift */,
-				6E86E5A429EEF12600FC0A17 /* WeatherCasterViewController.swift */,
-				6E86E59F29EEF12600FC0A17 /* WeatherCasterView.swift */,
-				6E86E5AB29EEF14600FC0A17 /* ViewModel.swift */,
 			);
 			path = Deprecated;
 			sourceTree = "<group>";
@@ -601,14 +577,12 @@
 				6E86E5C329F184E200FC0A17 /* Extension+Double.swift in Sources */,
 				6EC3CF5229F85BD400BE5848 /* SplashVC.swift in Sources */,
 				6E86E5BD29EF893B00FC0A17 /* WeatherDto.swift in Sources */,
-				6E86E5A929EEF12600FC0A17 /* MyLocationStackView.swift in Sources */,
 				6E86E5B929EF7BF700FC0A17 /* WeatherVM.swift in Sources */,
 				6EC3CF792A13901200BE5848 /* SettingVC.swift in Sources */,
 				6EC3CF5429F85C1000BE5848 /* SplashVM.swift in Sources */,
 				6E86E5C529F2C2EC00FC0A17 /* WeatherCell.swift in Sources */,
 				6E86E58429EEEBA800FC0A17 /* Extension+Date.swift in Sources */,
 				6E86E5AE29EEFCC400FC0A17 /* WeatherView.swift in Sources */,
-				6E86E5AC29EEF14600FC0A17 /* ViewModel.swift in Sources */,
 				6E86E58129EEEBA800FC0A17 /* Extension+UIView.swift in Sources */,
 				6E86E5C729F2DF1D00FC0A17 /* NowWeatherModel.swift in Sources */,
 				6ED2F8F22A189D0C0096E70E /* TimeModalVM.swift in Sources */,
@@ -623,21 +597,16 @@
 				6E86E59329EEEBBA00FC0A17 /* BaseMainVC.swift in Sources */,
 				6E86E57729EEEBA800FC0A17 /* Extension+UIFont.swift in Sources */,
 				6EC3CF5C29F95E7800BE5848 /* WeatherProtocol.swift in Sources */,
-				6E86E5AA29EEF12600FC0A17 /* WeatherCasterViewController.swift in Sources */,
-				6E86E5A729EEF12600FC0A17 /* MotherScrollView.swift in Sources */,
 				6E86E58529EEEBA800FC0A17 /* Extension+UIStackView.swift in Sources */,
 				6E86E5C129EF9E2D00FC0A17 /* Extension+Codable.swift in Sources */,
 				6E86E59029EEEBBA00FC0A17 /* BaseModalVC.swift in Sources */,
 				6E86E57829EEEBA800FC0A17 /* Extension+UIViewController.swift in Sources */,
-				6E86E5A529EEF12600FC0A17 /* WeatherCasterView.swift in Sources */,
 				6EC3CF7D2A13902200BE5848 /* SettingVM.swift in Sources */,
 				6ED2F8F02A189D0C0096E70E /* TimeModalVC.swift in Sources */,
 				6E86E59229EEEBBA00FC0A17 /* BaseVM.swift in Sources */,
 				6EC3CF5E29F9638000BE5848 /* LottieIndicator.swift in Sources */,
 				6E86E59129EEEBBA00FC0A17 /* BaseSceneVC.swift in Sources */,
 				6E86E58F29EEEBBA00FC0A17 /* BaseNC.swift in Sources */,
-				6E86E59D29EEF10400FC0A17 /* WebService.swift in Sources */,
-				6E86E59C29EEF10400FC0A17 /* WeatherModel.swift in Sources */,
 				6E86E57F29EEEBA800FC0A17 /* Extension+Int.swift in Sources */,
 				6E86E57D29EEEBA800FC0A17 /* Extension+String.swift in Sources */,
 				6E86E5BB29EF85D600FC0A17 /* WeatherService.swift in Sources */,
@@ -650,7 +619,6 @@
 				6E86E57E29EEEBA800FC0A17 /* Extension+UIColor.swift in Sources */,
 				6ED2F8F12A189D0C0096E70E /* TimeModalView.swift in Sources */,
 				6E86E58E29EEEBBA00FC0A17 /* BaseVC.swift in Sources */,
-				6E86E5A629EEF12600FC0A17 /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
