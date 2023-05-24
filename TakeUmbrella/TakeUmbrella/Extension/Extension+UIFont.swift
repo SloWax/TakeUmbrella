@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import SwiftUI
 
 extension UIFont {
     // 폰트 설정
-    class func setCustomFont(font: Name, size: CGFloat) -> UIFont {
+    class func setCustomUIFont(font: Name, size: CGFloat) -> UIFont {
         guard let font = UIFont(name: font.rawValue, size: size) else { fatalError("Not found Font: \(font.rawValue)") }
         return font
+    }
+    
+    class func setCustomFont(font: Name, size: CGFloat) -> Font {
+        return .custom(font.rawValue, size: size)
     }
     
     // 폰트 굵기

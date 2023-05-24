@@ -30,7 +30,7 @@ class WeatherView: BaseView {
     
     let lblCity = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .bold, size: 24)
+        $0.font = .setCustomUIFont(font: .bold, size: 24)
     }
     
     let btnSetting = UIButton(type: .system).then {
@@ -58,7 +58,7 @@ class WeatherView: BaseView {
     
     private let lblNow = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .regular, size: 18)
+        $0.font = .setCustomUIFont(font: .regular, size: 18)
     }
     
     private let svTemp = UIStackView().then {
@@ -69,17 +69,17 @@ class WeatherView: BaseView {
     
     private let lblMinTemp = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .regular, size: 18)
+        $0.font = .setCustomUIFont(font: .regular, size: 18)
     }
     
     private let lblMaxTemp = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .regular, size: 18)
+        $0.font = .setCustomUIFont(font: .regular, size: 18)
     }
     
     private let lblFeelTemp = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .regular, size: 18)
+        $0.font = .setCustomUIFont(font: .regular, size: 18)
     }
     
     private let lblTemp = UILabel().then {
@@ -111,7 +111,7 @@ class WeatherView: BaseView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        lblTemp.font = .setCustomFont(font: .light, size: self.frame.width / 3)
+        lblTemp.font = .setCustomUIFont(font: .light, size: self.frame.width / 3)
     }
     
     private func setUP() {

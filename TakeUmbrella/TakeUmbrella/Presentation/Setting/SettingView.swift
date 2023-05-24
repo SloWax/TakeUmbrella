@@ -69,7 +69,7 @@ final class PushMenu: UIView {
     private let lblTitle = UILabel().then {
         $0.text = "비 소식 알림"
         $0.textColor = .setCustomColor(.black)
-        $0.font = .setCustomFont(font: .medium, size: 16)
+        $0.font = .setCustomUIFont(font: .medium, size: 16)
     }
     
     let swOnOff = UISwitch().then {
@@ -112,12 +112,12 @@ final class TimeMenu: UIButton {
     
     private let lblTitle = UILabel().then {
         $0.text = "알림 시간"
-        $0.font = .setCustomFont(font: .medium, size: 16)
+        $0.font = .setCustomUIFont(font: .medium, size: 16)
     }
     
     private let lblValue = UILabel().then {
         $0.text = "미설정"
-        $0.font = .setCustomFont(font: .regular, size: 16)
+        $0.font = .setCustomUIFont(font: .regular, size: 16)
         $0.textAlignment = .right
     }
     

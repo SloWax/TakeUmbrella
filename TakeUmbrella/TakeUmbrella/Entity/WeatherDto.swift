@@ -31,22 +31,6 @@ struct WeatherDto: Codable {
                 let lat: Double
             }
             
-            struct Weather: Codable {
-                let id: Int
-                let main: String
-                let description: String
-                let icon: String
-            }
-
-            struct Main: Codable {
-                let temp: Double
-                let feels_like: Double
-                let temp_min: Double
-                let temp_max: Double
-                let pressure: Int
-                let humidity: Int
-            }
-            
             struct System: Codable {
                 let country: String
                 let sunrise: Int
@@ -65,6 +49,22 @@ struct WeatherDto: Codable {
                 let weather: [Weather]
                 let dt_txt: String
             }
+        }
+        
+        struct Weather: Codable {
+            let id: Int
+            let main: String
+            let description: String
+            let icon: String
+        }
+
+        struct Main: Codable {
+            let temp: Double
+            let feels_like: Double
+            let temp_min: Double
+            let temp_max: Double
+            let pressure: Int
+            let humidity: Int
         }
     }
 }

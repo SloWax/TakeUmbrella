@@ -49,6 +49,9 @@
 		6E86E5C529F2C2EC00FC0A17 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C429F2C2EC00FC0A17 /* WeatherCell.swift */; };
 		6E86E5C729F2DF1D00FC0A17 /* NowWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C629F2DF1C00FC0A17 /* NowWeatherModel.swift */; };
 		6E86E5C929F2E3F200FC0A17 /* DayWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */; };
+		6EBF4D6B2A1CD48F007F1610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E54B29EEE67D00FC0A17 /* Assets.xcassets */; };
+		6EBF4D6C2A1CD975007F1610 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56F29EEEBA800FC0A17 /* Extension+UIColor.swift */; };
+		6EBF4D6D2A1E0246007F1610 /* Extension+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56829EEEBA800FC0A17 /* Extension+UIFont.swift */; };
 		6EC3CF4D29F6EE0C00BE5848 /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF4C29F6EE0C00BE5848 /* Extension+Array.swift */; };
 		6EC3CF4F29F6F28500BE5848 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */; };
 		6EC3CF5229F85BD400BE5848 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5129F85BD400BE5848 /* SplashVC.swift */; };
@@ -71,8 +74,40 @@
 		6ED2F8F22A189D0C0096E70E /* TimeModalVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F8EF2A189D0C0096E70E /* TimeModalVM.swift */; };
 		6ED2F8F62A189E6F0096E70E /* PyoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F8F52A189E6F0096E70E /* PyoButton.swift */; };
 		6ED2F8F82A1B72B50096E70E /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F8F72A1B72B50096E70E /* UserInfoManager.swift */; };
+		6ED2F94E2A1CBD7B0096E70E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED2F94D2A1CBD7B0096E70E /* WidgetKit.framework */; };
+		6ED2F9502A1CBD7B0096E70E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED2F94F2A1CBD7B0096E70E /* SwiftUI.framework */; };
+		6ED2F9532A1CBD7B0096E70E /* TUWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9522A1CBD7B0096E70E /* TUWidgetBundle.swift */; };
+		6ED2F9552A1CBD7B0096E70E /* TUWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9542A1CBD7B0096E70E /* TUWidgetLiveActivity.swift */; };
+		6ED2F9572A1CBD7B0096E70E /* TUWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */; };
+		6ED2F9592A1CBD7E0096E70E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED2F9582A1CBD7E0096E70E /* Assets.xcassets */; };
+		6ED2F95D2A1CBD7E0096E70E /* TUWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6ED2F94C2A1CBD7B0096E70E /* TUWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6ED2F9642A1CCD820096E70E /* Spacers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9622A1CCD1B0096E70E /* Spacers.swift */; };
 		8979D9F4A9E79DBBDC9B34D1 /* Pods_TakeUmbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6ED2F95B2A1CBD7E0096E70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E86E53729EEE67C00FC0A17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6ED2F94B2A1CBD7B0096E70E;
+			remoteInfo = TUWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6ED2F9612A1CBD7F0096E70E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6ED2F95D2A1CBD7E0096E70E /* TUWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		351851F743852EFAC104464D /* Pods-TakeUmbrella.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeUmbrella.release.xcconfig"; path = "Target Support Files/Pods-TakeUmbrella/Pods-TakeUmbrella.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +179,15 @@
 		6ED2F8EF2A189D0C0096E70E /* TimeModalVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeModalVM.swift; sourceTree = "<group>"; };
 		6ED2F8F52A189E6F0096E70E /* PyoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyoButton.swift; sourceTree = "<group>"; };
 		6ED2F8F72A1B72B50096E70E /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		6ED2F94C2A1CBD7B0096E70E /* TUWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TUWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ED2F94D2A1CBD7B0096E70E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		6ED2F94F2A1CBD7B0096E70E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		6ED2F9522A1CBD7B0096E70E /* TUWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUWidgetBundle.swift; sourceTree = "<group>"; };
+		6ED2F9542A1CBD7B0096E70E /* TUWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUWidget.swift; sourceTree = "<group>"; };
+		6ED2F9582A1CBD7E0096E70E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6ED2F95A2A1CBD7E0096E70E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ED2F9622A1CCD1B0096E70E /* Spacers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacers.swift; sourceTree = "<group>"; };
 		AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeUmbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,6 +200,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6ED2F9492A1CBD7B0096E70E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ED2F9502A1CBD7B0096E70E /* SwiftUI.framework in Frameworks */,
+				6ED2F94E2A1CBD7B0096E70E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -163,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				6E86E54129EEE67C00FC0A17 /* TakeUmbrella */,
+				6ED2F9512A1CBD7B0096E70E /* TUWidget */,
 				6E86E54029EEE67C00FC0A17 /* Products */,
 				72C2F333B6AFB70DCC803503 /* Pods */,
 				AD876E01C2AA34EAC5915861 /* Frameworks */,
@@ -173,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				6E86E53F29EEE67C00FC0A17 /* TakeUmbrella.app */,
+				6ED2F94C2A1CBD7B0096E70E /* TUWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -426,6 +481,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6ED2F9512A1CBD7B0096E70E /* TUWidget */ = {
+			isa = PBXGroup;
+			children = (
+				6ED2F9522A1CBD7B0096E70E /* TUWidgetBundle.swift */,
+				6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */,
+				6ED2F9542A1CBD7B0096E70E /* TUWidgetLiveActivity.swift */,
+				6ED2F9622A1CCD1B0096E70E /* Spacers.swift */,
+				6ED2F9582A1CBD7E0096E70E /* Assets.xcassets */,
+				6ED2F95A2A1CBD7E0096E70E /* Info.plist */,
+			);
+			path = TUWidget;
+			sourceTree = "<group>";
+		};
 		72C2F333B6AFB70DCC803503 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +507,8 @@
 			isa = PBXGroup;
 			children = (
 				AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */,
+				6ED2F94D2A1CBD7B0096E70E /* WidgetKit.framework */,
+				6ED2F94F2A1CBD7B0096E70E /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -455,15 +525,34 @@
 				6E86E53C29EEE67C00FC0A17 /* Frameworks */,
 				6E86E53D29EEE67C00FC0A17 /* Resources */,
 				58080A56DC0F66DF677268F9 /* [CP] Embed Pods Frameworks */,
+				6ED2F9612A1CBD7F0096E70E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6ED2F95C2A1CBD7E0096E70E /* PBXTargetDependency */,
 			);
 			name = TakeUmbrella;
 			productName = TakeUmbrella;
 			productReference = 6E86E53F29EEE67C00FC0A17 /* TakeUmbrella.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6ED2F94B2A1CBD7B0096E70E /* TUWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6ED2F95E2A1CBD7F0096E70E /* Build configuration list for PBXNativeTarget "TUWidgetExtension" */;
+			buildPhases = (
+				6ED2F9482A1CBD7B0096E70E /* Sources */,
+				6ED2F9492A1CBD7B0096E70E /* Frameworks */,
+				6ED2F94A2A1CBD7B0096E70E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TUWidgetExtension;
+			productName = TUWidgetExtension;
+			productReference = 6ED2F94C2A1CBD7B0096E70E /* TUWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -472,11 +561,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					6E86E53E29EEE67C00FC0A17 = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					6ED2F94B2A1CBD7B0096E70E = {
+						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
@@ -494,6 +586,7 @@
 			projectRoot = "";
 			targets = (
 				6E86E53E29EEE67C00FC0A17 /* TakeUmbrella */,
+				6ED2F94B2A1CBD7B0096E70E /* TUWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -517,6 +610,15 @@
 				6EC3CF6F29FAD96C00BE5848 /* cloud.gif in Resources */,
 				6E86E56129EEEB3200FC0A17 /* NotoSansKR-Black.otf in Resources */,
 				6E86E59729EEF03D00FC0A17 /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ED2F94A2A1CBD7B0096E70E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EBF4D6B2A1CD48F007F1610 /* Assets.xcassets in Resources */,
+				6ED2F9592A1CBD7E0096E70E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,7 +724,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6ED2F9482A1CBD7B0096E70E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ED2F9572A1CBD7B0096E70E /* TUWidget.swift in Sources */,
+				6EBF4D6C2A1CD975007F1610 /* Extension+UIColor.swift in Sources */,
+				6ED2F9642A1CCD820096E70E /* Spacers.swift in Sources */,
+				6ED2F9532A1CBD7B0096E70E /* TUWidgetBundle.swift in Sources */,
+				6EBF4D6D2A1E0246007F1610 /* Extension+UIFont.swift in Sources */,
+				6ED2F9552A1CBD7B0096E70E /* TUWidgetLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6ED2F95C2A1CBD7E0096E70E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6ED2F94B2A1CBD7B0096E70E /* TUWidgetExtension */;
+			targetProxy = 6ED2F95B2A1CBD7E0096E70E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6E86E54D29EEE67D00FC0A17 /* LaunchScreen.storyboard */ = {
@@ -754,6 +877,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 558386073E9614719578085B /* Pods-TakeUmbrella.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TakeUmbrella/TakeUmbrella.entitlements;
@@ -791,6 +915,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 351851F743852EFAC104464D /* Pods-TakeUmbrella.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TakeUmbrella/TakeUmbrella.entitlements;
@@ -824,6 +949,62 @@
 			};
 			name = Release;
 		};
+		6ED2F95F2A1CBD7F0096E70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3799SNND63;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TUWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TUWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SloWax.TakeUmbrella.TUWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6ED2F9602A1CBD7F0096E70E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3799SNND63;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TUWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TUWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SloWax.TakeUmbrella.TUWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -841,6 +1022,15 @@
 			buildConfigurations = (
 				6E86E55429EEE67D00FC0A17 /* Debug */,
 				6E86E55529EEE67D00FC0A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ED2F95E2A1CBD7F0096E70E /* Build configuration list for PBXNativeTarget "TUWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ED2F95F2A1CBD7F0096E70E /* Debug */,
+				6ED2F9602A1CBD7F0096E70E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -23,13 +23,13 @@ class TimeModalView: BaseView {
     
     private let lblTitle = UILabel().then {
         $0.textColor = .setCustomColor(.gray10)
-        $0.font = .setCustomFont(font: .bold, size: 18)
+        $0.font = .setCustomUIFont(font: .bold, size: 18)
         $0.textAlignment = .center
     }
     
     private let lblSubTitle = UILabel().then {
         $0.textColor = .setCustomColor(.gray10)
-        $0.font = .setCustomFont(font: .medium, size: 14)
+        $0.font = .setCustomUIFont(font: .medium, size: 14)
         $0.textAlignment = .center
         $0.numberOfLines = 0
     }
@@ -38,7 +38,7 @@ class TimeModalView: BaseView {
     let pvPicker = UIPickerView()
     
     let btnConfirm = PyoButton(type: .system).then {
-        $0.titleLabel?.font = .setCustomFont(font: .medium, size: 16)
+        $0.titleLabel?.font = .setCustomUIFont(font: .medium, size: 16)
     }
     
     override init(frame: CGRect) {

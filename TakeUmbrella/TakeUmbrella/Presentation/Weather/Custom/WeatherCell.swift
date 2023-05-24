@@ -21,12 +21,12 @@ class WeatherCell: UITableViewCell {
     
     private let lblDay = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .light, size: 16)
+        $0.font = .setCustomUIFont(font: .light, size: 16)
     }
     
     private let lblTime = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .regular, size: 24)
+        $0.font = .setCustomUIFont(font: .regular, size: 24)
     }
     
     private let ivIcon = UIImageView()
@@ -38,7 +38,7 @@ class WeatherCell: UITableViewCell {
     
     private let lblTemp = UILabel().then {
         $0.textColor = .setCustomColor(.white)
-        $0.font = .setCustomFont(font: .light, size: 50)
+        $0.font = .setCustomUIFont(font: .light, size: 50)
     }
     
     
