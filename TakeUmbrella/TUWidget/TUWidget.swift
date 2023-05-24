@@ -45,48 +45,46 @@ struct TUWidgetEntryView : View {
     var entry: Provider.Entry
     
     var body: some View {
-        ZStack {
-            Image("01d")
-            
-            VStack {
-                Text("5.24 (수) 21:00")
-                    .font(UIFont.setCustomFont(font: .medium, size: 14))
-                    .lineLimit(1)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top)
-                    .padding(.horizontal)
-                
-                HStack {
-                    Text("상하동")
-                        .font(UIFont.setCustomFont(font: .regular, size: 16))
-                    
-                    Text("맑음")
-                        .font(UIFont.setCustomFont(font: .regular, size: 16))
-                }
+        VStack {
+            Text("5.24 (수) 21:00")
+                .font(.setCustomFont(font: .medium, size: 14))
+                .lineLimit(1)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top)
                 .padding(.horizontal)
+            
+            Text("-99.9°")
+                .font(.setCustomFont(font: .black, size: 32))
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .padding(.horizontal)
+            
+            HStack(alignment: .bottom) {
+                Image("01d")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 50)
                 
-                Text("-99.9°")
-                    .font(UIFont.setCustomFont(font: .black, size: 32))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal)
+                Text("상하동")
+                    .font(.setCustomFont(font: .regular, size: 16))
+                
+                Text("맑음")
+                    .font(.setCustomFont(font: .regular, size: 16))
+                    .padding(.trailing)
+            }
+            
+            HStack {
+                Text("⤒ 99.9°")
+                    .font(.setCustomFont(font: .regular, size: 18))
+                    .padding(.leading)
                 
                 Spacer()
                 
-                HStack {
-                    Text("⤒ 99.9°")
-                        .font(UIFont.setCustomFont(font: .regular, size: 18))
-                        .padding(.leading)
-                    
-                    Spacer()
-                    
-                    Text("⤓ -11.0°")
-                        .font(UIFont.setCustomFont(font: .regular, size: 18))
-                        .padding(.trailing)
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.bottom)
+                Text("⤓ -11.0°")
+                    .font(.setCustomFont(font: .regular, size: 18))
+                    .padding(.trailing)
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom)
         }
     }
 }
