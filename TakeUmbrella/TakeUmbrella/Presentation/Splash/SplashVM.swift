@@ -37,6 +37,7 @@ class SplashVM: BaseVM, WeatherProtocol {
                 if !UserInfoManager.shared.getUserDefault(key: .launched, type: Bool.self) {
                     UserInfoManager.shared.setUserDefault(true, key: .launched)
                     UserInfoManager.shared.setUserDefault(true, key: .push)
+                    UserInfoManager.shared.setUserDefault(["일", "월", "화", "수", "목", "금", "토"], key: .days)
                     UserInfoManager.shared.setUserDefault(480, key: .time)
                 }
             }.disposed(by: bag)

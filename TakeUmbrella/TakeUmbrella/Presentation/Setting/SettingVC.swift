@@ -39,6 +39,26 @@ class SettingVC: BaseSceneVC {
             .changed
             .bind(to: vm.input.bindSwitch)
             .disposed(by: vm.bag)
+        
+        settingView.btnDays
+            .rx
+            .tap
+            .bind { [weak self] in
+                guard let self = self else { return }
+                
+                let defaultDays = UserInfoManager.shared
+                    .getUserDefault(key: .days, type: [String].self)
+                
+                let modal = DayModalVC(
+                    title: "알림 요일 설정",
+                    subTitle: "비 소식이 있다면 무슨 요일에 알려드릴까요?",
+                    confirmTitle: "설정",
+                    defaultDays: defaultDays,
+                    onDays: { self.vm.input.bindDays.accept($0) }
+                )
+                
+                self.presentVC(modal)
+            }.disposed(by: vm.bag)
             
         settingView.btnTime
             .rx
@@ -67,15 +87,8 @@ class SettingVC: BaseSceneVC {
                 guard let self = self else { return }
 
                 self.settingView.viewPush.swOnOff.setOn(data.isOn, animated: false)
-                self.settingView.btnTime.setValue(data.isOn, value: data.time)
-            }.disposed(by: vm.bag)
-        
-        vm.output
-            .bindSwitch
-            .bind { [weak self] isOn in
-                guard let self = self else { return }
-                
-                self.settingView.btnTime.setValue(isOn)
+                self.settingView.btnDays.setValue(data.isOn, days: data.days)
+                self.settingView.btnTime.setValue(data.isOn, time: data.time)
             }.disposed(by: vm.bag)
     }
 }

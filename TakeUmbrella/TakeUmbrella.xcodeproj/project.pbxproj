@@ -51,6 +51,10 @@
 		6E86E5C929F2E3F200FC0A17 /* DayWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */; };
 		6EBDA8872A25B5020001C22B /* TUWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */; };
 		6EBDA8882A25B71B0001C22B /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C229F184E200FC0A17 /* Extension+Double.swift */; };
+		6EBDA88F2A27BDC70001C22B /* DayModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDA88E2A27BDC70001C22B /* DayModalVC.swift */; };
+		6EBDA8912A27BDCE0001C22B /* DayModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDA8902A27BDCE0001C22B /* DayModalView.swift */; };
+		6EBDA8932A27BDD70001C22B /* DayModalVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDA8922A27BDD70001C22B /* DayModalVM.swift */; };
+		6EBDA8952A27BFC80001C22B /* DayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDA8942A27BFC80001C22B /* DayItem.swift */; };
 		6EBDC7AD2A2096F400440FF9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC7AC2A2096F400440FF9 /* DataManager.swift */; };
 		6EBDC7AE2A209F5500440FF9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC7AC2A2096F400440FF9 /* DataManager.swift */; };
 		6EBDC7AF2A20A0AE00440FF9 /* DayWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */; };
@@ -168,6 +172,10 @@
 		6E86E5C629F2DF1C00FC0A17 /* NowWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowWeatherModel.swift; sourceTree = "<group>"; };
 		6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherModel.swift; sourceTree = "<group>"; };
 		6EBDA88B2A2794010001C22B /* TUWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TUWidgetExtension.entitlements; sourceTree = "<group>"; };
+		6EBDA88E2A27BDC70001C22B /* DayModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModalVC.swift; sourceTree = "<group>"; };
+		6EBDA8902A27BDCE0001C22B /* DayModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModalView.swift; sourceTree = "<group>"; };
+		6EBDA8922A27BDD70001C22B /* DayModalVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModalVM.swift; sourceTree = "<group>"; };
+		6EBDA8942A27BFC80001C22B /* DayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayItem.swift; sourceTree = "<group>"; };
 		6EBDC7AC2A2096F400440FF9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6EC3CF4C29F6EE0C00BE5848 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 		6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -422,6 +430,17 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		6EBDA88D2A27BDA70001C22B /* DayModal */ = {
+			isa = PBXGroup;
+			children = (
+				6EBDA8902A27BDCE0001C22B /* DayModalView.swift */,
+				6EBDA88E2A27BDC70001C22B /* DayModalVC.swift */,
+				6EBDA8922A27BDD70001C22B /* DayModalVM.swift */,
+				6EBDA8942A27BFC80001C22B /* DayItem.swift */,
+			);
+			path = DayModal;
+			sourceTree = "<group>";
+		};
 		6EC3CF5029F85BC500BE5848 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +504,7 @@
 		6ED2F8F32A189D1B0096E70E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6EBDA88D2A27BDA70001C22B /* DayModal */,
 				6ED2F8EC2A189D0C0096E70E /* TimeModal */,
 			);
 			path = Common;
@@ -723,11 +743,13 @@
 				6E86E59429EEEBBA00FC0A17 /* BaseView.swift in Sources */,
 				6E86E58229EEEBA800FC0A17 /* Extension+Optional.swift in Sources */,
 				6E86E57B29EEEBA800FC0A17 /* Extension+UITextField.swift in Sources */,
+				6EBDA88F2A27BDC70001C22B /* DayModalVC.swift in Sources */,
 				6E86E5C329F184E200FC0A17 /* Extension+Double.swift in Sources */,
 				6EC3CF5229F85BD400BE5848 /* SplashVC.swift in Sources */,
 				6E86E5BD29EF893B00FC0A17 /* WeatherDto.swift in Sources */,
 				6E86E5B929EF7BF700FC0A17 /* WeatherVM.swift in Sources */,
 				6EC3CF792A13901200BE5848 /* SettingVC.swift in Sources */,
+				6EBDA8912A27BDCE0001C22B /* DayModalView.swift in Sources */,
 				6EC3CF5429F85C1000BE5848 /* SplashVM.swift in Sources */,
 				6E86E5C529F2C2EC00FC0A17 /* WeatherCell.swift in Sources */,
 				6E86E58429EEEBA800FC0A17 /* Extension+Date.swift in Sources */,
@@ -752,6 +774,7 @@
 				6E86E57829EEEBA800FC0A17 /* Extension+UIViewController.swift in Sources */,
 				6EC3CF7D2A13902200BE5848 /* SettingVM.swift in Sources */,
 				6ED2F8F02A189D0C0096E70E /* TimeModalVC.swift in Sources */,
+				6EBDA8932A27BDD70001C22B /* DayModalVM.swift in Sources */,
 				6E86E59229EEEBBA00FC0A17 /* BaseVM.swift in Sources */,
 				6EC3CF5E29F9638000BE5848 /* LottieIndicator.swift in Sources */,
 				6E86E59129EEEBBA00FC0A17 /* BaseSceneVC.swift in Sources */,
@@ -768,6 +791,7 @@
 				6ED2F8F82A1B72B50096E70E /* UserInfoManager.swift in Sources */,
 				6E86E58329EEEBA800FC0A17 /* Extension+Rx.swift in Sources */,
 				6E86E57E29EEEBA800FC0A17 /* Extension+UIColor.swift in Sources */,
+				6EBDA8952A27BFC80001C22B /* DayItem.swift in Sources */,
 				6ED2F8F12A189D0C0096E70E /* TimeModalView.swift in Sources */,
 				6E86E58E29EEEBBA00FC0A17 /* BaseVC.swift in Sources */,
 			);
@@ -945,7 +969,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -983,7 +1007,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

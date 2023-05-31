@@ -9,6 +9,7 @@ import Foundation
 
 typealias Time = (hour: Int, min: Int)
 typealias OnTime = (Time) -> Void
+typealias OnDays = ([String]) -> Void
 typealias CallBack = () -> Void
 
 enum LocationAuth {

@@ -17,6 +17,7 @@ class UserInfoManager: NSObject {
     
     enum UserDefaultKeys: String {
         case push     = "PUSH"
+        case days     = "DAYS"
         case time     = "TIME"
         case launched = "LAUNCHED"
     }
@@ -67,6 +68,8 @@ class UserInfoManager: NSObject {
         switch key {
         case .push, .launched:
             return UserDefaults.standard.bool(forKey: key.rawValue) as! T
+        case .days:
+            return UserDefaults.standard.array(forKey: key.rawValue) as! T
         case .time:
             return UserDefaults.standard.integer(forKey: key.rawValue) as! T
         }

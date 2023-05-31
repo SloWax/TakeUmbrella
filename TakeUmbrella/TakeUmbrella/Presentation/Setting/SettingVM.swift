@@ -15,12 +15,12 @@ class SettingVM: BaseVM, WeatherProtocol {
     struct Input {
         let loadData = PublishRelay<Void>()
         let bindSwitch = PublishRelay<Bool>()
+        let bindDays = PublishRelay<[String]>()
         let bindTime = PublishRelay<(hour: Int, min: Int)>()
     }
     
     struct Output {
-        let setData = PublishRelay<(isOn: Bool, time: Int)>()
-        let bindSwitch = PublishRelay<Bool>()
+        let setData = PublishRelay<(isOn: Bool, days: [String], time: Int)>()
     }
     
     let input: Input
@@ -34,26 +34,27 @@ class SettingVM: BaseVM, WeatherProtocol {
         self.input
             .loadData
             .map {
+                self.addPushRainy()
+                
                 let isOn = UserInfoManager.shared.getUserDefault(key: .push, type: Bool.self)
+                let days = UserInfoManager.shared.getUserDefault(key: .days, type: [String].self)
                 let time = UserInfoManager.shared.getUserDefault(key: .time, type: Int.self)
                 
-                return (isOn, time)
+                return (isOn, days, time)
             }
             .bind(to: self.output.setData)
             .disposed(by: bag)
         
         self.input
             .bindSwitch
-            .map { [weak self] isOn in
-                guard let self = self else { return isOn }
-                
-                UserInfoManager.shared.setUserDefault(isOn, key: .push)
-                
-                isOn ? self.addPushRainy() : UserInfoManager.shared.removeAllNotification(.pending)
-                
-                return isOn
-            }
-            .bind(to: self.output.bindSwitch)
+            .map { UserInfoManager.shared.setUserDefault($0, key: .push) }
+            .bind(to: self.input.loadData)
+            .disposed(by: bag)
+        
+        self.input
+            .bindDays
+            .map { UserInfoManager.shared.setUserDefault($0, key: .days) }
+            .bind(to: self.input.loadData)
             .disposed(by: bag)
         
         self.input

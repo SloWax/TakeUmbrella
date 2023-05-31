@@ -123,20 +123,26 @@ extension WeatherProtocol where Self: BaseVM {
     }
     
     func addPushRainy() {
-        guard UserInfoManager.shared.getUserDefault(key: .push, type: Bool.self),
-              UserInfoManager.shared.days.value.contains(where: { $0.isRain }) else { return }
-        
         UserInfoManager.shared.removeAllNotification(.pending)
         
+        guard UserInfoManager.shared.getUserDefault(key: .push, type: Bool.self),
+              UserInfoManager.shared.days.value.contains(where: { $0.isRain }) else { return }
+
         let time = UserInfoManager.shared
             .getUserDefault(key: .time, type: Int.self)
             .splitTime
-        
+
         let components = DateComponents(hour: time.hour, minute: time.min)
         let nextTime = Calendar.current.nextDate(after: Date(), matching: components, matchingPolicy: .nextTime) ?? Date()
+        
+        let nextTimeWeekday = nextTime.toString(dateFormat: "E")
+        let days = UserInfoManager.shared.getUserDefault(key: .days, type: [String].self)
+        
+        guard (days.contains { $0 == nextTimeWeekday }) else { return }
+        
         let interval = DateInterval(start: Date(), end: nextTime)
         let duration = interval.duration
-        
+
         UserInfoManager.shared.addNotification(
             identifier: "rain",
             title: "엄마가우산챙기래",

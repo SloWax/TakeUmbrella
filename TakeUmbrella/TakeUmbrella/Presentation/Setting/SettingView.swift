@@ -24,7 +24,9 @@ class SettingView: BaseView {
     
     let viewPush = PushMenu()
     
-    let btnTime = TimeMenu()
+    let btnDays = TimeMenu(title: "요일")
+    
+    let btnTime = TimeMenu(title: "시간")
     
     
     override init(frame: CGRect) {
@@ -39,7 +41,7 @@ class SettingView: BaseView {
     }
     
     private func setUP() {
-        let arrangedSubviews = [viewPush, btnTime]
+        let arrangedSubviews = [viewPush, btnDays, btnTime]
         svMenu.addArrangedSubviews(arrangedSubviews)
         
         viewMother.addSubview(svMenu)
@@ -49,7 +51,15 @@ class SettingView: BaseView {
     
     private func setLayout() {
         viewMother.snp.makeConstraints { make in
-            let manager = UIApplication.shared.windows.first?.windowScene?.statusBarManager
+            let manager = UIApplication.shared.connectedScenes
+                .filter { $0.activationState == .foregroundActive }
+                .compactMap { $0 as? UIWindowScene }
+                .first?
+                .windows
+                .first?
+                .windowScene?
+                .statusBarManager
+            
             let height = manager?.statusBarFrame.height ?? 0
             
             make.top.equalTo(self).inset(height)
@@ -111,7 +121,6 @@ final class PushMenu: UIView {
 final class TimeMenu: UIButton {
     
     private let lblTitle = UILabel().then {
-        $0.text = "알림 시간"
         $0.font = .setCustomUIFont(font: .medium, size: 16)
     }
     
@@ -121,8 +130,11 @@ final class TimeMenu: UIButton {
         $0.textAlignment = .right
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(title: String) {
+        
+        self.lblTitle.text = title
+        
+        super.init(frame: .zero)
         
         setUP()
         setLayout()
@@ -152,14 +164,41 @@ final class TimeMenu: UIButton {
         }
     }
     
-    func setValue(_ isOn: Bool, value: Int? = nil) {
+    func setValue(_ isOn: Bool, days: [String] = [], time: Int? = nil) {
         self.isEnabled = isOn
         
         let textColor: UIColor = isOn ? .setCustomColor(.black) : .setCustomColor(.gray2)
         lblTitle.textColor = textColor
         lblValue.textColor = textColor
         
-        if let time = value?.splitTime {
+        if !days.isEmpty {
+            switch days {
+            case let days where days.count == 7:
+                lblValue.text = "매일"
+            case let days where days.count == 5
+                && days.contains("월")
+                && days.contains("화")
+                && days.contains("수")
+                && days.contains("목")
+                && days.contains("금"):
+                
+                lblValue.text = "평일"
+            case let days where days.count == 2
+                && days.contains("토")
+                && days.contains("일"):
+                
+                lblValue.text = "주말"
+            default:
+                let sortedDays = days.sorted { (a, b) -> Bool in
+                    let days = ["일", "월", "화", "수", "목", "금", "토"]
+                    return days.firstIndex(of: a)! < days.firstIndex(of: b)!
+                }
+                
+                lblValue.text = sortedDays.joined(separator: ",")
+            }
+        }
+        
+        if let time = time?.splitTime {
             let hour = time.hour
             let min = time.min
             let value = min == 0 ? "\(hour)시" : "\(hour)시 \(min)분"

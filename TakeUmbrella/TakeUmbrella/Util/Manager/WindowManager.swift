@@ -27,7 +27,13 @@ class WindowManager {
     }
     
     static func change(_ path: Path) {
-        UIApplication.shared.windows.first?.rootViewController = path.vc
+         UIApplication.shared.connectedScenes
+            .filter { $0.activationState == .foregroundActive }
+            .compactMap { $0 as? UIWindowScene }
+            .first?
+            .windows
+            .first?
+            .rootViewController = path.vc
     }
     
     static func exit() {
