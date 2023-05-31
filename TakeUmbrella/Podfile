@@ -28,7 +28,7 @@ def available_pods
   #Util
   pod 'Then'
   pod 'SnapKit', '~> 5.0.0'
-  #pod 'RealmSwift', '~> 10'
+  pod 'RealmSwift', '~> 10'
   pod 'lottie-ios'
   pod 'Gifu'
   
@@ -46,4 +46,6 @@ target 'TakeUmbrella' do
   use_frameworks!
   # CocoaPods 경고 제거
   inhibit_all_warnings!
+  target 'TUWidgetExtension' do
+    end
 end

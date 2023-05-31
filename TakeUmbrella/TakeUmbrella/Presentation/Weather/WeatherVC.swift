@@ -26,7 +26,7 @@ class WeatherVC: BaseMainVC {
     private func initialize() {
         view = weatherView
         
-        if let nowWeather = UserInfoManager.shared.getNow() {
+        if let nowWeather = UserInfoManager.shared.now.value {
             weatherView.setValue(nowWeather)
         }
         

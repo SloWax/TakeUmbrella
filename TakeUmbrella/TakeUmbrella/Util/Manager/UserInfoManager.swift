@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import RxOptional
+import WidgetKit
 
 
 class UserInfoManager: NSObject {
@@ -27,23 +28,35 @@ class UserInfoManager: NSObject {
     
     static let shared = UserInfoManager()
     
+    private let bag = DisposeBag()
     private var nowData: NowWeatherModel?
     private var daysData: [DayWeatherModel] = []
     
-    func setNow(_ data: NowWeatherModel) {
-        nowData = data
+    let now = BehaviorRelay<NowWeatherModel?>(value: nil)
+    let days = BehaviorRelay<[DayWeatherModel]>(value: [])
+    
+    override init() {
+        super.init()
+        
+//        self.now
+//            .bind { now in }
+//            .disposed(by: bag)
+        
+        self.days
+            .bind { days in
+                DataManager.shared.delete()
+                
+                days.forEach {
+                    DataManager.shared.create($0)
+                }
+                
+                WidgetCenter.shared.reloadAllTimelines()
+            }.disposed(by: bag)
     }
     
-    func getNow() -> NowWeatherModel? {
-        return nowData
-    }
-    
-    func setDays(_ list: [DayWeatherModel]) {
-        daysData = list
-    }
-    
-    func getDays() -> [DayWeatherModel] {
-        return daysData
+    func accept(_ now: NowWeatherModel, _ days: [DayWeatherModel]) {
+        self.now.accept(now)
+        self.days.accept(days)
     }
     
     func setUserDefault(_ value: Any?, key: UserDefaultKeys) {

@@ -55,18 +55,29 @@ extension WeatherProtocol where Self: BaseVM {
                     .map {
                         let date = Date(timeIntervalSince1970: $0.dt)
                         
-                        let isRain = $0
+                        let description = $0
                             .weather
                             .first?
                             .description
-                            .contains { String($0).contains("비") || String($0).contains("눈") }
+                            .replacingOccurrences(of: "연무", with: "안개")
+                            .replacingOccurrences(of: "박무", with: "안개")
+                            .replacingOccurrences(of: "보통", with: "")
+                            .replacingOccurrences(of: "온", with: "")
+                            .replacingOccurrences(of: "실 ", with: "")
+                            .replacingOccurrences(of: "튼", with: "") ?? ""
+                        
+                        let isRain = description.contains { String($0).contains("비") || String($0).contains("눈") }
                         
                         let newDay = DayWeatherModel(
                             day: date.toString(dateFormat: "M.d (E)"),
                             time: date.toString(dateFormat: "HH:mm"),
+                            location: address.subLocal,
                             icon: $0.weather.first?.icon ?? "",
-                            rain: isRain ?? false,
-                            temp: $0.main.temp.toCelsius
+                            description: description,
+                            isRain: isRain,
+                            temp: $0.main.temp.toCelsius,
+                            tempMin: $0.main.temp_min.toCelsius,
+                            tempMax: $0.main.temp_max.toCelsius
                         )
                         
                         return newDay
@@ -94,7 +105,7 @@ extension WeatherProtocol where Self: BaseVM {
                     .last ?? 0
                 
                 let now = NowWeatherModel(
-                    address: address,
+                    address: "\(address.area) \(address.local) \(address.subLocal)",
                     icon: nowData.weather.first?.icon ?? "",
                     description: description,
                     minTemp: minTemp.toCelsius,
@@ -103,8 +114,7 @@ extension WeatherProtocol where Self: BaseVM {
                     temp: nowData.main.temp.toCelsius
                 )
                 
-                UserInfoManager.shared.setNow(now)
-                UserInfoManager.shared.setDays(days)
+                UserInfoManager.shared.accept(now, days)
                 
                 completion(.success((now, days)))
             } onError: { error in
@@ -114,7 +124,7 @@ extension WeatherProtocol where Self: BaseVM {
     
     func addPushRainy() {
         guard UserInfoManager.shared.getUserDefault(key: .push, type: Bool.self),
-              UserInfoManager.shared.getDays().contains(where: { $0.rain }) else { return }
+              UserInfoManager.shared.days.value.contains(where: { $0.isRain }) else { return }
         
         UserInfoManager.shared.removeAllNotification(.pending)
         

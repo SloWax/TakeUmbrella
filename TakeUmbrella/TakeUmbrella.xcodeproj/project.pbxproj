@@ -49,6 +49,12 @@
 		6E86E5C529F2C2EC00FC0A17 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C429F2C2EC00FC0A17 /* WeatherCell.swift */; };
 		6E86E5C729F2DF1D00FC0A17 /* NowWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C629F2DF1C00FC0A17 /* NowWeatherModel.swift */; };
 		6E86E5C929F2E3F200FC0A17 /* DayWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */; };
+		6EBDA8872A25B5020001C22B /* TUWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */; };
+		6EBDA8882A25B71B0001C22B /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C229F184E200FC0A17 /* Extension+Double.swift */; };
+		6EBDA88A2A25BE740001C22B /* TUWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDA8892A25BE740001C22B /* TUWidgetLiveActivity.swift */; };
+		6EBDC7AD2A2096F400440FF9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC7AC2A2096F400440FF9 /* DataManager.swift */; };
+		6EBDC7AE2A209F5500440FF9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC7AC2A2096F400440FF9 /* DataManager.swift */; };
+		6EBDC7AF2A20A0AE00440FF9 /* DayWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */; };
 		6EBF4D6B2A1CD48F007F1610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E54B29EEE67D00FC0A17 /* Assets.xcassets */; };
 		6EBF4D6D2A1E0246007F1610 /* Extension+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56829EEEBA800FC0A17 /* Extension+UIFont.swift */; };
 		6EBF4D6E2A1E270E007F1610 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56F29EEEBA800FC0A17 /* Extension+UIColor.swift */; };
@@ -82,12 +88,12 @@
 		6ED2F94E2A1CBD7B0096E70E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED2F94D2A1CBD7B0096E70E /* WidgetKit.framework */; };
 		6ED2F9502A1CBD7B0096E70E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED2F94F2A1CBD7B0096E70E /* SwiftUI.framework */; };
 		6ED2F9532A1CBD7B0096E70E /* TUWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9522A1CBD7B0096E70E /* TUWidgetBundle.swift */; };
-		6ED2F9552A1CBD7B0096E70E /* TUWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9542A1CBD7B0096E70E /* TUWidgetLiveActivity.swift */; };
 		6ED2F9572A1CBD7B0096E70E /* TUWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */; };
 		6ED2F9592A1CBD7E0096E70E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED2F9582A1CBD7E0096E70E /* Assets.xcassets */; };
 		6ED2F95D2A1CBD7E0096E70E /* TUWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6ED2F94C2A1CBD7B0096E70E /* TUWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6ED2F9642A1CCD820096E70E /* Spacers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9622A1CCD1B0096E70E /* Spacers.swift */; };
 		8979D9F4A9E79DBBDC9B34D1 /* Pods_TakeUmbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */; };
+		DA655A93FB27472A9F483F39 /* Pods_TakeUmbrella_TUWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D6DBD6E45F892D4891CE1C /* Pods_TakeUmbrella_TUWidgetExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +121,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F2FE6848B15B12E31E265D9 /* Pods-TakeUmbrella-TUWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeUmbrella-TUWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-TakeUmbrella-TUWidgetExtension/Pods-TakeUmbrella-TUWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		351851F743852EFAC104464D /* Pods-TakeUmbrella.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeUmbrella.release.xcconfig"; path = "Target Support Files/Pods-TakeUmbrella/Pods-TakeUmbrella.release.xcconfig"; sourceTree = "<group>"; };
 		558386073E9614719578085B /* Pods-TakeUmbrella.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeUmbrella.debug.xcconfig"; path = "Target Support Files/Pods-TakeUmbrella/Pods-TakeUmbrella.debug.xcconfig"; sourceTree = "<group>"; };
 		6E86E53F29EEE67C00FC0A17 /* TakeUmbrella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeUmbrella.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +168,8 @@
 		6E86E5C429F2C2EC00FC0A17 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		6E86E5C629F2DF1C00FC0A17 /* NowWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowWeatherModel.swift; sourceTree = "<group>"; };
 		6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherModel.swift; sourceTree = "<group>"; };
+		6EBDA8892A25BE740001C22B /* TUWidgetLiveActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TUWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		6EBDC7AC2A2096F400440FF9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6EC3CF4C29F6EE0C00BE5848 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 		6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		6EC3CF5129F85BD400BE5848 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -188,12 +197,13 @@
 		6ED2F94D2A1CBD7B0096E70E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		6ED2F94F2A1CBD7B0096E70E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		6ED2F9522A1CBD7B0096E70E /* TUWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUWidgetBundle.swift; sourceTree = "<group>"; };
-		6ED2F9542A1CBD7B0096E70E /* TUWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUWidgetLiveActivity.swift; sourceTree = "<group>"; };
 		6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUWidget.swift; sourceTree = "<group>"; };
 		6ED2F9582A1CBD7E0096E70E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ED2F95A2A1CBD7E0096E70E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ED2F9622A1CCD1B0096E70E /* Spacers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacers.swift; sourceTree = "<group>"; };
 		AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeUmbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8548CEDAD22D77E92EEAD8F /* Pods-TakeUmbrella-TUWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeUmbrella-TUWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-TakeUmbrella-TUWidgetExtension/Pods-TakeUmbrella-TUWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		F3D6DBD6E45F892D4891CE1C /* Pods_TakeUmbrella_TUWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeUmbrella_TUWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +221,7 @@
 			files = (
 				6ED2F9502A1CBD7B0096E70E /* SwiftUI.framework in Frameworks */,
 				6ED2F94E2A1CBD7B0096E70E /* WidgetKit.framework in Frameworks */,
+				DA655A93FB27472A9F483F39 /* Pods_TakeUmbrella_TUWidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +445,7 @@
 				6EC3CF5529F8718000BE5848 /* WindowManager.swift */,
 				6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */,
 				6ED2F8F72A1B72B50096E70E /* UserInfoManager.swift */,
+				6EBDC7AC2A2096F400440FF9 /* DataManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -491,7 +503,7 @@
 			children = (
 				6ED2F9522A1CBD7B0096E70E /* TUWidgetBundle.swift */,
 				6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */,
-				6ED2F9542A1CBD7B0096E70E /* TUWidgetLiveActivity.swift */,
+				6EBDA8892A25BE740001C22B /* TUWidgetLiveActivity.swift */,
 				6ED2F9622A1CCD1B0096E70E /* Spacers.swift */,
 				6ED2F9582A1CBD7E0096E70E /* Assets.xcassets */,
 				6ED2F95A2A1CBD7E0096E70E /* Info.plist */,
@@ -504,6 +516,8 @@
 			children = (
 				558386073E9614719578085B /* Pods-TakeUmbrella.debug.xcconfig */,
 				351851F743852EFAC104464D /* Pods-TakeUmbrella.release.xcconfig */,
+				E8548CEDAD22D77E92EEAD8F /* Pods-TakeUmbrella-TUWidgetExtension.debug.xcconfig */,
+				0F2FE6848B15B12E31E265D9 /* Pods-TakeUmbrella-TUWidgetExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -514,6 +528,7 @@
 				AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */,
 				6ED2F94D2A1CBD7B0096E70E /* WidgetKit.framework */,
 				6ED2F94F2A1CBD7B0096E70E /* SwiftUI.framework */,
+				F3D6DBD6E45F892D4891CE1C /* Pods_TakeUmbrella_TUWidgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -546,6 +561,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6ED2F95E2A1CBD7F0096E70E /* Build configuration list for PBXNativeTarget "TUWidgetExtension" */;
 			buildPhases = (
+				E642C83284141185CE2B0078 /* [CP] Check Pods Manifest.lock */,
 				6ED2F9482A1CBD7B0096E70E /* Sources */,
 				6ED2F9492A1CBD7B0096E70E /* Frameworks */,
 				6ED2F94A2A1CBD7B0096E70E /* Resources */,
@@ -674,6 +690,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E642C83284141185CE2B0078 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TakeUmbrella-TUWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -719,11 +757,13 @@
 				6EC3CF5E29F9638000BE5848 /* LottieIndicator.swift in Sources */,
 				6E86E59129EEEBBA00FC0A17 /* BaseSceneVC.swift in Sources */,
 				6E86E58F29EEEBBA00FC0A17 /* BaseNC.swift in Sources */,
+				6EBDA8872A25B5020001C22B /* TUWidget.swift in Sources */,
 				6E86E57F29EEEBA800FC0A17 /* Extension+Int.swift in Sources */,
 				6E86E57D29EEEBA800FC0A17 /* Extension+String.swift in Sources */,
 				6E86E5BB29EF85D600FC0A17 /* WeatherService.swift in Sources */,
 				6E86E57A29EEEBA800FC0A17 /* Extension+UINavigation.swift in Sources */,
 				6E86E5C929F2E3F200FC0A17 /* DayWeatherModel.swift in Sources */,
+				6EBDC7AD2A2096F400440FF9 /* DataManager.swift in Sources */,
 				6E86E54329EEE67C00FC0A17 /* AppDelegate.swift in Sources */,
 				6E86E5B329EF4D8400FC0A17 /* WeatherVC.swift in Sources */,
 				6ED2F8F82A1B72B50096E70E /* UserInfoManager.swift in Sources */,
@@ -741,9 +781,12 @@
 				6ED2F9572A1CBD7B0096E70E /* TUWidget.swift in Sources */,
 				6ED2F9642A1CCD820096E70E /* Spacers.swift in Sources */,
 				6ED2F9532A1CBD7B0096E70E /* TUWidgetBundle.swift in Sources */,
+				6EBDA88A2A25BE740001C22B /* TUWidgetLiveActivity.swift in Sources */,
+				6EBDC7AE2A209F5500440FF9 /* DataManager.swift in Sources */,
+				6EBDA8882A25B71B0001C22B /* Extension+Double.swift in Sources */,
 				6EBF4D6D2A1E0246007F1610 /* Extension+UIFont.swift in Sources */,
-				6ED2F9552A1CBD7B0096E70E /* TUWidgetLiveActivity.swift in Sources */,
 				6EBF4D6E2A1E270E007F1610 /* Extension+UIColor.swift in Sources */,
+				6EBDC7AF2A20A0AE00440FF9 /* DayWeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -961,6 +1004,7 @@
 		};
 		6ED2F95F2A1CBD7F0096E70E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8548CEDAD22D77E92EEAD8F /* Pods-TakeUmbrella-TUWidgetExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -971,7 +1015,7 @@
 				INFOPLIST_FILE = TUWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TUWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -983,12 +1027,13 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		6ED2F9602A1CBD7F0096E70E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F2FE6848B15B12E31E265D9 /* Pods-TakeUmbrella-TUWidgetExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -999,7 +1044,7 @@
 				INFOPLIST_FILE = TUWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TUWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1011,7 +1056,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

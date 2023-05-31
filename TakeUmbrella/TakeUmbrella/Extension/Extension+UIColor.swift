@@ -63,8 +63,6 @@ extension Color {
 enum ColorCode: String {
 
     // primary
-//    case primaryRed            = "#ED6363"
-//    case primaryYellow         = "#FFD100"
     case primaryBlue           = "#68B4D1"
     
     // Grays

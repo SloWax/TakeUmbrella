@@ -53,7 +53,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         return (lat, lon)
     }
     
-    func loadAddress(coor: (lat: CLLocationDegrees, lon: CLLocationDegrees)) -> Observable<String> {
+    func loadAddress(coor: (lat: CLLocationDegrees, lon: CLLocationDegrees)) -> Observable<(area: String, local: String, subLocal: String)> {
         return Observable.create { observer -> Disposable in
             let geocoder = CLGeocoder()
             let location = CLLocation(latitude: coor.lat, longitude: coor.lon)
@@ -68,9 +68,8 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
                     let administrativeArea = address.administrativeArea ?? ""
                     let locality = address.locality ?? ""
                     let subLocality = address.subLocality ?? ""
-                    let name = "\(administrativeArea) \(locality) \(subLocality)"
                     
-                    observer.onNext(name)
+                    observer.onNext((administrativeArea, locality, subLocality))
                     observer.onCompleted()
                 }
             }

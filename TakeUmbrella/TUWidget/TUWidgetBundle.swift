@@ -12,6 +12,5 @@ import SwiftUI
 struct TUWidgetBundle: WidgetBundle {
     var body: some Widget {
         TUWidget()
-        TUWidgetLiveActivity()
     }
 }

@@ -29,7 +29,7 @@ class WeatherVM: BaseVM, WeatherProtocol {
         self.input = input
         self.output = output
         
-        let daysWeather = UserInfoManager.shared.getDays()
+        let daysWeather = UserInfoManager.shared.days.value
         output.bindList.accept(daysWeather)
         
         super.init()
