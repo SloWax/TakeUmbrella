@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxOptional
+import WidgetKit
 
 
 class WeatherVC: BaseMainVC {

@@ -20,7 +20,12 @@ protocol Persistable {
 class DataManager {
     static let shared = DataManager()
     
-    let realm = try! Realm()
+    private var realm: Realm {
+        let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.SloWax.TakeUmbrella")
+        let realmURL = container?.appendingPathComponent("default.realm")
+        let config = Realm.Configuration(fileURL: realmURL, schemaVersion: 1)
+        return try! Realm(configuration: config)
+    }
     
     func create(_ data: DayWeatherModel) {
         let weather = data.managedObject()

@@ -10,34 +10,32 @@ import SwiftUI
 
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-//        SimpleEntry(date: Date(), testString: "000")
-        SimpleEntry(
+    func placeholder(in context: Context) -> WeatherEntry {
+        WeatherEntry(
             date: Date(),
-            day: "000",
-            time: "000",
-            location: "동도옫ㅇ",
+            day: "1.1 (오늘)",
+            time: "00:00",
+            location: "서울",
             icon: "01d",
-            description: "000",
-            temp: 0.01,
-            tempMin: 0.01,
-            tempMax: 0.01
+            description: "맑음",
+            temp: 55.5,
+            tempMin: -99.1,
+            tempMax: 99.1
         )
     }
     
     // 위젯 갤러리에서 보여주기 위한 스냅샷
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-//        let entry = SimpleEntry(date: Date(), testString: "111")
-        let entry = SimpleEntry(
+    func getSnapshot(in context: Context, completion: @escaping (WeatherEntry) -> ()) {
+        let entry = WeatherEntry(
             date: Date(),
-            day: "111",
-            time: "111",
-            location: "동도옫ㅇ",
+            day: "1.1 (오늘)",
+            time: "00:00",
+            location: "서울",
             icon: "01d",
-            description: "111",
-            temp: 0.01,
-            tempMin: 0.01,
-            tempMax: 0.01
+            description: "맑음",
+            temp: 55.5,
+            tempMin: -99.1,
+            tempMax: 99.1
         )
         
         completion(entry)
@@ -45,28 +43,31 @@ struct Provider: TimelineProvider {
     
     // 위젯 새로고침 스케쥴
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        var entries: [WeatherEntry] = []
         let data = DataManager.shared.retrieve()
         
         let currentDate = Date()
+        
         for hourOffset in 0 ..< 24 {
-            let entryDate = Calendar.current.date(byAdding: .second, value: hourOffset * 3, to: currentDate)!
-//            let entry = SimpleEntry(date: entryDate, testString: "\(hourOffset * 3)")
+            let value = hourOffset * 3
+            let entryDate = Calendar.current.date(
+                byAdding: .hour,
+                value: value,
+                to: currentDate
+            )!
+            
             var entry = data[hourOffset].toEntry
             entry.date = entryDate
             
             entries.append(entry)
         }
         
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(entries: entries, policy: .never)
         completion(timeline)
     }
 }
 
-struct SimpleEntry: TimelineEntry {
-//    let date: Date
-//    var testString: String
-    
+struct WeatherEntry: TimelineEntry {
     var date: Date
     
     let day: String
@@ -129,28 +130,28 @@ struct TUWidgetEntryView : View {
 
 struct TUWidget: Widget {
     let kind: String = "TUWidget"
-
+    
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             TUWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("엄마가비온대")
+        .description("내 위치 날씨정보 위젯")
     }
 }
 
 struct TUWidget_Previews: PreviewProvider {
     static var previews: some View {
-        let entry = SimpleEntry(
+        let entry = WeatherEntry(
             date: Date(),
-            day: "333",
-            time: "333",
-            location: "동도옫ㅇ",
+            day: "날짜",
+            time: "시간",
+            location: "주소",
             icon: "01d",
-            description: "333",
-            temp: 0.01,
-            tempMin: 0.01,
-            tempMax: 0.01
+            description: "맑음",
+            temp: 55.5,
+            tempMin: -99.1,
+            tempMax: 99.1
         )
         
         TUWidgetEntryView(entry: entry)

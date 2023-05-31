@@ -51,7 +51,6 @@
 		6E86E5C929F2E3F200FC0A17 /* DayWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */; };
 		6EBDA8872A25B5020001C22B /* TUWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */; };
 		6EBDA8882A25B71B0001C22B /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C229F184E200FC0A17 /* Extension+Double.swift */; };
-		6EBDA88A2A25BE740001C22B /* TUWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDA8892A25BE740001C22B /* TUWidgetLiveActivity.swift */; };
 		6EBDC7AD2A2096F400440FF9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC7AC2A2096F400440FF9 /* DataManager.swift */; };
 		6EBDC7AE2A209F5500440FF9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC7AC2A2096F400440FF9 /* DataManager.swift */; };
 		6EBDC7AF2A20A0AE00440FF9 /* DayWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */; };
@@ -168,7 +167,7 @@
 		6E86E5C429F2C2EC00FC0A17 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		6E86E5C629F2DF1C00FC0A17 /* NowWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowWeatherModel.swift; sourceTree = "<group>"; };
 		6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherModel.swift; sourceTree = "<group>"; };
-		6EBDA8892A25BE740001C22B /* TUWidgetLiveActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TUWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		6EBDA88B2A2794010001C22B /* TUWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TUWidgetExtension.entitlements; sourceTree = "<group>"; };
 		6EBDC7AC2A2096F400440FF9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6EC3CF4C29F6EE0C00BE5848 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 		6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -231,6 +230,7 @@
 		6E86E53629EEE67C00FC0A17 = {
 			isa = PBXGroup;
 			children = (
+				6EBDA88B2A2794010001C22B /* TUWidgetExtension.entitlements */,
 				6E86E54129EEE67C00FC0A17 /* TakeUmbrella */,
 				6ED2F9512A1CBD7B0096E70E /* TUWidget */,
 				6E86E54029EEE67C00FC0A17 /* Products */,
@@ -503,7 +503,6 @@
 			children = (
 				6ED2F9522A1CBD7B0096E70E /* TUWidgetBundle.swift */,
 				6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */,
-				6EBDA8892A25BE740001C22B /* TUWidgetLiveActivity.swift */,
 				6ED2F9622A1CCD1B0096E70E /* Spacers.swift */,
 				6ED2F9582A1CBD7E0096E70E /* Assets.xcassets */,
 				6ED2F95A2A1CBD7E0096E70E /* Info.plist */,
@@ -781,7 +780,6 @@
 				6ED2F9572A1CBD7B0096E70E /* TUWidget.swift in Sources */,
 				6ED2F9642A1CCD820096E70E /* Spacers.swift in Sources */,
 				6ED2F9532A1CBD7B0096E70E /* TUWidgetBundle.swift in Sources */,
-				6EBDA88A2A25BE740001C22B /* TUWidgetLiveActivity.swift in Sources */,
 				6EBDC7AE2A209F5500440FF9 /* DataManager.swift in Sources */,
 				6EBDA8882A25B71B0001C22B /* Extension+Double.swift in Sources */,
 				6EBF4D6D2A1E0246007F1610 /* Extension+UIFont.swift in Sources */,
@@ -1008,6 +1006,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TUWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3799SNND63;
@@ -1015,7 +1014,7 @@
 				INFOPLIST_FILE = TUWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TUWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1037,6 +1036,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TUWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3799SNND63;
@@ -1044,7 +1044,7 @@
 				INFOPLIST_FILE = TUWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TUWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

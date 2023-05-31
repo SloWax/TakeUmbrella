@@ -19,12 +19,12 @@ struct DayWeatherModel {
     let tempMin: Double
     let tempMax: Double
     
-    var toEntry: SimpleEntry {
-        return SimpleEntry(
+    var toEntry: WeatherEntry {
+        return WeatherEntry(
             date: Date(),
             day: day,
             time: time,
-            location: "동도옫ㅇ",
+            location: location,
             icon: icon,
             description: description,
             temp: temp,
@@ -34,15 +34,3 @@ struct DayWeatherModel {
     }
 }
 
-struct WeatherEntry: TimelineEntry {
-    let date: Date
-    
-    let day: String
-    let time: String
-    let icon: String
-    let description: String
-    let isRain: Bool
-    let temp: Double
-    let tempMin: Double
-    let tempMax: Double
-}
