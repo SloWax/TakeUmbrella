@@ -105,7 +105,7 @@ extension WeatherProtocol where Self: BaseVM {
                     .last ?? 0
                 
                 let now = NowWeatherModel(
-                    address: "\(address.area) \(address.local) \(address.subLocal)",
+                    address: "\(address.local) \(address.subLocal)",
                     icon: nowData.weather.first?.icon ?? "",
                     description: description,
                     minTemp: minTemp.toCelsius,

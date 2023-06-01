@@ -35,7 +35,7 @@ class DayModalView: BaseView {
     
     let cvDays: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         return UICollectionView(frame: .zero, collectionViewLayout: layout).then {
             $0.register(DayItem.self, forCellWithReuseIdentifier: DayItem.id)
             $0.backgroundColor = .white
@@ -91,7 +91,7 @@ class DayModalView: BaseView {
         }
         
         cvDays.snp.makeConstraints { make in
-            make.top.equalTo(lblSubTitle.snp.bottom)
+            make.top.equalTo(lblSubTitle.snp.bottom).offset(25)
             make.left.right.equalTo(self)
             make.height.equalTo(100)
         }

@@ -63,10 +63,10 @@ class DayModalVM: BaseVM {
                 
                 switch event.isSelect {
                 case true:
-                    selectedDays.append(selectValue)
+                    self.selectedDays.append(selectValue)
                 case false:
-                    guard let index = selectedDays.firstIndex(of: selectValue) else { return }
-                    selectedDays.remove(at: index)
+                    guard let index = self.selectedDays.firstIndex(of: selectValue) else { return }
+                    self.selectedDays.remove(at: index)
                 }
             }.disposed(by: bag)
         
