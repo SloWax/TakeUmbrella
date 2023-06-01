@@ -1,0 +1,1120 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E86E54329EEE67C00FC0A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E54229EEE67C00FC0A17 /* AppDelegate.swift */; };
+		6E86E54C29EEE67D00FC0A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E54B29EEE67D00FC0A17 /* Assets.xcassets */; };
+		6E86E54F29EEE67D00FC0A17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E54D29EEE67D00FC0A17 /* LaunchScreen.storyboard */; };
+		6E86E56029EEEB3200FC0A17 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E55C29EEEB3200FC0A17 /* NotoSansKR-Bold.otf */; };
+		6E86E56129EEEB3200FC0A17 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E55D29EEEB3200FC0A17 /* NotoSansKR-Black.otf */; };
+		6E86E56229EEEB3200FC0A17 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E55E29EEEB3200FC0A17 /* NotoSansKR-Medium.otf */; };
+		6E86E56329EEEB3200FC0A17 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E55F29EEEB3200FC0A17 /* NotoSansKR-Regular.otf */; };
+		6E86E57729EEEBA800FC0A17 /* Extension+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56829EEEBA800FC0A17 /* Extension+UIFont.swift */; };
+		6E86E57829EEEBA800FC0A17 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56929EEEBA800FC0A17 /* Extension+UIViewController.swift */; };
+		6E86E57929EEEBA800FC0A17 /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56A29EEEBA800FC0A17 /* Extension+UIImage.swift */; };
+		6E86E57A29EEEBA800FC0A17 /* Extension+UINavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56B29EEEBA800FC0A17 /* Extension+UINavigation.swift */; };
+		6E86E57B29EEEBA800FC0A17 /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56C29EEEBA800FC0A17 /* Extension+UITextField.swift */; };
+		6E86E57C29EEEBA800FC0A17 /* Extension+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56D29EEEBA800FC0A17 /* Extension+CGFloat.swift */; };
+		6E86E57D29EEEBA800FC0A17 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56E29EEEBA800FC0A17 /* Extension+String.swift */; };
+		6E86E57E29EEEBA800FC0A17 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56F29EEEBA800FC0A17 /* Extension+UIColor.swift */; };
+		6E86E57F29EEEBA800FC0A17 /* Extension+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E57029EEEBA800FC0A17 /* Extension+Int.swift */; };
+		6E86E58029EEEBA800FC0A17 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E57129EEEBA800FC0A17 /* Extension+UIButton.swift */; };
+		6E86E58129EEEBA800FC0A17 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E57229EEEBA800FC0A17 /* Extension+UIView.swift */; };
+		6E86E58229EEEBA800FC0A17 /* Extension+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E57329EEEBA800FC0A17 /* Extension+Optional.swift */; };
+		6E86E58329EEEBA800FC0A17 /* Extension+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E57429EEEBA800FC0A17 /* Extension+Rx.swift */; };
+		6E86E58429EEEBA800FC0A17 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E57529EEEBA800FC0A17 /* Extension+Date.swift */; };
+		6E86E58529EEEBA800FC0A17 /* Extension+UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E57629EEEBA800FC0A17 /* Extension+UIStackView.swift */; };
+		6E86E58E29EEEBBA00FC0A17 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E58729EEEBB900FC0A17 /* BaseVC.swift */; };
+		6E86E58F29EEEBBA00FC0A17 /* BaseNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E58829EEEBB900FC0A17 /* BaseNC.swift */; };
+		6E86E59029EEEBBA00FC0A17 /* BaseModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E58929EEEBB900FC0A17 /* BaseModalVC.swift */; };
+		6E86E59129EEEBBA00FC0A17 /* BaseSceneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E58A29EEEBB900FC0A17 /* BaseSceneVC.swift */; };
+		6E86E59229EEEBBA00FC0A17 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E58B29EEEBB900FC0A17 /* BaseVM.swift */; };
+		6E86E59329EEEBBA00FC0A17 /* BaseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E58C29EEEBB900FC0A17 /* BaseMainVC.swift */; };
+		6E86E59429EEEBBA00FC0A17 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E58D29EEEBB900FC0A17 /* BaseView.swift */; };
+		6E86E59729EEF03D00FC0A17 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E59629EEF03D00FC0A17 /* Colors.xcassets */; };
+		6E86E5AE29EEFCC400FC0A17 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5AD29EEFCC400FC0A17 /* WeatherView.swift */; };
+		6E86E5B329EF4D8400FC0A17 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5B229EF4D8400FC0A17 /* WeatherVC.swift */; };
+		6E86E5B729EF73AE00FC0A17 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E5B629EF73AE00FC0A17 /* NotoSansKR-Light.otf */; };
+		6E86E5B929EF7BF700FC0A17 /* WeatherVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5B829EF7BF700FC0A17 /* WeatherVM.swift */; };
+		6E86E5BB29EF85D600FC0A17 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5BA29EF85D600FC0A17 /* WeatherService.swift */; };
+		6E86E5BD29EF893B00FC0A17 /* WeatherDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5BC29EF893B00FC0A17 /* WeatherDto.swift */; };
+		6E86E5BF29EF8ED400FC0A17 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5BE29EF8ED400FC0A17 /* BaseService.swift */; };
+		6E86E5C129EF9E2D00FC0A17 /* Extension+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C029EF9E2D00FC0A17 /* Extension+Codable.swift */; };
+		6E86E5C329F184E200FC0A17 /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C229F184E200FC0A17 /* Extension+Double.swift */; };
+		6E86E5C529F2C2EC00FC0A17 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C429F2C2EC00FC0A17 /* WeatherCell.swift */; };
+		6E86E5C729F2DF1D00FC0A17 /* NowWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C629F2DF1C00FC0A17 /* NowWeatherModel.swift */; };
+		6E86E5C929F2E3F200FC0A17 /* DayWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */; };
+		6EBDA8872A25B5020001C22B /* TUWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */; };
+		6EBDA8882A25B71B0001C22B /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C229F184E200FC0A17 /* Extension+Double.swift */; };
+		6EBDA88F2A27BDC70001C22B /* DayModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDA88E2A27BDC70001C22B /* DayModalVC.swift */; };
+		6EBDA8912A27BDCE0001C22B /* DayModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDA8902A27BDCE0001C22B /* DayModalView.swift */; };
+		6EBDA8932A27BDD70001C22B /* DayModalVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDA8922A27BDD70001C22B /* DayModalVM.swift */; };
+		6EBDA8952A27BFC80001C22B /* DayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDA8942A27BFC80001C22B /* DayItem.swift */; };
+		6EBDC7AD2A2096F400440FF9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC7AC2A2096F400440FF9 /* DataManager.swift */; };
+		6EBDC7AE2A209F5500440FF9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC7AC2A2096F400440FF9 /* DataManager.swift */; };
+		6EBDC7AF2A20A0AE00440FF9 /* DayWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */; };
+		6EBF4D6B2A1CD48F007F1610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E54B29EEE67D00FC0A17 /* Assets.xcassets */; };
+		6EBF4D6D2A1E0246007F1610 /* Extension+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56829EEEBA800FC0A17 /* Extension+UIFont.swift */; };
+		6EBF4D6E2A1E270E007F1610 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E56F29EEEBA800FC0A17 /* Extension+UIColor.swift */; };
+		6EBF4D6F2A1E2833007F1610 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E55C29EEEB3200FC0A17 /* NotoSansKR-Bold.otf */; };
+		6EBF4D702A1E2833007F1610 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E55F29EEEB3200FC0A17 /* NotoSansKR-Regular.otf */; };
+		6EBF4D712A1E2833007F1610 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E55E29EEEB3200FC0A17 /* NotoSansKR-Medium.otf */; };
+		6EBF4D722A1E2833007F1610 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E5B629EF73AE00FC0A17 /* NotoSansKR-Light.otf */; };
+		6EBF4D732A1E2833007F1610 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E86E55D29EEEB3200FC0A17 /* NotoSansKR-Black.otf */; };
+		6EC3CF4D29F6EE0C00BE5848 /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF4C29F6EE0C00BE5848 /* Extension+Array.swift */; };
+		6EC3CF4F29F6F28500BE5848 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */; };
+		6EC3CF5229F85BD400BE5848 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5129F85BD400BE5848 /* SplashVC.swift */; };
+		6EC3CF5429F85C1000BE5848 /* SplashVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5329F85C1000BE5848 /* SplashVM.swift */; };
+		6EC3CF5629F8718000BE5848 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5529F8718000BE5848 /* WindowManager.swift */; };
+		6EC3CF5829F8752E00BE5848 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5729F8752E00BE5848 /* Case.swift */; };
+		6EC3CF5C29F95E7800BE5848 /* WeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5B29F95E7800BE5848 /* WeatherProtocol.swift */; };
+		6EC3CF5E29F9638000BE5848 /* LottieIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF5D29F9638000BE5848 /* LottieIndicator.swift */; };
+		6EC3CF6429F969F400BE5848 /* UmbrellaIndicator.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF6329F969F300BE5848 /* UmbrellaIndicator.json */; };
+		6EC3CF6E29FAD96C00BE5848 /* lightning.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF6A29FAD96C00BE5848 /* lightning.gif */; };
+		6EC3CF6F29FAD96C00BE5848 /* cloud.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF6B29FAD96C00BE5848 /* cloud.gif */; };
+		6EC3CF7029FAD96C00BE5848 /* rainy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF6C29FAD96C00BE5848 /* rainy.gif */; };
+		6EC3CF7329FAD97200BE5848 /* snow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7129FAD97100BE5848 /* snow.gif */; };
+		6EC3CF7429FAD97200BE5848 /* sunny.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7229FAD97200BE5848 /* sunny.gif */; };
+		6EC3CF792A13901200BE5848 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF782A13901200BE5848 /* SettingVC.swift */; };
+		6EC3CF7B2A13901900BE5848 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7A2A13901900BE5848 /* SettingView.swift */; };
+		6EC3CF7D2A13902200BE5848 /* SettingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3CF7C2A13902200BE5848 /* SettingVM.swift */; };
+		6ED2F8F02A189D0C0096E70E /* TimeModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F8ED2A189D0C0096E70E /* TimeModalVC.swift */; };
+		6ED2F8F12A189D0C0096E70E /* TimeModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F8EE2A189D0C0096E70E /* TimeModalView.swift */; };
+		6ED2F8F22A189D0C0096E70E /* TimeModalVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F8EF2A189D0C0096E70E /* TimeModalVM.swift */; };
+		6ED2F8F62A189E6F0096E70E /* PyoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F8F52A189E6F0096E70E /* PyoButton.swift */; };
+		6ED2F8F82A1B72B50096E70E /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F8F72A1B72B50096E70E /* UserInfoManager.swift */; };
+		6ED2F94E2A1CBD7B0096E70E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED2F94D2A1CBD7B0096E70E /* WidgetKit.framework */; };
+		6ED2F9502A1CBD7B0096E70E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED2F94F2A1CBD7B0096E70E /* SwiftUI.framework */; };
+		6ED2F9532A1CBD7B0096E70E /* TUWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9522A1CBD7B0096E70E /* TUWidgetBundle.swift */; };
+		6ED2F9572A1CBD7B0096E70E /* TUWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */; };
+		6ED2F9592A1CBD7E0096E70E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED2F9582A1CBD7E0096E70E /* Assets.xcassets */; };
+		6ED2F95D2A1CBD7E0096E70E /* TUWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6ED2F94C2A1CBD7B0096E70E /* TUWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6ED2F9642A1CCD820096E70E /* Spacers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2F9622A1CCD1B0096E70E /* Spacers.swift */; };
+		8979D9F4A9E79DBBDC9B34D1 /* Pods_TakeUmbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */; };
+		DA655A93FB27472A9F483F39 /* Pods_TakeUmbrella_TUWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D6DBD6E45F892D4891CE1C /* Pods_TakeUmbrella_TUWidgetExtension.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6ED2F95B2A1CBD7E0096E70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E86E53729EEE67C00FC0A17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6ED2F94B2A1CBD7B0096E70E;
+			remoteInfo = TUWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6ED2F9612A1CBD7F0096E70E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6ED2F95D2A1CBD7E0096E70E /* TUWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0F2FE6848B15B12E31E265D9 /* Pods-TakeUmbrella-TUWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeUmbrella-TUWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-TakeUmbrella-TUWidgetExtension/Pods-TakeUmbrella-TUWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		351851F743852EFAC104464D /* Pods-TakeUmbrella.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeUmbrella.release.xcconfig"; path = "Target Support Files/Pods-TakeUmbrella/Pods-TakeUmbrella.release.xcconfig"; sourceTree = "<group>"; };
+		558386073E9614719578085B /* Pods-TakeUmbrella.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeUmbrella.debug.xcconfig"; path = "Target Support Files/Pods-TakeUmbrella/Pods-TakeUmbrella.debug.xcconfig"; sourceTree = "<group>"; };
+		6E86E53F29EEE67C00FC0A17 /* TakeUmbrella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeUmbrella.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E86E54229EEE67C00FC0A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E86E54B29EEE67D00FC0A17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E86E54E29EEE67D00FC0A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E86E55029EEE67D00FC0A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E86E55C29EEEB3200FC0A17 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		6E86E55D29EEEB3200FC0A17 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
+		6E86E55E29EEEB3200FC0A17 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		6E86E55F29EEEB3200FC0A17 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		6E86E56829EEEBA800FC0A17 /* Extension+UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIFont.swift"; sourceTree = "<group>"; };
+		6E86E56929EEEBA800FC0A17 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		6E86E56A29EEEBA800FC0A17 /* Extension+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
+		6E86E56B29EEEBA800FC0A17 /* Extension+UINavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UINavigation.swift"; sourceTree = "<group>"; };
+		6E86E56C29EEEBA800FC0A17 /* Extension+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
+		6E86E56D29EEEBA800FC0A17 /* Extension+CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+CGFloat.swift"; sourceTree = "<group>"; };
+		6E86E56E29EEEBA800FC0A17 /* Extension+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		6E86E56F29EEEBA800FC0A17 /* Extension+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		6E86E57029EEEBA800FC0A17 /* Extension+Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Int.swift"; sourceTree = "<group>"; };
+		6E86E57129EEEBA800FC0A17 /* Extension+UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
+		6E86E57229EEEBA800FC0A17 /* Extension+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		6E86E57329EEEBA800FC0A17 /* Extension+Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Optional.swift"; sourceTree = "<group>"; };
+		6E86E57429EEEBA800FC0A17 /* Extension+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Rx.swift"; sourceTree = "<group>"; };
+		6E86E57529EEEBA800FC0A17 /* Extension+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
+		6E86E57629EEEBA800FC0A17 /* Extension+UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIStackView.swift"; sourceTree = "<group>"; };
+		6E86E58729EEEBB900FC0A17 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		6E86E58829EEEBB900FC0A17 /* BaseNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNC.swift; sourceTree = "<group>"; };
+		6E86E58929EEEBB900FC0A17 /* BaseModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModalVC.swift; sourceTree = "<group>"; };
+		6E86E58A29EEEBB900FC0A17 /* BaseSceneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneVC.swift; sourceTree = "<group>"; };
+		6E86E58B29EEEBB900FC0A17 /* BaseVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		6E86E58C29EEEBB900FC0A17 /* BaseMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMainVC.swift; sourceTree = "<group>"; };
+		6E86E58D29EEEBB900FC0A17 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		6E86E59629EEF03D00FC0A17 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		6E86E5AD29EEFCC400FC0A17 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		6E86E5B229EF4D8400FC0A17 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
+		6E86E5B629EF73AE00FC0A17 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
+		6E86E5B829EF7BF700FC0A17 /* WeatherVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVM.swift; sourceTree = "<group>"; };
+		6E86E5BA29EF85D600FC0A17 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		6E86E5BC29EF893B00FC0A17 /* WeatherDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDto.swift; sourceTree = "<group>"; };
+		6E86E5BE29EF8ED400FC0A17 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		6E86E5C029EF9E2D00FC0A17 /* Extension+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Codable.swift"; sourceTree = "<group>"; };
+		6E86E5C229F184E200FC0A17 /* Extension+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Double.swift"; sourceTree = "<group>"; };
+		6E86E5C429F2C2EC00FC0A17 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		6E86E5C629F2DF1C00FC0A17 /* NowWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowWeatherModel.swift; sourceTree = "<group>"; };
+		6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherModel.swift; sourceTree = "<group>"; };
+		6EBDA88B2A2794010001C22B /* TUWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TUWidgetExtension.entitlements; sourceTree = "<group>"; };
+		6EBDA88E2A27BDC70001C22B /* DayModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModalVC.swift; sourceTree = "<group>"; };
+		6EBDA8902A27BDCE0001C22B /* DayModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModalView.swift; sourceTree = "<group>"; };
+		6EBDA8922A27BDD70001C22B /* DayModalVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModalVM.swift; sourceTree = "<group>"; };
+		6EBDA8942A27BFC80001C22B /* DayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayItem.swift; sourceTree = "<group>"; };
+		6EBDC7AC2A2096F400440FF9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6EC3CF4C29F6EE0C00BE5848 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
+		6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		6EC3CF5129F85BD400BE5848 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		6EC3CF5329F85C1000BE5848 /* SplashVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVM.swift; sourceTree = "<group>"; };
+		6EC3CF5529F8718000BE5848 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		6EC3CF5729F8752E00BE5848 /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
+		6EC3CF5B29F95E7800BE5848 /* WeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProtocol.swift; sourceTree = "<group>"; };
+		6EC3CF5D29F9638000BE5848 /* LottieIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieIndicator.swift; sourceTree = "<group>"; };
+		6EC3CF6329F969F300BE5848 /* UmbrellaIndicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UmbrellaIndicator.json; sourceTree = "<group>"; };
+		6EC3CF6A29FAD96C00BE5848 /* lightning.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lightning.gif; sourceTree = "<group>"; };
+		6EC3CF6B29FAD96C00BE5848 /* cloud.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cloud.gif; sourceTree = "<group>"; };
+		6EC3CF6C29FAD96C00BE5848 /* rainy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rainy.gif; sourceTree = "<group>"; };
+		6EC3CF7129FAD97100BE5848 /* snow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = snow.gif; sourceTree = "<group>"; };
+		6EC3CF7229FAD97200BE5848 /* sunny.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sunny.gif; sourceTree = "<group>"; };
+		6EC3CF762A02A82000BE5848 /* TakeUmbrella.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TakeUmbrella.entitlements; sourceTree = "<group>"; };
+		6EC3CF782A13901200BE5848 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		6EC3CF7A2A13901900BE5848 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		6EC3CF7C2A13902200BE5848 /* SettingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVM.swift; sourceTree = "<group>"; };
+		6ED2F8ED2A189D0C0096E70E /* TimeModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeModalVC.swift; sourceTree = "<group>"; };
+		6ED2F8EE2A189D0C0096E70E /* TimeModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeModalView.swift; sourceTree = "<group>"; };
+		6ED2F8EF2A189D0C0096E70E /* TimeModalVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeModalVM.swift; sourceTree = "<group>"; };
+		6ED2F8F52A189E6F0096E70E /* PyoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyoButton.swift; sourceTree = "<group>"; };
+		6ED2F8F72A1B72B50096E70E /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		6ED2F94C2A1CBD7B0096E70E /* TUWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TUWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ED2F94D2A1CBD7B0096E70E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		6ED2F94F2A1CBD7B0096E70E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		6ED2F9522A1CBD7B0096E70E /* TUWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUWidgetBundle.swift; sourceTree = "<group>"; };
+		6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUWidget.swift; sourceTree = "<group>"; };
+		6ED2F9582A1CBD7E0096E70E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6ED2F95A2A1CBD7E0096E70E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ED2F9622A1CCD1B0096E70E /* Spacers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacers.swift; sourceTree = "<group>"; };
+		AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeUmbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8548CEDAD22D77E92EEAD8F /* Pods-TakeUmbrella-TUWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeUmbrella-TUWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-TakeUmbrella-TUWidgetExtension/Pods-TakeUmbrella-TUWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		F3D6DBD6E45F892D4891CE1C /* Pods_TakeUmbrella_TUWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeUmbrella_TUWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E86E53C29EEE67C00FC0A17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8979D9F4A9E79DBBDC9B34D1 /* Pods_TakeUmbrella.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ED2F9492A1CBD7B0096E70E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ED2F9502A1CBD7B0096E70E /* SwiftUI.framework in Frameworks */,
+				6ED2F94E2A1CBD7B0096E70E /* WidgetKit.framework in Frameworks */,
+				DA655A93FB27472A9F483F39 /* Pods_TakeUmbrella_TUWidgetExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E86E53629EEE67C00FC0A17 = {
+			isa = PBXGroup;
+			children = (
+				6EBDA88B2A2794010001C22B /* TUWidgetExtension.entitlements */,
+				6E86E54129EEE67C00FC0A17 /* TakeUmbrella */,
+				6ED2F9512A1CBD7B0096E70E /* TUWidget */,
+				6E86E54029EEE67C00FC0A17 /* Products */,
+				72C2F333B6AFB70DCC803503 /* Pods */,
+				AD876E01C2AA34EAC5915861 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6E86E54029EEE67C00FC0A17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E86E53F29EEE67C00FC0A17 /* TakeUmbrella.app */,
+				6ED2F94C2A1CBD7B0096E70E /* TUWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E86E54129EEE67C00FC0A17 /* TakeUmbrella */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF762A02A82000BE5848 /* TakeUmbrella.entitlements */,
+				6E86E5AF29EEFCD100FC0A17 /* Deprecated */,
+				6E86E59529EEEBC500FC0A17 /* App */,
+				6E86E58629EEEBB900FC0A17 /* Base */,
+				6E86E5B029EEFEE100FC0A17 /* Entity */,
+				6E86E56729EEEBA800FC0A17 /* Extension */,
+				6E86E5B129EEFEE900FC0A17 /* Service */,
+				6E86E56429EEEB6900FC0A17 /* Util */,
+				6E86E55929EEEAFB00FC0A17 /* Presentation */,
+				6E86E55629EEE94200FC0A17 /* Resource */,
+			);
+			path = TakeUmbrella;
+			sourceTree = "<group>";
+		};
+		6E86E55629EEE94200FC0A17 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF7529FADC7C00BE5848 /* GIF */,
+				6EC3CF6329F969F300BE5848 /* UmbrellaIndicator.json */,
+				6E86E54D29EEE67D00FC0A17 /* LaunchScreen.storyboard */,
+				6E86E54B29EEE67D00FC0A17 /* Assets.xcassets */,
+				6E86E59629EEF03D00FC0A17 /* Colors.xcassets */,
+				6E86E55029EEE67D00FC0A17 /* Info.plist */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		6E86E55929EEEAFB00FC0A17 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6E86E59929EEF10400FC0A17 /* Model */,
+				6EC3CF5029F85BC500BE5848 /* Splash */,
+				6E86E59829EEF0F100FC0A17 /* Weather */,
+				6EC3CF772A13865A00BE5848 /* Setting */,
+				6E86E55A29EEEB1E00FC0A17 /* CustomUI */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6E86E55A29EEEB1E00FC0A17 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				6ED2F8F42A189E5E0096E70E /* View */,
+				6ED2F8F32A189D1B0096E70E /* Common */,
+				6E86E55B29EEEB3200FC0A17 /* Font */,
+				6EC3CF5D29F9638000BE5848 /* LottieIndicator.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		6E86E55B29EEEB3200FC0A17 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6E86E55C29EEEB3200FC0A17 /* NotoSansKR-Bold.otf */,
+				6E86E55D29EEEB3200FC0A17 /* NotoSansKR-Black.otf */,
+				6E86E55E29EEEB3200FC0A17 /* NotoSansKR-Medium.otf */,
+				6E86E55F29EEEB3200FC0A17 /* NotoSansKR-Regular.otf */,
+				6E86E5B629EF73AE00FC0A17 /* NotoSansKR-Light.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		6E86E56429EEEB6900FC0A17 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF5A29F95E6700BE5848 /* Manager */,
+				6EC3CF5929F95E6300BE5848 /* Protocol */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		6E86E56729EEEBA800FC0A17 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF4C29F6EE0C00BE5848 /* Extension+Array.swift */,
+				6E86E56829EEEBA800FC0A17 /* Extension+UIFont.swift */,
+				6E86E56929EEEBA800FC0A17 /* Extension+UIViewController.swift */,
+				6E86E56A29EEEBA800FC0A17 /* Extension+UIImage.swift */,
+				6E86E56B29EEEBA800FC0A17 /* Extension+UINavigation.swift */,
+				6E86E56C29EEEBA800FC0A17 /* Extension+UITextField.swift */,
+				6E86E56D29EEEBA800FC0A17 /* Extension+CGFloat.swift */,
+				6E86E56E29EEEBA800FC0A17 /* Extension+String.swift */,
+				6E86E56F29EEEBA800FC0A17 /* Extension+UIColor.swift */,
+				6E86E57029EEEBA800FC0A17 /* Extension+Int.swift */,
+				6E86E5C229F184E200FC0A17 /* Extension+Double.swift */,
+				6E86E57129EEEBA800FC0A17 /* Extension+UIButton.swift */,
+				6E86E57229EEEBA800FC0A17 /* Extension+UIView.swift */,
+				6E86E57329EEEBA800FC0A17 /* Extension+Optional.swift */,
+				6E86E57429EEEBA800FC0A17 /* Extension+Rx.swift */,
+				6E86E57529EEEBA800FC0A17 /* Extension+Date.swift */,
+				6E86E57629EEEBA800FC0A17 /* Extension+UIStackView.swift */,
+				6E86E5C029EF9E2D00FC0A17 /* Extension+Codable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6E86E58629EEEBB900FC0A17 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6E86E58D29EEEBB900FC0A17 /* BaseView.swift */,
+				6E86E58C29EEEBB900FC0A17 /* BaseMainVC.swift */,
+				6E86E58A29EEEBB900FC0A17 /* BaseSceneVC.swift */,
+				6E86E58729EEEBB900FC0A17 /* BaseVC.swift */,
+				6E86E58829EEEBB900FC0A17 /* BaseNC.swift */,
+				6E86E58929EEEBB900FC0A17 /* BaseModalVC.swift */,
+				6E86E58B29EEEBB900FC0A17 /* BaseVM.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6E86E59529EEEBC500FC0A17 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6E86E54229EEE67C00FC0A17 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6E86E59829EEF0F100FC0A17 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				6E86E5AD29EEFCC400FC0A17 /* WeatherView.swift */,
+				6E86E5B229EF4D8400FC0A17 /* WeatherVC.swift */,
+				6E86E5B829EF7BF700FC0A17 /* WeatherVM.swift */,
+				6E86E59E29EEF12600FC0A17 /* Custom */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		6E86E59929EEF10400FC0A17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF5729F8752E00BE5848 /* Case.swift */,
+				6E86E5C829F2E3F200FC0A17 /* DayWeatherModel.swift */,
+				6E86E5C629F2DF1C00FC0A17 /* NowWeatherModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E86E59E29EEF12600FC0A17 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				6E86E5C429F2C2EC00FC0A17 /* WeatherCell.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		6E86E5AF29EEFCD100FC0A17 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
+		6E86E5B029EEFEE100FC0A17 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				6E86E5BC29EF893B00FC0A17 /* WeatherDto.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		6E86E5B129EEFEE900FC0A17 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6E86E5BE29EF8ED400FC0A17 /* BaseService.swift */,
+				6E86E5BA29EF85D600FC0A17 /* WeatherService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6EBDA88D2A27BDA70001C22B /* DayModal */ = {
+			isa = PBXGroup;
+			children = (
+				6EBDA8902A27BDCE0001C22B /* DayModalView.swift */,
+				6EBDA88E2A27BDC70001C22B /* DayModalVC.swift */,
+				6EBDA8922A27BDD70001C22B /* DayModalVM.swift */,
+				6EBDA8942A27BFC80001C22B /* DayItem.swift */,
+			);
+			path = DayModal;
+			sourceTree = "<group>";
+		};
+		6EC3CF5029F85BC500BE5848 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF5129F85BD400BE5848 /* SplashVC.swift */,
+				6EC3CF5329F85C1000BE5848 /* SplashVM.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		6EC3CF5929F95E6300BE5848 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF5B29F95E7800BE5848 /* WeatherProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6EC3CF5A29F95E6700BE5848 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF5529F8718000BE5848 /* WindowManager.swift */,
+				6EC3CF4E29F6F28500BE5848 /* LocationManager.swift */,
+				6ED2F8F72A1B72B50096E70E /* UserInfoManager.swift */,
+				6EBDC7AC2A2096F400440FF9 /* DataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6EC3CF7529FADC7C00BE5848 /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF6B29FAD96C00BE5848 /* cloud.gif */,
+				6EC3CF6A29FAD96C00BE5848 /* lightning.gif */,
+				6EC3CF6C29FAD96C00BE5848 /* rainy.gif */,
+				6EC3CF7129FAD97100BE5848 /* snow.gif */,
+				6EC3CF7229FAD97200BE5848 /* sunny.gif */,
+			);
+			name = GIF;
+			sourceTree = "<group>";
+		};
+		6EC3CF772A13865A00BE5848 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3CF7A2A13901900BE5848 /* SettingView.swift */,
+				6EC3CF782A13901200BE5848 /* SettingVC.swift */,
+				6EC3CF7C2A13902200BE5848 /* SettingVM.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		6ED2F8EC2A189D0C0096E70E /* TimeModal */ = {
+			isa = PBXGroup;
+			children = (
+				6ED2F8ED2A189D0C0096E70E /* TimeModalVC.swift */,
+				6ED2F8EE2A189D0C0096E70E /* TimeModalView.swift */,
+				6ED2F8EF2A189D0C0096E70E /* TimeModalVM.swift */,
+			);
+			path = TimeModal;
+			sourceTree = "<group>";
+		};
+		6ED2F8F32A189D1B0096E70E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6EBDA88D2A27BDA70001C22B /* DayModal */,
+				6ED2F8EC2A189D0C0096E70E /* TimeModal */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6ED2F8F42A189E5E0096E70E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6ED2F8F52A189E6F0096E70E /* PyoButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6ED2F9512A1CBD7B0096E70E /* TUWidget */ = {
+			isa = PBXGroup;
+			children = (
+				6ED2F9522A1CBD7B0096E70E /* TUWidgetBundle.swift */,
+				6ED2F9562A1CBD7B0096E70E /* TUWidget.swift */,
+				6ED2F9622A1CCD1B0096E70E /* Spacers.swift */,
+				6ED2F9582A1CBD7E0096E70E /* Assets.xcassets */,
+				6ED2F95A2A1CBD7E0096E70E /* Info.plist */,
+			);
+			path = TUWidget;
+			sourceTree = "<group>";
+		};
+		72C2F333B6AFB70DCC803503 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				558386073E9614719578085B /* Pods-TakeUmbrella.debug.xcconfig */,
+				351851F743852EFAC104464D /* Pods-TakeUmbrella.release.xcconfig */,
+				E8548CEDAD22D77E92EEAD8F /* Pods-TakeUmbrella-TUWidgetExtension.debug.xcconfig */,
+				0F2FE6848B15B12E31E265D9 /* Pods-TakeUmbrella-TUWidgetExtension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD876E01C2AA34EAC5915861 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB09AF20BEE003655127ED76 /* Pods_TakeUmbrella.framework */,
+				6ED2F94D2A1CBD7B0096E70E /* WidgetKit.framework */,
+				6ED2F94F2A1CBD7B0096E70E /* SwiftUI.framework */,
+				F3D6DBD6E45F892D4891CE1C /* Pods_TakeUmbrella_TUWidgetExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E86E53E29EEE67C00FC0A17 /* TakeUmbrella */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E86E55329EEE67D00FC0A17 /* Build configuration list for PBXNativeTarget "TakeUmbrella" */;
+			buildPhases = (
+				D5125BF86208277C154C9B13 /* [CP] Check Pods Manifest.lock */,
+				6E86E53B29EEE67C00FC0A17 /* Sources */,
+				6E86E53C29EEE67C00FC0A17 /* Frameworks */,
+				6E86E53D29EEE67C00FC0A17 /* Resources */,
+				58080A56DC0F66DF677268F9 /* [CP] Embed Pods Frameworks */,
+				6ED2F9612A1CBD7F0096E70E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6ED2F95C2A1CBD7E0096E70E /* PBXTargetDependency */,
+			);
+			name = TakeUmbrella;
+			productName = TakeUmbrella;
+			productReference = 6E86E53F29EEE67C00FC0A17 /* TakeUmbrella.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6ED2F94B2A1CBD7B0096E70E /* TUWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6ED2F95E2A1CBD7F0096E70E /* Build configuration list for PBXNativeTarget "TUWidgetExtension" */;
+			buildPhases = (
+				E642C83284141185CE2B0078 /* [CP] Check Pods Manifest.lock */,
+				6ED2F9482A1CBD7B0096E70E /* Sources */,
+				6ED2F9492A1CBD7B0096E70E /* Frameworks */,
+				6ED2F94A2A1CBD7B0096E70E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TUWidgetExtension;
+			productName = TUWidgetExtension;
+			productReference = 6ED2F94C2A1CBD7B0096E70E /* TUWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E86E53729EEE67C00FC0A17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					6E86E53E29EEE67C00FC0A17 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					6ED2F94B2A1CBD7B0096E70E = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 6E86E53A29EEE67C00FC0A17 /* Build configuration list for PBXProject "TakeUmbrella" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E86E53629EEE67C00FC0A17;
+			productRefGroup = 6E86E54029EEE67C00FC0A17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E86E53E29EEE67C00FC0A17 /* TakeUmbrella */,
+				6ED2F94B2A1CBD7B0096E70E /* TUWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E86E53D29EEE67C00FC0A17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EC3CF7029FAD96C00BE5848 /* rainy.gif in Resources */,
+				6E86E54F29EEE67D00FC0A17 /* LaunchScreen.storyboard in Resources */,
+				6EC3CF6429F969F400BE5848 /* UmbrellaIndicator.json in Resources */,
+				6EC3CF7329FAD97200BE5848 /* snow.gif in Resources */,
+				6E86E56029EEEB3200FC0A17 /* NotoSansKR-Bold.otf in Resources */,
+				6E86E5B729EF73AE00FC0A17 /* NotoSansKR-Light.otf in Resources */,
+				6E86E56229EEEB3200FC0A17 /* NotoSansKR-Medium.otf in Resources */,
+				6E86E54C29EEE67D00FC0A17 /* Assets.xcassets in Resources */,
+				6EC3CF6E29FAD96C00BE5848 /* lightning.gif in Resources */,
+				6E86E56329EEEB3200FC0A17 /* NotoSansKR-Regular.otf in Resources */,
+				6EC3CF7429FAD97200BE5848 /* sunny.gif in Resources */,
+				6EC3CF6F29FAD96C00BE5848 /* cloud.gif in Resources */,
+				6E86E56129EEEB3200FC0A17 /* NotoSansKR-Black.otf in Resources */,
+				6E86E59729EEF03D00FC0A17 /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ED2F94A2A1CBD7B0096E70E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EBF4D722A1E2833007F1610 /* NotoSansKR-Light.otf in Resources */,
+				6EBF4D6B2A1CD48F007F1610 /* Assets.xcassets in Resources */,
+				6EBF4D6F2A1E2833007F1610 /* NotoSansKR-Bold.otf in Resources */,
+				6EBF4D712A1E2833007F1610 /* NotoSansKR-Medium.otf in Resources */,
+				6EBF4D702A1E2833007F1610 /* NotoSansKR-Regular.otf in Resources */,
+				6EBF4D732A1E2833007F1610 /* NotoSansKR-Black.otf in Resources */,
+				6ED2F9592A1CBD7E0096E70E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58080A56DC0F66DF677268F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TakeUmbrella/Pods-TakeUmbrella-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TakeUmbrella/Pods-TakeUmbrella-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TakeUmbrella/Pods-TakeUmbrella-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5125BF86208277C154C9B13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TakeUmbrella-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E642C83284141185CE2B0078 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TakeUmbrella-TUWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E86E53B29EEE67C00FC0A17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E86E57929EEEBA800FC0A17 /* Extension+UIImage.swift in Sources */,
+				6EC3CF5829F8752E00BE5848 /* Case.swift in Sources */,
+				6E86E59429EEEBBA00FC0A17 /* BaseView.swift in Sources */,
+				6E86E58229EEEBA800FC0A17 /* Extension+Optional.swift in Sources */,
+				6E86E57B29EEEBA800FC0A17 /* Extension+UITextField.swift in Sources */,
+				6EBDA88F2A27BDC70001C22B /* DayModalVC.swift in Sources */,
+				6E86E5C329F184E200FC0A17 /* Extension+Double.swift in Sources */,
+				6EC3CF5229F85BD400BE5848 /* SplashVC.swift in Sources */,
+				6E86E5BD29EF893B00FC0A17 /* WeatherDto.swift in Sources */,
+				6E86E5B929EF7BF700FC0A17 /* WeatherVM.swift in Sources */,
+				6EC3CF792A13901200BE5848 /* SettingVC.swift in Sources */,
+				6EBDA8912A27BDCE0001C22B /* DayModalView.swift in Sources */,
+				6EC3CF5429F85C1000BE5848 /* SplashVM.swift in Sources */,
+				6E86E5C529F2C2EC00FC0A17 /* WeatherCell.swift in Sources */,
+				6E86E58429EEEBA800FC0A17 /* Extension+Date.swift in Sources */,
+				6E86E5AE29EEFCC400FC0A17 /* WeatherView.swift in Sources */,
+				6E86E58129EEEBA800FC0A17 /* Extension+UIView.swift in Sources */,
+				6E86E5C729F2DF1D00FC0A17 /* NowWeatherModel.swift in Sources */,
+				6ED2F8F22A189D0C0096E70E /* TimeModalVM.swift in Sources */,
+				6E86E57C29EEEBA800FC0A17 /* Extension+CGFloat.swift in Sources */,
+				6EC3CF5629F8718000BE5848 /* WindowManager.swift in Sources */,
+				6EC3CF4D29F6EE0C00BE5848 /* Extension+Array.swift in Sources */,
+				6EC3CF7B2A13901900BE5848 /* SettingView.swift in Sources */,
+				6E86E5BF29EF8ED400FC0A17 /* BaseService.swift in Sources */,
+				6EC3CF4F29F6F28500BE5848 /* LocationManager.swift in Sources */,
+				6ED2F8F62A189E6F0096E70E /* PyoButton.swift in Sources */,
+				6E86E58029EEEBA800FC0A17 /* Extension+UIButton.swift in Sources */,
+				6E86E59329EEEBBA00FC0A17 /* BaseMainVC.swift in Sources */,
+				6E86E57729EEEBA800FC0A17 /* Extension+UIFont.swift in Sources */,
+				6EC3CF5C29F95E7800BE5848 /* WeatherProtocol.swift in Sources */,
+				6E86E58529EEEBA800FC0A17 /* Extension+UIStackView.swift in Sources */,
+				6E86E5C129EF9E2D00FC0A17 /* Extension+Codable.swift in Sources */,
+				6E86E59029EEEBBA00FC0A17 /* BaseModalVC.swift in Sources */,
+				6E86E57829EEEBA800FC0A17 /* Extension+UIViewController.swift in Sources */,
+				6EC3CF7D2A13902200BE5848 /* SettingVM.swift in Sources */,
+				6ED2F8F02A189D0C0096E70E /* TimeModalVC.swift in Sources */,
+				6EBDA8932A27BDD70001C22B /* DayModalVM.swift in Sources */,
+				6E86E59229EEEBBA00FC0A17 /* BaseVM.swift in Sources */,
+				6EC3CF5E29F9638000BE5848 /* LottieIndicator.swift in Sources */,
+				6E86E59129EEEBBA00FC0A17 /* BaseSceneVC.swift in Sources */,
+				6E86E58F29EEEBBA00FC0A17 /* BaseNC.swift in Sources */,
+				6EBDA8872A25B5020001C22B /* TUWidget.swift in Sources */,
+				6E86E57F29EEEBA800FC0A17 /* Extension+Int.swift in Sources */,
+				6E86E57D29EEEBA800FC0A17 /* Extension+String.swift in Sources */,
+				6E86E5BB29EF85D600FC0A17 /* WeatherService.swift in Sources */,
+				6E86E57A29EEEBA800FC0A17 /* Extension+UINavigation.swift in Sources */,
+				6E86E5C929F2E3F200FC0A17 /* DayWeatherModel.swift in Sources */,
+				6EBDC7AD2A2096F400440FF9 /* DataManager.swift in Sources */,
+				6E86E54329EEE67C00FC0A17 /* AppDelegate.swift in Sources */,
+				6E86E5B329EF4D8400FC0A17 /* WeatherVC.swift in Sources */,
+				6ED2F8F82A1B72B50096E70E /* UserInfoManager.swift in Sources */,
+				6E86E58329EEEBA800FC0A17 /* Extension+Rx.swift in Sources */,
+				6E86E57E29EEEBA800FC0A17 /* Extension+UIColor.swift in Sources */,
+				6EBDA8952A27BFC80001C22B /* DayItem.swift in Sources */,
+				6ED2F8F12A189D0C0096E70E /* TimeModalView.swift in Sources */,
+				6E86E58E29EEEBBA00FC0A17 /* BaseVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ED2F9482A1CBD7B0096E70E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ED2F9572A1CBD7B0096E70E /* TUWidget.swift in Sources */,
+				6ED2F9642A1CCD820096E70E /* Spacers.swift in Sources */,
+				6ED2F9532A1CBD7B0096E70E /* TUWidgetBundle.swift in Sources */,
+				6EBDC7AE2A209F5500440FF9 /* DataManager.swift in Sources */,
+				6EBDA8882A25B71B0001C22B /* Extension+Double.swift in Sources */,
+				6EBF4D6D2A1E0246007F1610 /* Extension+UIFont.swift in Sources */,
+				6EBF4D6E2A1E270E007F1610 /* Extension+UIColor.swift in Sources */,
+				6EBDC7AF2A20A0AE00440FF9 /* DayWeatherModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6ED2F95C2A1CBD7E0096E70E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6ED2F94B2A1CBD7B0096E70E /* TUWidgetExtension */;
+			targetProxy = 6ED2F95B2A1CBD7E0096E70E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E86E54D29EEE67D00FC0A17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E86E54E29EEE67D00FC0A17 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E86E55129EEE67D00FC0A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E86E55229EEE67D00FC0A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E86E55429EEE67D00FC0A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 558386073E9614719578085B /* Pods-TakeUmbrella.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TakeUmbrella/TakeUmbrella.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 3799SNND63;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TakeUmbrella/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "엄마가비온대";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재위치 확인을 위해 허용해주세요.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SloWax.TakeUmbrella;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6E86E55529EEE67D00FC0A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 351851F743852EFAC104464D /* Pods-TakeUmbrella.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TakeUmbrella/TakeUmbrella.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 3799SNND63;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TakeUmbrella/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "엄마가비온대";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재위치 확인을 위해 허용해주세요.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SloWax.TakeUmbrella;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6ED2F95F2A1CBD7F0096E70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8548CEDAD22D77E92EEAD8F /* Pods-TakeUmbrella-TUWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TUWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 3799SNND63;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TUWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TUWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SloWax.TakeUmbrella.TUWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6ED2F9602A1CBD7F0096E70E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F2FE6848B15B12E31E265D9 /* Pods-TakeUmbrella-TUWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TUWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 3799SNND63;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TUWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TUWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SloWax.TakeUmbrella.TUWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E86E53A29EEE67C00FC0A17 /* Build configuration list for PBXProject "TakeUmbrella" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E86E55129EEE67D00FC0A17 /* Debug */,
+				6E86E55229EEE67D00FC0A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E86E55329EEE67D00FC0A17 /* Build configuration list for PBXNativeTarget "TakeUmbrella" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E86E55429EEE67D00FC0A17 /* Debug */,
+				6E86E55529EEE67D00FC0A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ED2F95E2A1CBD7F0096E70E /* Build configuration list for PBXNativeTarget "TUWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ED2F95F2A1CBD7F0096E70E /* Debug */,
+				6ED2F9602A1CBD7F0096E70E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E86E53729EEE67C00FC0A17 /* Project object */;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OpenWeatherID</key>
+	<string>35bc6c3ea0807b59455f3bfb5e237c97</string>
+	<key>ServerURL</key>
+	<string>https://api.openweathermap.org/data/2.5</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSansKR-Light.otf</string>
+		<string>NotoSansKR-Black.otf</string>
+		<string>NotoSansKR-Bold.otf</string>
+		<string>NotoSansKR-Regular.otf</string>
+		<string>NotoSansKR-Medium.otf</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>위치 정보 권한을 승인하시겠습니까?</string>
+</dict>
+</plist>
