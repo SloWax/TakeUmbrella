@@ -117,6 +117,10 @@ class DayModalView: BaseView {
             cvDays.selectItem(at: indexPath, animated: false, scrollPosition: .centeredVertically)
         }
     }
+    
+    func isEnabledConfirm(_ Days: [String]) {
+        btnConfirm.isEnabled = !Days.isEmpty
+    }
 }
 
 

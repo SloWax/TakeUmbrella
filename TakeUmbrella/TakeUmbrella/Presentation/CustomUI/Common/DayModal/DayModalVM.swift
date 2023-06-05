@@ -27,19 +27,17 @@ class DayModalVM: BaseVM {
         
         // Data
         let days = BehaviorRelay<[String]>(value: ["일", "월", "화", "수", "목", "금", "토"])
+        let selectedDays = BehaviorRelay<[String]>(value: [])
     }
     
     let input: Input
     let output: Output
-    
-    private var selectedDays: [String] = []
     
     init(input: Input = Input(), output: Output = Output(),
          defaultDays: [String]) {
         
         self.input = input
         self.output = output
-        self.selectedDays = defaultDays
         
         super.init()
         
@@ -49,9 +47,10 @@ class DayModalVM: BaseVM {
                 guard let self = self else { return }
                 
                 let allDays = self.output.days.value
-                let rows = self.selectedDays.compactMap { allDays.firstIndex(of: $0) }
+                let rows = defaultDays.compactMap { allDays.firstIndex(of: $0) }
                 
                 self.output.bindDefaultRow.accept(rows)
+                self.output.selectedDays.accept(defaultDays)
             }.disposed(by: bag)
         
         self.input
@@ -60,14 +59,17 @@ class DayModalVM: BaseVM {
                 guard let self = self else { return }
                 
                 let selectValue = self.output.days.value[event.index]
+                var nextDays = self.output.selectedDays.value
                 
                 switch event.isSelect {
                 case true:
-                    self.selectedDays.append(selectValue)
+                    nextDays.append(selectValue)
                 case false:
-                    guard let index = self.selectedDays.firstIndex(of: selectValue) else { return }
-                    self.selectedDays.remove(at: index)
+                    guard let index = nextDays.firstIndex(of: selectValue) else { return }
+                    nextDays.remove(at: index)
                 }
+                
+                self.output.selectedDays.accept(nextDays)
             }.disposed(by: bag)
         
         self.input
@@ -75,7 +77,8 @@ class DayModalVM: BaseVM {
             .bind { [weak self] in
                 guard let self = self else { return }
                 
-                self.output.bindConfirm.accept(self.selectedDays)
+                let selectedDays = self.output.selectedDays.value
+                self.output.bindConfirm.accept(selectedDays)
             }.disposed(by: bag)
     }
 }
