@@ -128,5 +128,13 @@ class DayModalVC: BaseModalVC {
                 self.vm.clearBag()
                 self.dismiss(animated: false)
             }.disposed(by: bag)
+        
+        vm.output
+            .selectedDays // 설정 버튼 활성화 여부
+            .bind { [weak self] selectedDays in
+                guard let self = self else { return }
+                
+                self.dayModalView.isEnabledConfirm(selectedDays)
+            }.disposed(by: bag)
     }
 }
