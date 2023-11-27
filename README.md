@@ -8,7 +8,7 @@
 앱에 들어간 시점으로부터 24시간 내에 강수 예보를 확인하고 원하는 요일, 시간에 알림을 보내줍니다 :)
 
 - 현재 ver. 1.0.0
-- 사용기술 : Swift, SwiftUI, WidgetKit, UIKit, RxSwift, Realm, Lottie
+- 사용기술 : Swift, SwiftUI, WidgetKit, UIKit, Moya/RxSwift, Realm, Lottie, SnapKit
 - AppStore : https://apps.apple.com/app/id6449781300
 
 <p align="center">
